@@ -1,4 +1,3 @@
-
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -21,7 +20,7 @@
             <h2>Staatliches</h2>
             <img src="Images/Staatliches.png" alt="Staatliches" />
         </div>
-        
+
         <div>
             <h2>Playfair</h2>
             <img src="Images/Playfair Display.png" alt="playfair display" />
@@ -37,5 +36,6 @@
 
       </body>
     </html>
+
   </h1>
 </h1>
