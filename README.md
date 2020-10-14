@@ -17,11 +17,27 @@ Build Ecommerce Website - General Layout:
         - Footer with general contact & Social media 
 
 
-    - User Dashboard
-    
+    - User Dashboard (via 'mock' Login)
+        - "Hello Bob! Here's our latest!" --> Featured Products ("Best Sellers") - Grid?) ("Personalized")
+        - Access Cart (hard-code a couple items)
+        - Access User History  (hard-code a few sessions and services)
+        - Manage Account
+
+    - Provider Dashboard (via 'mock' Login)
+        - "Hello Chad! Here's our latest!" --> Featured Products ("Best Sellers") - Grid?) ("Personalized")
+        - 
+        - 
+        - Access Service History  (hard-code a few sessions and services)
+        - Manage Account - Cateogry ID
+        - Manage Services (Add/Remove/Modify Services)
+
+    - Community Page
+        - List of Providers (ordered by Rating)
+        - Filter by Cateogry 
 
 
-    - Products/Services Page (Full) 
+    - Products/Services Page (Full) - This is a List of the PROVIDERS' SERVICES
+
         - List of ALL products (categorized) - Side Bar (Filter/Navigation; list of all Categries @click takes to a section )
             
             - Individual Personal Training  (by appointment, charged per hour, instructors have different rates) 
