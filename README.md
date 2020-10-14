@@ -8,6 +8,14 @@ GROUP 4 - "BoomShakaLaka"
 - Nusorn Krachangtoy
 - Vlad Preduna 
 
+Functional
+Non-Functional
+
+
+Must Have
+Nice to Have
+Bluesky
+
 
 Build Ecommerce Website - General Layout:
     - Landing Page: 
@@ -32,59 +40,45 @@ Build Ecommerce Website - General Layout:
         - Manage Services (Add/Remove/Modify Services)
 
     - Community Page
-        - List of Providers (ordered by Rating)
-        - Filter by Cateogry 
+        - Filter Services by Providers (ordered by Rating)
+        - Filter Services by Cateogry (Trainers, Nutritionists, Instructors)
+        - (Filter by Geography)
 
-
-    - Products/Services Page (Full) - This is a List of the PROVIDERS' SERVICES
-
-        - List of ALL products (categorized) - Side Bar (Filter/Navigation; list of all Categries @click takes to a section )
-            
-            - Individual Personal Training  (by appointment, charged per hour, instructors have different rates) 
-            
-            - Group training (scheduled classes) - different categories (MMA, Yoga, Cardio, Zumba, etc.)
-            
-            
-    - Product (Detailed) Page 
+    - Product/Provider (Detailed) Page
         - Detailed Info 
         - Customization options
 
+    - Products/Services Page (Full) - This is a List of the PROVIDERS' SERVICES
+        - List of ALL products (categorized) - Side Bar (Filter/Navigation; list of all Categries @click takes to a section )
+            - Individual Personal Training  (by appointment, charged per hour, instructors have different rates) 
+            - Group training (scheduled classes) - different categories (MMA, Yoga, Cardio, Zumba, etc.)
+
     - View Cart (user added items) 
 
-
     - Checkout ("confirm order"/"place order")
-
 
     - Contact (Form) / About (Para) 
 
 
-
-
 <!--  -->
 - Team roles
+    - PENDING
+    - Strengths 
 
 - Site description and purpose (user base (personas), product type etc.)
 
-        Ideas:
-            - Clothing (self model)
-            - Food (geography) 
-            - Outdoor equipment rental 
-            
-            - Fitness (
-                - Login for Users / Login for Providers
-                - Products = Fitness Services from Fitness Professionals (Trainers, Nutritionists)    
-            )
-            - 
-
+    - Description: Health & Wellness Hub 
+    - Purpose: Connect Health & Wellness Professionals with Customers, and faciliate Transactions direclty within the app  
+    - User base: General Users; Service Provider Users; Admins
+    - Product Type:  
 
 
 - Design (color palette, brand themes, font choices, design principles.)
 
-- Company name: "BoomShakaLaka" - 
+- Company name: "SHREDZ"
 
 
 - Wireframes and prototypes (page layouts incorporating design concepts, user experience, navigation, e-commerce components etc.)
-
 
 
 - Technologies to be used. Will your group incorporate Bootstrap and jQuery?
