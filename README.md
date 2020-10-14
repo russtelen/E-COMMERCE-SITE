@@ -9,14 +9,37 @@ GROUP 4 - "BoomShakaLaka"
 - Vlad Preduna 
 
 
+Build Ecommerce Website - General Layout:
+    - Landing Page: 
+        - Header with Logo 
+        - Nav (Browse Links, Login/Register, View Cart)
+        - Featured Products ("Best Sellers") - Grid?)
+        - Footer with general contact & Social media 
 
-Build Ecommerce Website:
-- Landing Page: Nav (Links, Login/Register, View Cart) - Featured Products ("Best Sellers") 
-- Products Page (Full) - List of ALL products (categorized) - Side Bar (Filter/Navigation; list of all Categries @click takes to a section )
------ Handgungs, shotguns, tanks, cannons 
-- View Cart (user added items) 
-- Checkout ("confirm order"/"place order")
-- Contact (Form) / About (Para) 
+
+    - User Dashboard
+    
+
+
+    - Products/Services Page (Full) 
+        - List of ALL products (categorized) - Side Bar (Filter/Navigation; list of all Categries @click takes to a section )
+            
+            - Individual Personal Training  (by appointment, charged per hour, instructors have different rates) 
+            
+            - Group training (scheduled classes) - different categories (MMA, Yoga, Cardio, Zumba, etc.)
+            
+            
+    - Product (Detailed) Page 
+        - Detailed Info 
+        - Customization options
+
+    - View Cart (user added items) 
+
+
+    - Checkout ("confirm order"/"place order")
+
+
+    - Contact (Form) / About (Para) 
 
 
 
@@ -25,6 +48,19 @@ Build Ecommerce Website:
 - Team roles
 
 - Site description and purpose (user base (personas), product type etc.)
+
+        Ideas:
+            - Clothing (self model)
+            - Food (geography) 
+            - Outdoor equipment rental 
+            
+            - Fitness (
+                - Login for Users / Login for Providers
+                - Products = Fitness Services from Fitness Professionals (Trainers, Nutritionists)    
+            )
+            - 
+
+
 
 - Design (color palette, brand themes, font choices, design principles.)
 
