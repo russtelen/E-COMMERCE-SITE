@@ -1,8 +1,3 @@
-Staatliches - Highlight Upper Case only
-Anton - Highlight with lower case
-Roboto - body fonts with 12 styles
-Playfair - Emphasize contents
-
 ## Anton - Highlight with lower case
 
 <img src="Images/Anton.png" alt="Anont" />
