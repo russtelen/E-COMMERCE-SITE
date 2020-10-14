@@ -36,6 +36,7 @@ Build Ecommerce Website - General Layout:
         - Header with Logo 
         - Nav (Browse Links, Login/Register, View Cart)
         - Featured Products ("Best Sellers") - Grid?)
+        - Intagram Promos (#Sweatyselfie)
         - Footer with general contact & Social media 
 
     - About (Para - Mission) / "Meet our team!"
@@ -50,17 +51,14 @@ Build Ecommerce Website - General Layout:
         
     - View Products & Services
         - Categorized Lists (each category = section)
-        - Detailed Info Drop-down (jQuery)
-        
-    - Program Page (Schedule)
-
-    
-
-    - Products/Services Page (Full)
-        - List of ALL products (categorized) - Side Bar (Filter/Navigation; list of all Categries @click takes to a section )
-            - Individual Personal Training  (by appointment, charged per hour, instructors have different rates) 
+            Examples:
             - Group training (scheduled classes) - different categories (MMA, Yoga, Cardio, Zumba, etc.)
-            - Scuedule Table 
+            - Individual Personal Training  (by appointment, charged per hour, instructors have different rates) 
+        - Detailed Info Drop-down (jQuery)
+        - List of ALL products (categorized) - Side Bar (Filter/Navigation; list of all Categries @click takes to a section )
+        
+    - Program Page (Schedule)        
+            - Scuedule Table for Classes
 
     - View Cart (user added items) 
 
