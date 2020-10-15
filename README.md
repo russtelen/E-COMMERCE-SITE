@@ -1,6 +1,4 @@
-
-SSD - FRONT END PROJECT
-
+# SSD - FRONT END PROJECT
 GROUP 4 - "BoomShakaLaka"
 - Crystal Kim
 - Juhwan Moon
@@ -8,71 +6,81 @@ GROUP 4 - "BoomShakaLaka"
 - Nusorn Krachangtoy
 - Vlad Preduna 
 
+    Team roles/tasks as per Project Kanban
 
-=====
-Functional
-    - Login 
-    - Add Products to Cart
-    - Cart Checkout
-    - View Products (and Details)
+- Company name: "SHREDZ"
+- Description: Health & Wellness Hub 
+- Purpose: Connect Health & Wellness Professionals with Customers, and faciliate Transactions direclty within the app  
+- User base: General Users; Service Provider Users; Admins
+- Product Type:  Fitness Program Membership, Services and Products
 
-Non-Functional
-    - Contact
-    - jQuery on the Sing-up 
-    - Live chat 
 
-=====
-Must Have
-Nice to Have
-Bluesky
-=====
-Build Ecommerce Website - General Layout:
-    -Selling Fitness Related:
-    -   Memberships
-    -   Services
-    -   Products
-// Must Have
-    - Landing Page: 
-        - Header with Logo 
-        - Nav (Browse Links, Login/Register, View Cart)
-        - Featured Products ("Best Sellers") - Grid?)
-        - Intagram Promos (#Sweatyselfie)
-        - Footer with general contact & Social media 
+## Use Case Diagram
+Moqups URL: https://app.moqups.com/YyMjjcMyRD/view/page/a2643d858
+<br>
+<img src="assets\use_case_diagram\Shredz_UCD.JPG" width="600px">
+  
+## Prototypes
+(Pending)
 
-    - About (Para - Mission) / "Meet our team!"
 
-    - Contact (Form)
-        -   Form
-        -   Map Location (embedded)
+## General Layout
 
-    - Log & Sign-up Page 
-        -   both on same page
-        -   Sign-up hiddin initially; slideToggle opens SignUp Form (plugin?)
+#### Landing Page: 
+- Header with Logo 
+- Nav (Browse Links, Login/Register, View Cart)
+- Featured Products ("Best Sellers") - Grid?)
+- Intagram Promos (#Sweatyselfie)
+- Footer with general contact & Social media 
+
+#### About (Para - Mission) / "Meet our team!"
+- info page with Mission Statement 
+- Image Card for each team member
+    
+#### Contact (Form)
+-   Form
+-   Map Location (embedded)
+
+#### Log & Sign-up Page 
+-   both on same page?
+-   Sign-up initially hidden; slideToggle opens SignUp Form
         
-    - View Products & Services
-        - Categorized Lists (each category = section)
-            Examples:
-            - Group training (scheduled classes) - different categories (MMA, Yoga, Cardio, Zumba, etc.)
-            - Individual Personal Training  (by appointment, charged per hour, instructors have different rates) 
+#### View Products & Services
+-   Categorized Lists (each category = section)
+    Examples:
+        - Group training (scheduled classes) - different categories (MMA, Yoga, Cardio, Zumba, etc.)
+        - Individual Personal Training  (by appointment, charged per hour, instructors have different rates) 
         - Detailed Info Drop-down (jQuery)
         - List of ALL products (categorized) - Side Bar (Filter/Navigation; list of all Categries @click takes to a section )
         
-    - Program Page (Schedule)        
-            - Scuedule Table for Classes
+#### Program Page (Schedule)       
+-   Scuedule Table for Classes
+-   Users can register directly into schedule
+-   Users can remove themselves from schedule 
 
-    - View Cart (user added items) 
+#### View Cart Page 
+-   display user added items
+-   user can remove/modify
+-   user can access item details
 
-    - Checkout ("confirm order"/"place order")
+#### Checkout Page ("confirm order"/"place order")
+-   Complete order: 
+-       prompt user to confirm        
+-       clears cart 
+-       modify user account history
+-       
+-   Cancel order: 
+-       clears cart)
 
 
-//Nice to Have
+### Nice to Have
     - User Dashboard (via 'mock' Login)
         - "Hello Bob! Here's our latest!" --> Featured Products ("Best Sellers") - Grid?) ("Personalized")
         - Access Cart (hard-code a couple items)
         - Access User History  (hard-code a few sessions and services)
         - Manage Account
 
-//Bluesky
+### Bluesky
         Provider Dashboard (via 'mock' Login)
         - "Hello Chad! Here's our latest!" --> Featured Products ("Best Sellers") - Grid?) ("Personalized")
         - Access Cart (hard-code a couple items)
@@ -83,36 +91,14 @@ Build Ecommerce Website - General Layout:
         - Filter Services by Providers (ordered by Rating)
         - Filter Services by Cateogry (Trainers, Nutritionists, Instructors)
 
-<!--  -->
-- Team roles
-    - PENDING
-    - Strengths 
-- Company name: "SHREDZ"
-
-- Site description and purpose (user base (personas), product type etc.)
-    - Description: Health & Wellness Hub 
-    - Purpose: Connect Health & Wellness Professionals with Customers, and faciliate Transactions direclty within the app  
-    - User base: General Users; Service Provider Users; Admins
-    - Product Type:  
 
 
-- Design (color palette, brand themes, font choices, design principles.)
-    - Health = Green
-    - Red = Hard Work
-    - Yellow = Nutrition
-    - Black/White/Grey = Minimalist 
+### Technologies to be used
+-   jQuery for Website Appearance Functionality 
+-   CSS/SASS for styling
 
 
-
-
-
-- Wireframes and prototypes (page layouts incorporating design concepts, user experience, navigation, e-commerce components etc.)
-
-
-- Technologies to be used. Will your group incorporate Bootstrap and jQuery?
-
-
-
+### Notes:
 - Research: take a look at other e-commerce sites; what components do they implement and why? Should you incorporate something similar? How would you go about doing so?
 
 - Create your group Github repository and add a "project" using the automated Kanban template. Add your prioritized "issues" to the project. These should include all of the above 
