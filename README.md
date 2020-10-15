@@ -1,18 +1,19 @@
 # SSD - FRONT END PROJECT
-GROUP 4 - "BoomShakaLaka"
-- Crystal Kim
-- Juhwan Moon
-- Russell Telen
-- Nusorn Krachangtoy
-- Vlad Preduna 
+## GROUP 4 - "BoomShakaLaka"
+- The Team: 
+    - Crystal Kim
+    - Juhwan Moon
+    - Russell Telen
+    - Nusorn Krachangtoy
+    - Vlad Preduna 
 
     Team roles/tasks as per Project Kanban
 
 - Company name: "SHREDZ"
-- Description: Health & Wellness Hub 
-- Purpose: Connect Health & Wellness Professionals with Customers, and faciliate Transactions direclty within the app  
-- User base: General Users; Service Provider Users; Admins
-- Product Type:  Fitness Program Membership, Services and Products
+    - Description: Health & Wellness Hub 
+    - Purpose: Connect Health & Wellness Professionals with Customers, and faciliate Transactions direclty within the app  
+    - User base: General Users; Service Provider Users; Admins
+    - Product Type:  Fitness Program Membership, Services and Products
 
 
 ## Use Case Diagram
@@ -20,7 +21,7 @@ Moqups URL: https://app.moqups.com/YyMjjcMyRD/view/page/a2643d858
 <br>
 <img src="assets\use_case_diagram\Shredz_UCD.JPG" width="600px">
   
-## Prototypes
+## Wireframe Prototype
 (Pending)
 
 
@@ -33,18 +34,18 @@ Moqups URL: https://app.moqups.com/YyMjjcMyRD/view/page/a2643d858
 - Intagram Promos (#Sweatyselfie)
 - Footer with general contact & Social media 
 
-#### About (Para - Mission) / "Meet our team!"
+#### About / "Meet our team!"
 - info page with Mission Statement 
 - Image Card for each team member
     
 #### Contact (Form)
--   Form
--   Map Location (embedded)
+-   User input form
+-   Contact info
+-   Map Location
 
 #### Log & Sign-up Page 
--   both on same page?
--   Sign-up initially hidden; slideToggle opens SignUp Form
-        
+-   Sign-up form initially hidden; jQuery slideToggle to open
+
 #### View Products & Services
 -   Categorized Lists (each category = section)
     Examples:
@@ -65,32 +66,37 @@ Moqups URL: https://app.moqups.com/YyMjjcMyRD/view/page/a2643d858
 
 #### Checkout Page ("confirm order"/"place order")
 -   Complete order: 
--       prompt user to confirm        
--       clears cart 
--       modify user account history
--       
+    -   prompt user to confirm        
+    -   clears cart 
+    -   modify user account history
+  
 -   Cancel order: 
--       clears cart)
+    -   clears cart)
 
 
 ### Nice to Have
-    - User Dashboard (via 'mock' Login)
-        - "Hello Bob! Here's our latest!" --> Featured Products ("Best Sellers") - Grid?) ("Personalized")
-        - Access Cart (hard-code a couple items)
-        - Access User History  (hard-code a few sessions and services)
-        - Manage Account
+- User Dashboard (via 'mock' Login)
+    - "Hello Bob! Here's our latest!" --> Featured Products ("Best Sellers") - Grid?) ("Personalized")
+    - Access Cart (hard-code a couple items)
+    - Access User History  (hard-code a few sessions and services)
+    - Manage Account
 
 ### Bluesky
-        Provider Dashboard (via 'mock' Login)
-        - "Hello Chad! Here's our latest!" --> Featured Products ("Best Sellers") - Grid?) ("Personalized")
-        - Access Cart (hard-code a couple items)
-        - Access User History  (hard-code a few sessions and services)
-        - Manage Account
-
-        Community Page
-        - Filter Services by Providers (ordered by Rating)
-        - Filter Services by Cateogry (Trainers, Nutritionists, Instructors)
-
+- Provider Dashboard (via 'mock' Login)
+    - "Hello Chad! Here's our latest!" --> Featured Products ("Best Sellers") - Grid?) ("Personalized")
+    - Access Cart (hard-code a couple items)
+    - Access User History  (hard-code a few sessions and services)
+    - Manage Account
+- Community Page
+    - Filter Services by Providers (ordered by Rating)
+    - Filter Services by Cateogry (Trainers, Nutritionists, Instructors)
+    - in-app Messaging between Users and Health Professionals
+- Library of Member Health Professional video content
+    - Tiered membership system (pay-wall system) 
+    - Video Streaming 
+    - Various forms of information sharing (routines, meal plans, etc.) 
+-  Excercise Routine App with direct input from Member Health Professionals 
+-  Excercise/Nutrition Logs, track metrics/progress
 
 
 ### Technologies to be used
