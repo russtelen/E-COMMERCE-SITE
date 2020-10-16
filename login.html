@@ -32,5 +32,15 @@
         </form>
       </div>
     </div>
+    <script src="js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("a").click(function (e) {
+          e.preventDefault();
+          $(".form").removeClass("active").addclass("noactive");
+          $(this).siblings().addClass("active").removeClass("noactive");
+        });
+      });
+    </script>
   </body>
 </html>
