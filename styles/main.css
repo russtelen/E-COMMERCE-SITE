@@ -1,1 +1,142 @@
 /* No CSS *//*# sourceMappingURL=main.css.map */
+
+
+#team_banner{
+    position: relative;
+    background-image: url(../images/team1.jpg);                                                               
+    height: 100vh;
+    background-size: cover;
+}
+
+.team-cover{
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.7);                                                                 
+   z-index:1;
+}
+
+#team_content{
+     position: absolute;
+     /*top:30%;
+     left:30%;
+     transform: translate(-50%, -50%)*/                                         margin: 100px;  
+     margin-top: -10px;
+                
+     /*font-size:5rem;*/
+     color: white;
+     z-index: 2;
+     text-align: center;
+}
+
+#team_title{
+    font-size: 6rem;
+}
+
+  
+  #team2 > h2 {
+    font-size: 3.5rem;
+  }
+  
+
+  #exercise1 {
+    display: flex;
+    padding: 5%;
+  }
+
+  #exercise1 > img {
+    width: 40%;
+    margin-right: 4%;
+  }
+  
+  #exercise1 p {
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+
+
+  #exercise2 {
+    display: flex;
+    padding: 5%;
+  }
+  
+  #exercise2 > img {
+    width: 40%;
+    margin-right: 4%;
+  }
+  
+  #exercise2 p {
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+
+
+  #exercise3  {
+    display: flex;
+    padding: 5%;
+  }
+  
+  #exercise3  > img {
+    width: 40%;
+    margin-right: 4%;
+  }
+  
+  #exercise3 p {
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+
+
+  #exercise4 {
+    display: flex;
+    padding: 5%;
+  }
+  
+  #exercise4 > img {
+    width: 40%;
+    margin-right: 4%;
+  }
+  
+  #exercise4 p {
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+
+
+
+  #exercise5 {
+    display: flex;
+    padding: 5%;
+  }
+  
+  #exercise5 > img {
+    width: 40%;
+    margin-right: 4%;
+  }
+  
+  #exercise5 p {
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+
+
+  #exercise6 {
+    display: flex;
+    padding: 5%;
+  }
+  
+  #exercise6 > img {
+    width: 40%;
+    margin-right: 4%;
+  }
+  
+  #exercise6 p {
+    line-height: 1.4;
+    text-align: justify;
+  }
+  
