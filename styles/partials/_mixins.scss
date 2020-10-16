@@ -11,17 +11,17 @@
 
 // FONT MIXINS //
 @mixin header($font-size, $line-height) {
-  font-family: "Bold";
+  font-family: "Roboto-Bold";
   font-size: $font-size;
   line-height: $line-height;
 }
 @mixin subheader($font-size, $line-height) {
-  font-family: "Demi";
+  font-family: "Roboto-Demi";
   font-size: $font-size;
   line-height: $line-height;
 }
 @mixin text($font-size, $line-height) {
-  font-family: "Regular";
+  font-family: "OpenSan-Regular";
   font-size: $font-size;
   line-height: $line-height;
 }
