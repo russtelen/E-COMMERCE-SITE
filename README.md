@@ -32,7 +32,7 @@ Moqups URL: https://app.moqups.com/YyMjjcMyRD/view/page/a2643d858
 
 ### Brand Color
 
-### Base colors
+#### Base colors
 
 <img src="color-palette/ color palette.png" alt="Highligting contents" />
 
@@ -42,7 +42,7 @@ Moqups URL: https://app.moqups.com/YyMjjcMyRD/view/page/a2643d858
 - Blackish - 242423 - 36, 36, 35
 - Dark Grey -333533 - 51, 53, 51
 
-### Highlight color
+#### Highlight color
 
 <img src="color-palette/green color.png" alt="Highligting contents"  />
    * Grey - 2d5931 - 45, 89, 49
