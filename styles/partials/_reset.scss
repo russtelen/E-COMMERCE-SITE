@@ -1,8 +1,7 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -93,7 +92,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-
+// HTML5 display-role reset for older browsers
 article,
 aside,
 details,
@@ -107,21 +106,17 @@ nav,
 section {
   display: block;
 }
-
 body {
   line-height: 1;
 }
-
 ol,
 ul {
   list-style: none;
 }
-
 blockquote,
 q {
   quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
@@ -129,29 +124,7 @@ q:after {
   content: "";
   content: none;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-.container {
-  margin: 0 auto;
-  max-width: 1440px;
-}
-
-@font-face {
-  font-family: "Roboto-Bold";
-  src: url("../assets/Fonts/Roboto/Roboto-Bold.otf");
-}
-
-@font-face {
-  font-family: "Roboto-Demi";
-  src: url("../assets/Fonts/Roboto/Roboto-Medium.otf");
-}
-
-@font-face {
-  font-family: "OpenSan-Regular";
-  src: url("../assets/Fonts/OpenSan/OpenSans-Regular.otf");
-}
-/*# sourceMappingURL=main.css.map */

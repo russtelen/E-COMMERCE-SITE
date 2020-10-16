@@ -1,0 +1,27 @@
+// MARGINS //
+@mixin offset {
+  margin: 0 1rem;
+  @include tablet {
+    margin: 0 1.5rem;
+  }
+  @include desktop {
+    margin: 0 11.25rem;
+  }
+}
+
+// FONT MIXINS //
+@mixin header($font-size, $line-height) {
+  font-family: "Roboto-Bold";
+  font-size: $font-size;
+  line-height: $line-height;
+}
+@mixin subheader($font-size, $line-height) {
+  font-family: "Roboto-Demi";
+  font-size: $font-size;
+  line-height: $line-height;
+}
+@mixin text($font-size, $line-height) {
+  font-family: "OpenSan-Regular";
+  font-size: $font-size;
+  line-height: $line-height;
+}
