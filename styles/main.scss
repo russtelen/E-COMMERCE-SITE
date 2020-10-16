@@ -4,3 +4,7 @@
 @import "./partials/mixins";
 @import "./partials/utility";
 @import "./partials/fonts";
+
+body {
+    @include text(20px, 20px)
+}
