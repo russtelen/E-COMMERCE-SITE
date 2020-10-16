@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="tab">
+        <a href="#" class="btn">Signin</a>
+        <form id="signIn" class="form active">
+          <label>Username</label>
+          <input type="text" placeholder="Enter username" />
+          <label>Password</label>
+          <input type="password" placeholder="Enter password" />
+          <input type="submit" value="Signin" />
+          <a href="#" class="forget">Forgot password?</a>
+        </form>
+      </div>
+
+      <div class="tab">
+        <a href="#" class="btn">Signup</a>
+        <form id="signup" class="form noactive">
+          <label>Full name</label>
+          <input type="text" placeholder="Enter your name" />
+          <label>Email</label>
+          <input type="email" placeholder="Enter your Email address" />
+          <labe>Password</labe>
+          <input type="password" palceholder="Choose password" />
+          <input type="submit" value="signup" />
+        </form>
+      </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("a").click(function (e) {
+          e.preventDefault();
+          $(".form").removeClass("active").addclass("noactive");
+          $(this).siblings().addClass("active").removeClass("noactive");
+        });
+      });
+    </script>
+  </body>
+</html>
