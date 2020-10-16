@@ -34,7 +34,7 @@ Moqups URL: https://app.moqups.com/YyMjjcMyRD/view/page/a2643d858
 
 #### Base colors
 
-<img src="color-palette/ color palette.png" alt="Highligting contents" />
+<img src="assets/color-palette/ color palette.png" alt="Highligting contents" />
 
 - Light blue - cfdbd5 - 207, 219, 213
 - Light grey - e8eddf - 232, 237, 223
@@ -44,7 +44,7 @@ Moqups URL: https://app.moqups.com/YyMjjcMyRD/view/page/a2643d858
 
 #### Highlight color
 
-<img src="color-palette/green color.png" alt="Highligting contents"  />
+<img src="assets/color-palette/green color.png" alt="Highligting contents"  />
    * Grey - 2d5931 - 45, 89, 49
 
 #### Landing Page:
