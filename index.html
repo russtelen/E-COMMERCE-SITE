@@ -1,9 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SHREDZ</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f0b9136e4d.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles/main.css">
+
   </head>
-  <body></body>
+  <body>
+     <!-- header -->
+      <header>
+        <!-- sample navbar (Replace this with Vlad's Navbar) -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top"> <!-- -->
+        
+          <!-- Logo = Link to Home -->
+          <a class="navbar-brand text-white" href="index.html"><img src="assets/logo/shredz_logo.svg" width="140px"></a>
+  
+          <!-- Hamburger Menu Toggle -->
+          <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <!-- Navbar Items (collapsable)-->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto justify-content-center">
+  
+              <li class="nav-item text-center">
+                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="#">Explore Prograns</a>
+              </li>
+              
+              <li class="nav-item text-center">
+                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="#">Meet Our Team</a>
+                </li>
+                
+              <li class="nav-item text-center">
+                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="#">Book Sessions</a>
+                </li>
+                
+              <li class="nav-item text-center">
+                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="#">Contact</a>
+                </li>
+  
+                <!-- Members seection in Navbar -
+                   Drop-down Menu for easy Log-in; Link to Registration Page -->
+              <li class="nav-item text-center dropdown align-items-center">
+                <a class="btn btn-outline-light dropdown-toggle border border-dark rounded mx-2 w-150" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Members
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div class="container">
+                  <form class="px-4 py-2">
+                    <div class="form-group">
+                      <label for="email" class="ml-0">Email address</label>
+                      <input type="email" class="form-control w-100" id="email" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="m-0">Password</label>
+                      <input type="password" class="form-control w-100" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <label class="form-check-label" for="dropdownCheck">
+                        Remember me
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Sign in</button>
+                  </form>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item w-100 text-center" href="#">Forgot password?</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item w-100 text-center" href="#">Sign-up</a>
+                  </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <label class="form-check-label" for="dropdownCheck">
+                        Remember me
+                      </label>
+                    </div>
+                  <button type="submit" class="btn btn-dark">Sign in</button>
+                </form>
+                <div class="dropdown-divider"></div>
+                  <a class="dropdown-item w-100 text-center" href="#">Forgot password?</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item w-100 text-center" href="#">Sign-up</a>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item text-center">
+              <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
+            </li>
+          </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+         </nav>
+        <!-- end navbar -->
+
+
+        <!-- banner (Add background image using CSS)-->
+        <div class="jumbotron">
+          <h1 class="display-4">COME GET SHREDDED WITH SHREDZ</h1>
+          <p class="lead">Begin your journey today</p>
+          <hr class="my-4">
+            <a class="btn btn-success btn-lg" href="#" role="button">Try a class for free</a>
+          </p>
+
+        </div>
+        <!-- end banner -->
+      </header>
+
+      <main>
+        <!-- START begin your journey section -->
+        <section class="landing-journey">
+          <!-- step 1 -->
+          <div  class="journies">
+            <i class="fas fa-user-plus"></i> <!-- make these icons larger-->
+            <h2>Step 1</h2> 
+            <h3>REGISTER</h3>
+          </div>
+
+           <!-- step 2 -->
+          <div class="journies">
+            <i class="far fa-calendar-alt"></i> <!-- make these icons larger-->
+            <h2>Step 2</h2> 
+            <h3>BOOK A CLASS</h3>
+          </div>
+
+           <!-- step 3 -->
+          <div class="journies"> <!-- make these icons larger-->
+            <i class="fas fa-dumbbell"></i>
+            <h2>Step 3</h2> 
+            <h3>GET SHREDDED</h3>
+          </div>
+        </section>
+        <!-- END begin your journey section -->
+
+
+        <!-- START our program section -->
+        <section class="landing-programs">
+          <!-- program 1 -->
+          <div class="programs">
+            <img src="" alt="">
+            <h4>Yoga</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perferendis dolor quos nostrum ipsum, illum expedita labore magnam unde quia officia deleniti. Rem ea cum provident tempora qui magni a?</p>
+            <button class="btn btn-info btn-sm">Learn More</button>
+          </div>
+          <!-- program 2 -->
+          <div class="programs">
+            <img src="" alt="">
+            <h4>Muay Thai</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perferendis dolor quos nostrum ipsum, illum expedita labore magnam unde quia officia deleniti. Rem ea cum provident tempora qui magni a?</p>
+            <button class="btn btn-info btn-sm">Learn More</button>
+          </div>
+          <!-- program 3 -->
+          <div class="programs">
+            <img src="" alt="">
+            <h4>Jiu Jitsu</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perferendis dolor quos nostrum ipsum, illum expedita labore magnam unde quia officia deleniti. Rem ea cum provident tempora qui magni a?</p>
+            <button class="btn btn-info btn-sm">Learn More</button>
+          </div>
+          <!-- program 4 -->
+          <div class="programs">
+            <img src="" alt="">
+            <h4>Zumba</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perferendis dolor quos nostrum ipsum, illum expedita labore magnam unde quia officia deleniti. Rem ea cum provident tempora qui magni a?</p>
+            <button class="btn btn-info btn-sm">Learn More</button>
+          </div>
+          <!-- program 5 -->
+          <div class="programs">
+            <img src="" alt="">
+            <h4>HIIT Cardio</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perferendis dolor quos nostrum ipsum, illum expedita labore magnam unde quia officia deleniti. Rem ea cum provident tempora qui magni a?</p>
+            <button class="btn btn-info btn-sm">Learn More</button>
+          </div>
+          <!-- program 6 -->
+          <div class="programs">
+            <img src="" alt="">
+            <h4>Females Only</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In perferendis dolor quos nostrum ipsum, illum expedita labore magnam unde quia officia deleniti. Rem ea cum provident tempora qui magni a?</p>
+            <button class="btn btn-info btn-sm">Learn More</button>
+          </div>
+        </section>
+        <!-- END our program section -->
+
+
+
+
+
+      </main>
+
+
+
+`
+
+
+
+
+
+
+
+
+    
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="https://kit.fontawesome.com/001a8c6911.js" crossorigin="anonymous"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
 </html>
+
