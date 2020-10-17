@@ -137,7 +137,7 @@ table {
 
 .container {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1024px;
 }
 
 @font-face {
@@ -185,7 +185,7 @@ body main .landing__title {
   text-align: center;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   body main .landing__title {
     font-family: "Roboto-Bold";
     font-size: 36px;
@@ -208,7 +208,7 @@ body main .landing__title {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   body main .landing__journies {
     height: 500px;
   }
@@ -281,10 +281,10 @@ body main .landing__program-img {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   body main .landing__program-img {
-    width: 1000px;
-    height: 1000px;
+    width: 250px;
+    height: 250px;
   }
 }
 
