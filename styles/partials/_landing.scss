@@ -13,9 +13,25 @@ main {
     @include wrapper;
 
    .landing {
-       &__journies-title {
+       &__title {
         @include header(23px, 32px);
+        @include space-out;
         text-align: center;
+
+        @include desktop {
+            @include header(36px,44px);
+        }
+       }
+
+       &__journies {
+            @include tablet {
+                @include flex-center-horiz;
+            }
+
+            @include desktop {
+                height: 500px;
+            }
+
        }
 
        &__journey {
@@ -45,8 +61,29 @@ main {
            width: 250px;
            height: 250px;
            border-radius: 10%;
+
+           @include tablet {
+               width: 150px;
+               height: 150px;
+           }
+
+           @include desktop {
+                width: 400px;
+                height: 400px;
+           }
        }
-   
+
+       &__program-row1 {
+           @include tablet {
+            @include flex-center-horiz;
+           }
+       }
+
+       &__program-row2 {
+        @include tablet {
+         @include flex-center-horiz;
+        }
+    }
 
    }
 
