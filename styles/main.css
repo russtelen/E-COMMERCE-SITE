@@ -164,6 +164,7 @@ body {
 body .jumbotron {
   background-image: url("../../images/landing/landing-banner.jpg");
   background-size: cover;
+  height: 500px;
 }
 
 body .jumbotron h1, body .jumbotron p {
@@ -282,8 +283,8 @@ body main .landing__program-img {
 
 @media (min-width: 1440px) {
   body main .landing__program-img {
-    width: 400px;
-    height: 400px;
+    width: 1000px;
+    height: 1000px;
   }
 }
 
