@@ -31,6 +31,21 @@ main {
            @include subheader(14px, 22px)
        }
 
+       &__program {
+            @include flex-center-column;
+            @include space-out;
+            border-bottom: 1px solid gray;
+
+            button {
+                @include space-out;
+            }
+       }
+
+       &__program-img {
+           width: 250px;
+           height: 250px;
+           border-radius: 10%;
+       }
    
 
    }

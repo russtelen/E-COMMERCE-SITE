@@ -211,4 +211,34 @@ body main .landing__text-subheader {
   font-size: 14px;
   line-height: 22px;
 }
+
+body main .landing__program {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+body main .landing__program button {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+body main .landing__program-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10%;
+}
 /*# sourceMappingURL=main.css.map */
