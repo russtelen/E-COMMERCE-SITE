@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after {
@@ -155,11 +154,4 @@ table {
   font-family: "OpenSan-Regular";
   src: url("../assets/Fonts/OpenSan/OpenSans-Regular.otf");
 }
-
-body {
-  font-family: "OpenSan-Regular";
-  font-size: 20px;
-  line-height: 20px;
-}
 /*# sourceMappingURL=main.css.map */
-
