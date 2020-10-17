@@ -154,8 +154,6 @@ table {
   font-family: "OpenSan-Regular";
   src: url("../assets/Fonts/OpenSan/OpenSans-Regular.otf");
 }
-<<<<<<< HEAD
-=======
 
 body {
   font-family: "OpenSan-Regular";
@@ -319,5 +317,4 @@ body main .landing__program-img {
             flex-direction: row;
   }
 }
->>>>>>> 07745b6dfd530f59a15767d31cc51db2d7bf0bac
 /*# sourceMappingURL=main.css.map */
