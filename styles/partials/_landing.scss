@@ -1,0 +1,34 @@
+body {
+@include text(1rem, 1rem);
+
+.jumbotron {
+    background-image: url("../../images/landing/landing-banner.jpg");
+    background-size: cover;
+    h1, p{
+        color: white;
+    }
+}
+
+main {
+    @include wrapper;
+
+   .landing {
+       &__journey {
+           @include space-out;
+           @include flex-center-column;
+       }
+    // &__journies{
+    //     @include flex-center-horiz;
+    // }
+   
+
+   }
+
+    
+
+}
+
+
+
+
+}

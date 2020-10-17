@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after {
@@ -158,8 +157,39 @@ table {
 
 body {
   font-family: "OpenSan-Regular";
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+body .jumbotron {
+  background-image: url("../../images/landing/landing-banner.jpg");
+  background-size: cover;
+}
+
+body .jumbotron h1, body .jumbotron p {
+  color: white;
+}
+
+body main {
+  margin: 0 auto;
+  width: 80%;
+}
+
+body main .landing__journey {
+  margin: 1rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=main.css.map */
-
