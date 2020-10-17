@@ -13,13 +13,24 @@ main {
     @include wrapper;
 
    .landing {
+       &__journies-title {
+        @include header(23px, 32px);
+        text-align: center;
+       }
+
        &__journey {
            @include space-out;
            @include flex-center-column;
        }
-    // &__journies{
-    //     @include flex-center-horiz;
-    // }
+
+       &__text-header{
+           @include header(24px, 32px)
+       }
+
+       &__text-subheader{
+           @include subheader(14px, 22px)
+       }
+
    
 
    }

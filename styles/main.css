@@ -175,6 +175,13 @@ body main {
   width: 80%;
 }
 
+body main .landing__journies-title {
+  font-family: "Roboto-Bold";
+  font-size: 23px;
+  line-height: 32px;
+  text-align: center;
+}
+
 body main .landing__journey {
   margin: 1rem;
   padding: 1rem;
@@ -191,5 +198,17 @@ body main .landing__journey {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+body main .landing__text-header {
+  font-family: "Roboto-Bold";
+  font-size: 24px;
+  line-height: 32px;
+}
+
+body main .landing__text-subheader {
+  font-family: "Roboto-Demi";
+  font-size: 14px;
+  line-height: 22px;
 }
 /*# sourceMappingURL=main.css.map */
