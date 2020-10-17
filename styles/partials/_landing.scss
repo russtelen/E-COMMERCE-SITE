@@ -1,0 +1,98 @@
+body {
+@include text(1rem, 1rem);
+
+.jumbotron {
+    background-image: url("../../images/landing/landing-banner.jpg");
+    background-size: cover;
+    h1, p{
+        color: white;
+    }
+    height: 500px;
+}
+
+main {
+    @include wrapper;
+
+   .landing {
+       &__title {
+        @include header(23px, 32px);
+        @include space-out;
+        text-align: center;
+
+        @include desktop {
+            @include header(36px,44px);
+        }
+       }
+
+       &__journies {
+            @include tablet {
+                @include flex-center-horiz;
+            }
+
+            @include desktop {
+                height: 350px;
+            }
+
+       }
+
+       &__journey {
+           @include space-out;
+           @include flex-center-column;
+       }
+
+       &__text-header{
+           @include header(24px, 32px)
+       }
+
+       &__text-subheader{
+           @include subheader(14px, 22px)
+       }
+
+       &__program {
+            @include flex-center-column;
+            @include space-out;
+            border-bottom: 1px solid gray;
+
+            button {
+                @include space-out;
+            }
+       }
+
+       &__program-img {
+           width: 250px;
+           height: 250px;
+           border-radius: 10%;
+
+           @include tablet {
+               width: 150px;
+               height: 150px;
+           }
+
+           @include desktop {
+                width: 250px;
+                height: 250px;
+           }
+       }
+
+       &__program-row1 {
+           @include tablet {
+            @include flex-center-horiz;
+           }
+       }
+
+       &__program-row2 {
+        @include tablet {
+         @include flex-center-horiz;
+        }
+    }
+
+   }
+
+    
+
+}
+
+
+
+
+}
