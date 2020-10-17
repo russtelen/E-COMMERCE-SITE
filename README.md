@@ -25,8 +25,20 @@ Moqups URL: https://app.moqups.com/YyMjjcMyRD/view/page/a2643d858
 <img src="assets\use_case_diagram\Shredz_UCD.JPG" width="600px">
 
 ## Wireframe Prototype
-
-(Pending)
+<br>
+<div style="display: flex;">
+  <div style="width: 32%;">
+    <img src="assets\wireframe_prototype\page1_landing.jpg" alt="landing page">
+  </div>
+  <div style="width: 64%;">
+    <img src="assets\wireframe_prototype\page2_programs.jpg" alt="programs page" height="300px">
+    <img src="assets\wireframe_prototype\page3_team.jpg" alt="team page" height="300px">
+    <img src="assets\wireframe_prototype\page5_cart_and_checkout.jpg" alt="cart and checkout page" height="300px">
+    <img src="assets\wireframe_prototype\page6_contact.jpg" alt="contact page" height="300px">
+    <img src="assets\wireframe_prototype\page7_register.jpg" alt="register page" height="300px">
+  </div>
+</div>
+<img src="assets\wireframe_prototype\page4_schedule.jpg" alt="schedule page" height="300px">
 
 ## General Layout
 
@@ -34,7 +46,7 @@ Moqups URL: https://app.moqups.com/YyMjjcMyRD/view/page/a2643d858
 
 #### Base colors
 
-<img src="assets/color-palette/ color palette.png" alt="Highligting contents" />
+<img src="assets/color-palette/ color palette.png" alt="Highligting contents">
 
 - Light blue - cfdbd5 - 207, 219, 213
 - Light grey - e8eddf - 232, 237, 223
