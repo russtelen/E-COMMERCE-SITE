@@ -210,7 +210,7 @@ body main .landing__title {
 
 @media (min-width: 1024px) {
   body main .landing__journies {
-    height: 500px;
+    height: 350px;
   }
 }
 
