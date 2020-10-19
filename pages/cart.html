@@ -80,53 +80,64 @@
     </header>
 
     <main>
-        <h2>Your Cart</h2>
-
         <!-- Cart Items - populated crom JS -->
-        <section class="cart-items">
-                                            <!-- Item 1 -->
-            <div class="card-item">
-                <div class="card-info">
-                    <a href="#"><label class="card-title">Muay Thai</label></a>
-                    <label class="card-item-date">Date: Oct 30, 2020</label>
-                    <label class="card-item-time">Time: 9:00am - 11:00am</label>
-                    <label class="card-item-instructor">Instructor: Russ Telen</label>
+        <section class="cart">
+           <h2>Your Cart</h2>
+                      <!-- Item 1 -->
+            <div class="cart-item">
+                <div class="cart-item__info">
+                    <a href="#"><label class="card-item__title">Muay Thai</label></a>
+                    <label class="cart-item__date">Date: Oct 30, 2020</label>
+                    <label class="cart-item__time">Time: 9:00am - 11:00am</label>
+                    <label class="cart-item__instructor">Instructor: Russ Telen</label>
                 </div>
-
-                <div class="card-image">
-                    <a href="#"><img src="#" alt="muay_thai"></a>
+                            <!--  -->
+                <div class="cart-item__image" id="img1">
+                    <a href="#">
+                      <!-- <img src="#" alt="muay_thai"> -->
+                    </a>
                 </div>
-
-                <div class="card-functions">
-                    <div class="card-remove-function">
-                        <button class="card-remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
+                            <!--  -->
+                <div class="cart-item__functions">
+                    <div class="cart-item__remove">
+                        <button class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
                     </div>
-                    <div class="card-item-price">
-                      $15.00
-                  </div>
+                    <!-- QTY -->
+                    <div class="cart-item__amount">
+                      <input class="cart-item__quantity" type="number" value="1">
+                      <i class="fas fa-times fa-sm"></i>
+                      <label class="cart-item__price">$15.00</label>
+                    <!-- PRICE -->
+                    </div>
+                    <span class="cart-item__item-total"></span>
                 </div>
             </div>
                                             <!-- Item 2 -->
-            <div class="card-item">
+            <div class="cart-item">
                 <!-- INFO -->
-              <div class="card-info">
-                    <label class="card-item__title">Yoga</label>
-                    <label class="card_item__date">Date: Dec 15, 2020</label>
-                    <label class="card-item__time">Time: 3:00pm - 4:00pm</label>
-                    <label class="card-item__instructor">Instructor: Crystal Kim</label>
-                    <label class="card-item-price">Instructor: Crystal Kim</label>
+              <div class="cart-item__info">
+                    <label class="cart-item__title">Yoga</label>
+                    <label class="cart_item__date">Date: Dec 15, 2020</label>
+                    <label class="cart-item__time">Time: 3:00pm - 4:00pm</label>
+                    <label class="cart-item__instructor">Instructor: Crystal Kim</label>
                 </div>
                     <!-- IMAGE -->
-                <div class="card-image">
-                    <a href="#"><img src="#" alt="yoga"></a>
+                <div class="cart-item__image" id="img2">
+                    <!-- <a href="#"><img src="#" alt="yoga"></a> -->
                 </div>
-                <div class="card-functions">
+                <div class="cart-item__functions">
                     <!-- REMOVE ITEM -->
-                  <div class="card-remove-function">
-                      <button class="card-remove-button"><i class="far fa-trash-alt"></i> Remove</button>
+                    <div class="cart-item_remove">
+                      <button class="cart-item__remove-button"><i class="far fa-trash-alt"></i> Remove</button>
                     </div>
+                    <!-- QTY -->
+                    <div class="cart-item__amount">
+                      <input class="cart-item__quantity" type="number" value="1">
+                      <i class="fas fa-times fa-sm"></i>
+                      <label class="cart-item__price">$15.00</label>
                     <!-- PRICE -->
-                    <div class="card-item-price">
+                    </div>
+                    <div class="cart-item__item-total">
                         $15.00
                     </div>
                 </div>
@@ -135,35 +146,41 @@
 
         <!--  Cart Summary - updated based on items, in JS-->
         <section class="cart-summary">
-            <div class="cart-subtotal">
-                <label for="subtotal">Subtotal: <span class="js_subtotal"></span> </label>
+            
+            <div class="cart-summary__item">
+              <label for="cart-summary__count">Item count: <span class="js_subtotal"></span> </label>
+            </div>
+          
+            <div class="cart-summary__item">
+                <label for="cart-summary__subtotal">Subtotal: <span class="js_subtotal"></span> </label>
             </div>
             <!-- CHECKOUT -->
-            <button class="checkout-button" id="checkout" type="button">Checkout</button>
+            <div class="cart-summary__item">
+              <button class="cart-summary__checkout-button" id="checkout" type="button">
+                Checkout
+              </button>
+            </div>
         </section>
 
         <!-- Cart Checkout -->
         <section class="checkout">
-            <div class="checkout-login">
-                <div class="checkout-login-input">
-                    <label for="email">Email address</label>
-                    <input type="email" id="email" placeholder="email@example.com">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="password">
-                </div>
-                <div class="checkout-login-remember">
-                    <input id="checkout-rememberme" type="checkbox">
-                    <label id="checkout-rememberme-label">Remember me</label>    
-                </div>
-                <div class="checkout-buttons">
-                    <a href="#"><button class="button" id="login" type="button">Log-in</button></a>
-                    <a href="#"><button class="button" id="register" type="button">Register</button></a>
-                </div>
+          <h2>Checkout</h2>
+          <div class="checkout__login">
+              <label for="email">Email address</label>
+              <input type="email" id="email" placeholder="email@example.com">
+              <label for="password">Password</label>
+              <input type="password" id="password" placeholder="password">
+              <div class="checkout__login-remember">
+                <input id="checkout-rememberme" type="checkbox">
+                <label id="checkout-rememberme-label">Remember me</label>
+              </div>
             </div>
+          <div class="checkout__buttons">
+              <a href="#"><button class="button" id="login" type="button">Log-in</button></a>
+              <a href="login.html"><button class="button" id="register" type="button">Register</button></a>
+          </div>
         </section>
-
     </main>
-
 
 
     <!-- Fontawesome -->
@@ -174,6 +191,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../scripts/cart.js"></script>
-    <script src="../scripts/scripts.js"></script>
+    <!-- <script src="../scripts/scripts.js"></script> -->
   </body>
 </html>
