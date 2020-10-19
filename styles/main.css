@@ -176,12 +176,12 @@ body .jumbotron h1, body .jumbotron p {
   color: white;
 }
 
-body main {
+body .landing {
   margin: 0 auto;
   width: 80%;
 }
 
-body main .landing__title {
+body .landing__title {
   font-family: "Roboto-Bold";
   font-size: 23px;
   line-height: 32px;
@@ -192,7 +192,7 @@ body main .landing__title {
 }
 
 @media (min-width: 1024px) {
-  body main .landing__title {
+  body .landing__title {
     font-family: "Roboto-Bold";
     font-size: 36px;
     line-height: 44px;
@@ -200,7 +200,7 @@ body main .landing__title {
 }
 
 @media (min-width: 768px) {
-  body main .landing__journies {
+  body .landing__journies {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -215,12 +215,12 @@ body main .landing__title {
 }
 
 @media (min-width: 1024px) {
-  body main .landing__journies {
+  body .landing__journies {
     height: 350px;
   }
 }
 
-body main .landing__journey {
+body .landing__journey {
   margin: 1rem;
   padding: 1rem;
   display: -webkit-box;
@@ -238,19 +238,19 @@ body main .landing__journey {
           flex-direction: column;
 }
 
-body main .landing__text-header {
+body .landing__text-header {
   font-family: "Roboto-Bold";
   font-size: 19px;
   line-height: 32px;
 }
 
-body main .landing__text-subheader {
+body .landing__text-subheader {
   font-family: "Roboto-Demi";
   font-size: 14px;
   line-height: 22px;
 }
 
-body main .landing__program {
+body .landing__program {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,33 +269,33 @@ body main .landing__program {
   border-bottom: 1px solid gray;
 }
 
-body main .landing__program button {
+body .landing__program button {
   margin: 1rem;
   padding: 1rem;
 }
 
-body main .landing__program-img {
+body .landing__program-img {
   width: 250px;
   height: 250px;
   border-radius: 10%;
 }
 
 @media (min-width: 768px) {
-  body main .landing__program-img {
+  body .landing__program-img {
     width: 150px;
     height: 150px;
   }
 }
 
 @media (min-width: 1024px) {
-  body main .landing__program-img {
+  body .landing__program-img {
     width: 250px;
     height: 250px;
   }
 }
 
 @media (min-width: 768px) {
-  body main .landing__program-row1 {
+  body .landing__program-row1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -310,7 +310,7 @@ body main .landing__program-img {
 }
 
 @media (min-width: 768px) {
-  body main .landing__program-row2 {
+  body .landing__program-row2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -381,9 +381,48 @@ h2 {
   margin: 2%;
 }
 
-.contact__info-details {
+.contact {
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    width: 50%;
+  }
+}
+
+.contact__info {
   margin: 1rem;
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .contact__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.contact__info-details p {
+  font-family: "OpenSan-Regular";
+  font-size: 25px;
+  line-height: 25px;
 }
 
 .contact__map {
@@ -410,6 +449,13 @@ h2 {
   }
 }
 
+@media (min-width: 1024px) {
+  .contact__mapframe {
+    height: 600px;
+    width: 1000px;
+  }
+}
+
 .contact__mapouter {
   position: relative;
   text-align: right;
@@ -424,6 +470,13 @@ h2 {
   }
 }
 
+@media (min-width: 1024px) {
+  .contact__mapouter {
+    height: 600px;
+    width: 1000px;
+  }
+}
+
 .contact__gmap_canvas {
   overflow: hidden;
   background: none !important;
@@ -435,6 +488,13 @@ h2 {
   .contact__gmap_canvas {
     height: 400px;
     width: 600px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact__gmap_canvas {
+    height: 600px;
+    width: 1000px;
   }
 }
 /*# sourceMappingURL=main.css.map */

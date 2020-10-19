@@ -1,7 +1,25 @@
 .contact {
-    &__info-details {
-        @include space-out
+    @include wrapper;
+    @include desktop {
+        width: 50%
     }
+    
+    &__info {
+        @include space-out;
+        @include flex-column;
+
+        @include desktop {
+            @include flex-center-horiz;
+           
+        }
+    }
+
+    &__info-details {
+        p {
+            @include text(25px, 25px)
+        }
+    }
+
     &__map {
         @include flex-center;
     }
@@ -13,6 +31,11 @@
         @include tablet {
             height: 400px;
             width: 600px;
+        }
+
+        @include desktop {
+            height: 600px;
+            width: 1000px;
         }
     }
 
@@ -26,6 +49,11 @@
             height: 400px;
             width: 600px;
         }
+
+        @include desktop {
+            height: 600px;
+            width: 1000px;
+        }
     }
 
     &__gmap_canvas {
@@ -37,6 +65,11 @@
         @include tablet {
             height: 400px;
             width: 600px;
+        }
+
+        @include desktop {
+            height: 600px;
+            width: 1000px;
         }
     }
    
