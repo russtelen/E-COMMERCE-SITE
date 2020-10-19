@@ -1,6 +1,9 @@
 body {
 @include text(1rem, 1rem);
 
+.slick-prev:before, .slick-next:before  {
+    color: black;
+}
 .jumbotron {
     background-image: url("../../images/landing/landing-banner.jpg");
     background-size: cover;
@@ -19,6 +22,7 @@ main {
         @include header(23px, 32px);
         @include space-out;
         text-align: center;
+        text-transform: uppercase;
 
         @include desktop {
             @include header(36px,44px);
@@ -82,12 +86,11 @@ main {
        }
 
        &__program-row2 {
-        @include tablet {
-         @include flex-center-horiz;
+            @include tablet {
+            @include flex-center-horiz;
+            }
         }
-    }
-
-   }
+  }
 
 }
 

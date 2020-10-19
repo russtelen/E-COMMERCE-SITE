@@ -161,6 +161,10 @@ body {
   line-height: 1rem;
 }
 
+body .slick-prev:before, body .slick-next:before {
+  color: black;
+}
+
 body .jumbotron {
   background-image: url("../../images/landing/landing-banner.jpg");
   background-size: cover;
@@ -184,6 +188,7 @@ body main .landing__title {
   margin: 1rem;
   padding: 1rem;
   text-align: center;
+  text-transform: uppercase;
 }
 
 @media (min-width: 1024px) {
