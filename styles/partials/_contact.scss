@@ -1,0 +1,34 @@
+.contact {
+    &__info-details {
+        @include space-out
+    }
+    &__map {
+        @include flex-center;
+    }
+
+    &__mapframe{
+        height:300px;width:200px;
+    }
+
+    &__mapouter {
+        position:relative;text-align:right;height:300px;width:200px;
+    }
+
+    &__gmap_canvas {
+        overflow:hidden;background:none!important;height:300px;width:200px;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

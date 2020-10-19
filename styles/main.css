@@ -380,4 +380,40 @@ h2 {
           flex-direction: column;
   margin: 2%;
 }
+
+.contact__info-details {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.contact__map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact__mapframe {
+  height: 300px;
+  width: 200px;
+}
+
+.contact__mapouter {
+  position: relative;
+  text-align: right;
+  height: 300px;
+  width: 200px;
+}
+
+.contact__gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 300px;
+  width: 200px;
+}
 /*# sourceMappingURL=main.css.map */
