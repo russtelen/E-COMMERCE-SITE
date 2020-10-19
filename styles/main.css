@@ -317,4 +317,135 @@ body main .landing__program-img {
             flex-direction: row;
   }
 }
+
+body {
+  background: #cfdbd5;
+  height: 100vh;
+}
+
+.login__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login__contatiner {
+  position: relative;
+  background: white;
+  height: 400px;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 5px 5px 20px 20px;
+  overflow: hidden;
+}
+
+.login__tab {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.login__tab a.btn {
+  text-align: center;
+  background: #2d5931;
+  color: white;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.login__tab a.btn:hover {
+  background: #1c371e;
+}
+
+.login__tab:first-child a.btn {
+  background: yellow;
+}
+
+.login__tab:first-child a.btn:hover {
+  background: #f2bc2c;
+}
+
+.signIn {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+}
+
+.signIn input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0px 10px 0px;
+}
+
+.signIn input[type="submit"] {
+  background: #e8eddf;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.signIn input[type="submit"]:hover {
+  background: #d1dbbe;
+  cursor: pointer;
+}
+
+.signIn #signUp {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.signIn #signUp input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0px 10px 0px;
+}
+
+.signIn #signUp input[type="submit"] {
+  background: #e8eddf;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.signIn #signUp input[type="submit"]:hover {
+  background: #d1dbbe;
+  cursor: pointer;
+}
+
+.signIn .active {
+  display: block;
+}
+
+.signIn .noactive {
+  display: none;
+}
+
+.signIn__forget {
+  background: none;
+  color: #242423;
+  text-align: left;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.signIn__forget:hover {
+  color: black;
+}
 /*# sourceMappingURL=main.css.map */
