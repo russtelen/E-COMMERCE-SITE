@@ -403,6 +403,13 @@ h2 {
   width: 200px;
 }
 
+@media (min-width: 768px) {
+  .contact__mapframe {
+    height: 400px;
+    width: 600px;
+  }
+}
+
 .contact__mapouter {
   position: relative;
   text-align: right;
@@ -410,10 +417,24 @@ h2 {
   width: 200px;
 }
 
+@media (min-width: 768px) {
+  .contact__mapouter {
+    height: 400px;
+    width: 600px;
+  }
+}
+
 .contact__gmap_canvas {
   overflow: hidden;
   background: none !important;
   height: 300px;
   width: 200px;
+}
+
+@media (min-width: 768px) {
+  .contact__gmap_canvas {
+    height: 400px;
+    width: 600px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
