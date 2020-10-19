@@ -23,6 +23,9 @@ function ready(){
 
 function updateCartTotal(){
     var cartItemContainer = document.getElementsByClassName('')
+
+
+
 }
 
 
