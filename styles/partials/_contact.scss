@@ -21,6 +21,7 @@
     }
 
     &__map {
+        @include space-out;
         @include flex-center;
     }
 

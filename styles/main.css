@@ -426,6 +426,8 @@ h2 {
 }
 
 .contact__map {
+  margin: 1rem;
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
