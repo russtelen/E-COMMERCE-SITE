@@ -1,174 +1,42 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box; }
+/*
+Error: Invalid CSS after ".../partials/cart"": expected "{", was ";"
+        on line 8 of C:\Users\vladmeistr\Desktop\BCIT-SSD\Frontend_Project\front-end-project-boomshakalaka\styles\main.scss
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+3: @import "./partials/breakpoints";
+4: @import "./partials/mixins";
+5: @import "./partials/utility";
+6: @import "./partials/fonts";
+7: <<<<<<< HEAD
+8: @import "./partials/cart";
+9: =======
+10: 
+11: // Schedule page //
+12: @import "./partials/schedule";
+13: @import "./partials/landing";
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol,
-ul {
-  list-style: none; }
-
-blockquote,
-q {
-  quotes: none; }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-.container {
-  margin: 0 auto;
-  max-width: 1440px; }
-
-@font-face {
-  font-family: "Roboto-Bold";
-  src: url("../assets/Fonts/Roboto/Roboto-Bold.otf"); }
-@font-face {
-  font-family: "Roboto-Demi";
-  src: url("../assets/Fonts/Roboto/Roboto-Medium.otf"); }
-@font-face {
-  font-family: "OpenSan-Regular";
-  src: url("../assets/Fonts/OpenSan/OpenSans-Regular.otf"); }
-h2 {
-  margin: 5%;
-  font-size: 26px;
-  font-family: "Roboto-Bold"; }
-
-.card-item {
-  display: grid;
-  grid-template-columns: 40% auto 15%;
-  grid-template-areas: "left center right";
-  justify-content: space-between;
-  background-color: #cfdbd5;
-  background: linear-gradient(135deg, white 2%, #cfdbd5);
-  margin: 2%;
-  box-shadow: 2px 2px 2px black; }
-
-.card-info {
-  display: flex;
-  flex-direction: column;
-  justify-items: left; }
-
-.card-functions {
-  justify-self: end; }
-
-.card-item-price {
-  justify-self: bottom; }
-
-.cart-summary {
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  margin: 2%; }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+C:\Users\vladmeistr\Desktop\BCIT-SSD\Frontend_Project\front-end-project-boomshakalaka\styles\main.scss:8
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1203:in `tok!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:677:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:670:in `ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \".../partials/cart\"\": expected \"{\", was \";\"\A         on line 8 of C:\Users\vladmeistr\Desktop\BCIT-SSD\Frontend_Project\front-end-project-boomshakalaka\styles\main.scss\A \A 3: @import \"./partials/breakpoints\";\A 4: @import \"./partials/mixins\";\A 5: @import \"./partials/utility\";\A 6: @import \"./partials/fonts\";\A 7: <<<<<<< HEAD\A 8: @import \"./partials/cart\";\A 9: =======\A 10: \A 11: // Schedule page //\A 12: @import \"./partials/schedule\";\A 13: @import \"./partials/landing\";"; }
