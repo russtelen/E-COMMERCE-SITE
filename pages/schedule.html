@@ -9,7 +9,8 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f0b9136e4d.js" crossorigin="anonymous"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/fullcalendar-scheduler/main.css" />
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- <link rel="stylesheet" href="../assets/fullcalendar-scheduler/lib/fullcalendar.css" /> -->
     <title>SHREDZ - Schedule</title>
   </head>
   <body>
@@ -32,7 +33,7 @@
             <ul class="navbar-nav mr-auto justify-content-center">
       
               <li class="nav-item text-center">
-                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="#">Explore Prograns</a>
+                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="#">Explore Programs</a>
               </li>
       
               <li class="nav-item text-center">
@@ -106,10 +107,31 @@
         <!-- end navbar -->
     </header>
     <!-- Calendar -->
-    <div id="calendar"></div>
+    <div class="calendar">
+    <div class="calendar__wrapper">
+      <div class="calendar__sidebar">
+        <h2 class="calendar__text">SHREDZ SCHEDULE</h2>
+        <p class="calendar__text calendar__text--para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim dolores harum velit ducimus saepe iste tempora vel earum reprehenderit nihil sint qui, laudantium ab modi sed ratione quam? Pariatur, natus?</p>
+        <div class="calendar__filter-wrapper">
+          <div class="calendar__filter-item">
+            <button class="calendar__filter-btn">Yoga</button>
+            <button class="calendar__filter-btn">Muay Thai</button>
+            <button class="calendar__filter-btn">Ju Jitsu</button>
+            <button class="calendar__filter-btn">program 4</button>
+            <button class="calendar__filter-btn">program 5</button>
+            <button class="calendar__filter-btn">program 6</button>
+        
+          </div>
+        </div>
+      </div>
+      <div id="calendar" class="calendar-wrapper fc-media-screen" style="height: 420px"></div>
+    </div>
+    </div>
+    <!-- End of Calendar -->
+
 
     <!-- JS script -->
-    <script src="../assets/fullcalendar-scheduler/main.js"></script>
+    <script src="../assets/fullcalendar-scheduler/lib/main.js"></script>
     <script src="../scripts/scripts.js"></script>
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/001a8c6911.js" crossorigin="anonymous"></script>

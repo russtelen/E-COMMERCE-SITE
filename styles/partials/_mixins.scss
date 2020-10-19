@@ -25,3 +25,53 @@
   font-size: $font-size;
   line-height: $line-height;
 }
+
+
+// LAYOUT MIXINS //
+@mixin space-out {
+  margin: $margins;
+  padding: $padding;
+}
+
+@mixin wrapper {
+  margin: 0 auto;
+  width: 80%; 
+}
+
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+  }
+
+@mixin flex-center-vert {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@mixin flex-center-horiz {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
