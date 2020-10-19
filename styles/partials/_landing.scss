@@ -1,23 +1,26 @@
 body {
 @include text(1rem, 1rem);
 
+.slick-prev:before, .slick-next:before  {
+    color: black;
+}
 .jumbotron {
     background-image: url("../../images/landing/landing-banner.jpg");
     background-size: cover;
+    background-position: center;
     h1, p{
         color: white;
     }
     height: 500px;
 }
-
-main {
-    @include wrapper;
-
    .landing {
+        @include wrapper;
+
        &__title {
         @include header(23px, 32px);
         @include space-out;
         text-align: center;
+        text-transform: uppercase;
 
         @include desktop {
             @include header(36px,44px);
@@ -41,7 +44,7 @@ main {
        }
 
        &__text-header{
-           @include header(24px, 32px)
+           @include header(19px, 32px)
        }
 
        &__text-subheader{
@@ -81,18 +84,12 @@ main {
        }
 
        &__program-row2 {
-        @include tablet {
-         @include flex-center-horiz;
+            @include tablet {
+            @include flex-center-horiz;
+            }
         }
-    }
-
-   }
-
-    
+  }
 
 }
 
 
-
-
-}
