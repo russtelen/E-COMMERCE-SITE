@@ -12,6 +12,12 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f0b9136e4d.js" crossorigin="anonymous"></script>
 
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="styles/main.css">
 
   </head>
@@ -94,7 +100,7 @@
         <div class="jumbotron">
           <h1 class="display-4">COME GET SHREDDED WITH SHREDZ</h1>
           <p class="lead">Begin your journey today</p>
-          <hr class="my-4">
+          <br>
             <a class="btn btn-info btn-lg" href="#" role="button">Try a class for free</a>
           </p>
         </div>
@@ -104,7 +110,8 @@
 
       <!-- main section STARTS here (wrap this in a container) -->
       <main>
-        <!-- START begin your journey section -->
+        <div class="landing">
+          <!-- START begin your journey section -->
         
         <p class="landing__title">BEGIN YOUR JOURNEY</p>
         <section class="landing__journies">
@@ -130,11 +137,7 @@
           </div>
         </section>
         <!-- END begin your journey section -->
-
-
         <hr>
-
-
         <!-- START our program section -->
         <p class="landing__title">Our Programs</p>
         <section class="landing__programs">
@@ -187,19 +190,24 @@
           </div>  
         </section>
         <!-- END our program section -->
-
-        <hr>
-
+        <br>
         <!-- START join the shredz fam section -->
         <section class="landing__family">
-          <div class="landing__family-carousel"> <!-- make this into a carousel-->
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+          <p class="landing__title">Join the Shredz Family</p>
+          <div class="landing__family-carousel responsive"> <!-- make this into a carousel-->
+            <img src="images/landing/carousel8.jpg" alt="">
+            <img src="images/landing/carousel2.jpg" alt="">
+            <img src="images/landing/carousel1.jpg" alt="">
+            <img src="images/landing/carousel7.jpg" alt="">
+            <img src="images/landing/carousel9.jpg" alt="">
+            <img src="images/landing/carousel4.jpg" alt="">
+            <img src="images/landing/carousel6.jpg" alt="">
+            <img src="images/landing/carousel5.jpg" alt="">
+            <img src="images/landing/carousel3.jpg" alt="">
           </div>
 
-          <div class="landing__text-header">
-            <p>Follow us on Instagram!</p>
+          <div class="landing__title">
+            <p>Follow us on  <a href="https://www.instagram.com/russtelen/">Instagram!</a> </p>
           </div>   
         </section>
         <!-- END join the shredz fam section -->
@@ -212,13 +220,17 @@
         <!-- copyright -->
         <!-- social links -->
       </footer>
+
+        </div>
+        
     
-    <!-- jQuery first, then Bootstrap JS -->
-    <script src="https://kit.fontawesome.com/001a8c6911.js" crossorigin="anonymous"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ 
+    <!-- jQuery first, then Popper.js, Bootstrap JS, Slick JS, Landing JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+    <script src="scripts/landing.js"></script>
   </body>
 </html>
 

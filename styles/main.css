@@ -139,55 +139,65 @@ table {
 @font-face {
   font-family: "OpenSan-Regular";
   src: url("../assets/Fonts/OpenSan/OpenSans-Regular.otf"); }
+.calendar__wrapper {
+  display: flex; }
+.calendar__filter-item {
+  display: flex;
+  flex-direction: column; }
+
 body {
   font-family: "OpenSan-Regular";
   font-size: 1rem;
   line-height: 1rem; }
+  body .slick-prev:before, body .slick-next:before {
+    color: black; }
   body .jumbotron {
     background-image: url("../../images/landing/landing-banner.jpg");
     background-size: cover;
+    background-position: center;
     height: 500px; }
     body .jumbotron h1, body .jumbotron p {
       color: white; }
-  body main {
+  body .landing {
     margin: 0 auto;
     width: 80%; }
-    body main .landing__title {
+    body .landing__title {
       font-family: "Roboto-Bold";
       font-size: 23px;
       line-height: 32px;
       margin: 1rem;
       padding: 1rem;
-      text-align: center; }
+      text-align: center;
+      text-transform: uppercase; }
       @media (min-width: 1024px) {
-        body main .landing__title {
+        body .landing__title {
           font-family: "Roboto-Bold";
           font-size: 36px;
           line-height: 44px; } }
     @media (min-width: 768px) {
-      body main .landing__journies {
+      body .landing__journies {
         display: flex;
         justify-content: space-between;
         flex-direction: row; } }
     @media (min-width: 1024px) {
-      body main .landing__journies {
+      body .landing__journies {
         height: 350px; } }
-    body main .landing__journey {
+    body .landing__journey {
       margin: 1rem;
       padding: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column; }
-    body main .landing__text-header {
+    body .landing__text-header {
       font-family: "Roboto-Bold";
-      font-size: 24px;
+      font-size: 19px;
       line-height: 32px; }
-    body main .landing__text-subheader {
+    body .landing__text-subheader {
       font-family: "Roboto-Demi";
       font-size: 14px;
       line-height: 22px; }
-    body main .landing__program {
+    body .landing__program {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -195,31 +205,89 @@ body {
       margin: 1rem;
       padding: 1rem;
       border-bottom: 1px solid gray; }
-      body main .landing__program button {
+      body .landing__program button {
         margin: 1rem;
         padding: 1rem; }
-    body main .landing__program-img {
+    body .landing__program-img {
       width: 250px;
       height: 250px;
       border-radius: 10%; }
       @media (min-width: 768px) {
-        body main .landing__program-img {
+        body .landing__program-img {
           width: 150px;
           height: 150px; } }
       @media (min-width: 1024px) {
-        body main .landing__program-img {
+        body .landing__program-img {
           width: 250px;
           height: 250px; } }
     @media (min-width: 768px) {
-      body main .landing__program-row1 {
+      body .landing__program-row1 {
         display: flex;
         justify-content: space-between;
         flex-direction: row; } }
     @media (min-width: 768px) {
-      body main .landing__program-row2 {
+      body .landing__program-row2 {
         display: flex;
         justify-content: space-between;
         flex-direction: row; } }
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #cfdbd5;
+  height: 100vh; }
+
+.login__container {
+  background: white;
+  height: 400px;
+  width: 400px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 5px 5px 20px 20px;
+  overflow: hidden; }
+.login__tab-container {
+  overflow: hidden;
+  display: flex;
+  width: 100%; }
+.login__tab {
+  display: none; }
+.login__btn {
+  text-align: center;
+  opacity: 0.8;
+  background: #2d5931;
+  color: white;
+  display: block;
+  padding: 10px;
+  text-decoration: none; }
+  .login__btn:active {
+    background-color: #ccc; }
+  .login__btn:hover {
+    background-color: #1c371e; }
+.login__form {
+  width: 100%;
+  padding: 20px; }
+.login__input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0px 10px 0px; }
+  .login__input[type="submit"] {
+    background: #e8eddf;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase; }
+    .login__input[type="submit"]:hover {
+      background: #d1dbbe;
+      cursor: pointer; }
+.login__forget {
+  background: none;
+  color: #242423;
+  text-align: left;
+  margin-top: 10px;
+  text-decoration: none; }
+  .login__forget:hover {
+    color: black; }
 
 h2 {
   margin: 5%;
@@ -345,5 +413,157 @@ h2 {
       border-radius: 3%; }
       .checkout__buttons button:hover {
         background-color: palegreen; }
+
+.contact {
+  margin: 0 auto;
+  width: 80%; }
+  @media (min-width: 1024px) {
+    .contact {
+      width: 50%; } }
+  .contact__info {
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 1024px) {
+      .contact__info {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row; } }
+  .contact__info-details p {
+    font-family: "OpenSan-Regular";
+    font-size: 25px;
+    line-height: 25px; }
+  .contact__map {
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .contact__mapframe {
+    height: 300px;
+    width: 200px; }
+    @media (min-width: 768px) {
+      .contact__mapframe {
+        height: 400px;
+        width: 600px; } }
+    @media (min-width: 1024px) {
+      .contact__mapframe {
+        height: 600px;
+        width: 1000px; } }
+  .contact__mapouter {
+    position: relative;
+    text-align: right;
+    height: 300px;
+    width: 200px; }
+    @media (min-width: 768px) {
+      .contact__mapouter {
+        height: 400px;
+        width: 600px; } }
+    @media (min-width: 1024px) {
+      .contact__mapouter {
+        height: 600px;
+        width: 1000px; } }
+  .contact__gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 300px;
+    width: 200px; }
+    @media (min-width: 768px) {
+      .contact__gmap_canvas {
+        height: 400px;
+        width: 600px; } }
+    @media (min-width: 1024px) {
+      .contact__gmap_canvas {
+        height: 600px;
+        width: 1000px; } }
+
+.team_banner {
+  position: relative;
+  background-image: url(../images/team1.jpg);
+  height: 100vh;
+  background-size: cover; }
+
+.team-cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1; }
+
+.team_content {
+  position: absolute;
+  /*top:30%;
+  left:30%;
+  transform: translate(-50%, -50%)*/
+  margin: 100px;
+  /*font-size:5rem;*/
+  color: white;
+  z-index: 2;
+  text-align: center; }
+
+.team_info {
+  margin-top: 50px; }
+
+.team_title {
+  font-size: 4rem; }
+
+.team2 > h2 {
+  font-size: 3.5rem; }
+
+main {
+  margin: 0 auto;
+  width: 80%; }
+  main .card {
+    padding: 50px;
+    width: 100%;
+    height: 600px; }
+    main .card .card-img {
+      width: 400px;
+      height: 500px;
+      border-radius: 10%; }
+    main .card .card-body {
+      margin-left: -200px; }
+    main .card .card-title {
+      font-size: 2.5em;
+      padding: 20px;
+      font-family: "Roboto-Demi"; }
+    main .card .card-text {
+      font-family: "OpenSan-Regular"; }
+
+/*
+.exercise1 {
+  display: flex;
+  padding: 5%;
+
+  > img {
+    width: 40%;
+    margin-right: 4%;
+  }
+
+  p {
+    line-height: 1.4;
+    text-align: justify;
+  }
+}
+
+.exercise1-grid {
+  display: grid;
+}
+
+.exercise2, .exercise3, .exercise4, .exercise5, .exercise6 {
+  display: flex;
+  padding: 5%;
+
+  > img {
+    width: 40%;
+    margin-right: 4%;
+  }
+
+  p {
+    line-height: 1.4;
+    text-align: justify;
+  }
+}*/
 
 /*# sourceMappingURL=main.css.map */

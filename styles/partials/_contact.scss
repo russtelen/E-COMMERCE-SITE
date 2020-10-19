@@ -1,0 +1,90 @@
+.contact {
+    @include wrapper;
+    @include desktop {
+        width: 50%
+    }
+    
+    &__info {
+        @include space-out;
+        @include flex-column;
+
+        @include desktop {
+            @include flex-center-horiz;
+           
+        }
+    }
+
+    &__info-details {
+        p {
+            @include text(25px, 25px)
+        }
+    }
+
+    &__map {
+        @include space-out;
+        @include flex-center;
+    }
+
+    &__mapframe{
+        height:300px;
+        width:200px;
+
+        @include tablet {
+            height: 400px;
+            width: 600px;
+        }
+
+        @include desktop {
+            height: 600px;
+            width: 1000px;
+        }
+    }
+
+    &__mapouter {
+        position:relative;
+        text-align:right;
+        height:300px;
+        width:200px;
+
+        @include tablet {
+            height: 400px;
+            width: 600px;
+        }
+
+        @include desktop {
+            height: 600px;
+            width: 1000px;
+        }
+    }
+
+    &__gmap_canvas {
+        overflow:hidden;
+        background:none!important;
+        height:300px;
+        width:200px;
+
+        @include tablet {
+            height: 400px;
+            width: 600px;
+        }
+
+        @include desktop {
+            height: 600px;
+            width: 1000px;
+        }
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
