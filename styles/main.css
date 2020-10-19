@@ -340,94 +340,118 @@ body .landing__program-img {
   }
 }
 
-.login-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #cfdbd5;
-  height: 100vh;
-}
-
-.login__container {
-  background: white;
+.container {
+  position: relative;
+  background: #fff;
+  margin-top: 15%;
   height: 400px;
   width: 400px;
-  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 5px 5px 20px 20px;
-  overflow: hidden;
-}
-
-.login__tab-container {
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 20px 20px 20px 20px;
+  overflow: hidden;
 }
 
-.login__tab {
-  display: none;
+.container .tab {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.login__btn {
+.container .tab a.btn {
   text-align: center;
-  opacity: 0.8;
-  background: #2d5931;
-  color: white;
+  background: #f5cb5c;
+  color: #fff;
   display: block;
   padding: 10px;
   text-decoration: none;
 }
 
-.login__btn:active {
-  background-color: #ccc;
+.container .tab a.btn:hover {
+  background: #f2bc2c;
 }
 
-.login__btn:hover {
-  background-color: #1c371e;
+.container .tab:first-child a.btn {
+  background: #2d5931;
 }
 
-.login__form {
+.container .tab:first-child a.btn:hover {
+  background: #1c371e;
+}
+
+#signIn {
+  position: absolute;
   width: 100%;
   padding: 20px;
 }
 
-.login__input {
+#signIn input {
   width: 100%;
   padding: 10px;
   margin: 5px 0px 10px 0px;
 }
 
-.login__input[type="submit"] {
-  background: #e8eddf;
+#signIn input[type="submit"] {
+  background: #333533;
   border: none;
   outline: none;
   font-size: 18px;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
 }
 
-.login__input[type="submit"]:hover {
-  background: #d1dbbe;
+#signIn input[type="submit"]:hover {
+  background: #333533;
   cursor: pointer;
 }
 
-.login__forget {
+#signUp {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+#signUp input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0px 10px 0px;
+}
+
+#signUp input[type="submit"] {
+  background: #333533;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#signUp input[type="submit"]:hover {
+  background: #333533;
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+}
+
+.noactive {
+  display: none;
+}
+
+.forget {
   background: none;
-  color: #242423;
+  color: grey;
   text-align: left;
   margin-top: 10px;
   text-decoration: none;
 }
 
-.login__forget:hover {
+.forget:hover {
   color: black;
 }
 
