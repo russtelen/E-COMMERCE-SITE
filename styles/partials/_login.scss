@@ -1,0 +1,75 @@
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $light-blue;
+  height: 100vh;
+}
+
+.login {
+  &__container {
+    // position: relative;
+    background: white;
+    height: 400px;
+    width: 400px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 5px 5px 20px 20px;
+    overflow: hidden;
+  }
+
+  &__tab-container {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+  }
+  &__tab {
+    display: none;
+  }
+
+  &__btn {
+    text-align: center;
+    opacity: 0.8;
+    background: $green;
+    color: white;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    &:active {
+      background-color: #ccc;
+    }
+    &:hover {
+      background-color: darken($green, 10%);
+    }
+  }
+  &__form {
+    width: 100%;
+    padding: 20px;
+  }
+  &__input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0px 10px 0px;
+    &[type="submit"] {
+      background: $light-grey;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: uppercase;
+      &:hover {
+        background: darken($light-grey, 10%);
+        cursor: pointer;
+      }
+    }
+  }
+  &__forget {
+    background: none;
+    color: $blackish;
+    text-align: left;
+    margin-top: 10px;
+    text-decoration: none;
+    &:hover {
+      color: darken($blackish, 50%);
+    }
+  }
+}

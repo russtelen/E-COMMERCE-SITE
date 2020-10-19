@@ -1,5 +1,6 @@
 .calendar {
   &__wrapper {
+    display: flex;
   }
   &__sidebar {
   }
@@ -13,6 +14,8 @@
   &__filter-wrapper {
   }
   &__filter-item {
+    display: flex;
+    flex-direction: column;
   }
   &__filter-btn {
   }
