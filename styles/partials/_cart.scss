@@ -1,0 +1,51 @@
+h2{
+    margin: 5%;
+    font-size: 26px;
+    font-family: "Roboto-Bold";
+}
+
+.card-item{
+    // display: flex;
+    display: grid;
+    grid-template-columns: 40% auto 15%;
+    grid-template-areas: "left center right";
+    justify-content: space-between;
+
+    background-color: $light-blue;
+    background: linear-gradient(135deg, white 2%, $light-blue);
+    
+    margin: 2%;
+    box-shadow: 2px 2px 2px black;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+}
+
+.card-image{
+    
+}
+
+.card-functions{
+    justify-self: end;
+}
+
+.card-item-price{
+    justify-self: bottom;
+}
+
+.cart-summary{
+    // width: 20%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 2%;
+    // align-content: space-between;
+    // align-items: right;
+}
+
+.cart-summary{
+    
+}

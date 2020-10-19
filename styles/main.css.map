@@ -11,7 +11,8 @@
         "partials/_fonts.scss",
         "partials/_schedule.scss",
         "partials/_landing.scss",
-        "partials/_login.scss"
+        "partials/_login.scss",
+        "partials/_cart.scss"
     ],
     "names": [],
     "file": "main.css"
