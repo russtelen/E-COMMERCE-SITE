@@ -155,6 +155,22 @@ table {
   src: url("../assets/Fonts/OpenSan/OpenSans-Regular.otf");
 }
 
+.calendar__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calendar__filter-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 body {
   font-family: "OpenSan-Regular";
   font-size: 1rem;
