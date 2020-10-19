@@ -9,107 +9,109 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f0b9136e4d.js" crossorigin="anonymous"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/fullcalendar-scheduler/main.css" />
+    <link rel="stylesheet" href="../styles/main.css">
+    <!-- <link rel="stylesheet" href="../assets/fullcalendar-scheduler/lib/fullcalendar.css" /> -->
     <title>SHREDZ - Schedule</title>
   </head>
   <body>
       <header>
         <!-- sample navbar (Replace this with Vlad's Navbar) -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
-          <!-- -->
-      
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top"> <!-- -->
+          
           <!-- Logo = Link to Home -->
-          <a class="navbar-brand text-white" href="index.html"><img src="../assets/logo/shredz_logo.svg" width="140px"></a>
-      
+          <a class="navbar-brand text-white" href="..\index.html"><img src="../assets/logo/shredz_logo.svg" width="140px"></a>
+  
           <!-- Hamburger Menu Toggle -->
-          <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-      
+        
           <!-- Navbar Items (collapsable)-->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto justify-content-center">
-      
+  
               <li class="nav-item text-center">
-                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="#">Explore Prograns</a>
+                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="program.html">Explore Prograns</a>
               </li>
-      
+              
               <li class="nav-item text-center">
-                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="#">Meet Our Team</a>
-              </li>
-      
+                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="MeetOurTeam.html">Meet Our Team</a>
+                </li>
+                
               <li class="nav-item text-center">
-                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="#">Book Sessions</a>
-              </li>
-      
+                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="schedule.html">Book Sessions</a>
+                </li>
+                
               <li class="nav-item text-center">
-                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="#">Contact</a>
-              </li>
-      
-              <!-- Members seection in Navbar -
-                         Drop-down Menu for easy Log-in; Link to Registration Page -->
+                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="contact.html">Contact</a>
+                </li>
+  
+                <!-- Members seection in Navbar -
+                   Drop-down Menu for easy Log-in; Link to Registration Page -->
               <li class="nav-item text-center dropdown align-items-center">
-                <a class="btn btn-outline-light dropdown-toggle border border-dark rounded mx-2 w-150" href="#"
-                  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="btn btn-outline-light dropdown-toggle border border-dark rounded mx-2 w-150" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Members
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <div class="container">
-                    <form class="px-4 py-2">
-                      <div class="form-group">
-                        <label for="email" class="ml-0">Email address</label>
-                        <input type="email" class="form-control w-100" id="email" placeholder="email@example.com">
-                      </div>
-                      <div class="form-group">
-                        <label for="password" class="m-0">Password</label>
-                        <input type="password" class="form-control w-100" id="password" placeholder="Password">
-                      </div>
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                        <label class="form-check-label" for="dropdownCheck">
-                          Remember me
-                        </label>
-                      </div>
-                      <button type="submit" class="btn btn-dark">Sign in</button>
-                    </form>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item w-100 text-center" href="#">Forgot password?</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item w-100 text-center" href="#">Sign-up</a>
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                    <label class="form-check-label" for="dropdownCheck">
-                      Remember me
-                    </label>
-                  </div>
-                  <button type="submit" class="btn btn-dark">Sign in</button>
+                  <form class="px-4 py-2">
+                    <div class="form-group">
+                      <label for="email" class="ml-0">Email address</label>
+                      <input type="email" class="form-control w-100" id="email" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="m-0">Password</label>
+                      <input type="password" class="form-control w-100" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <label class="form-check-label" for="dropdownCheck">
+                        Remember me
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Sign in</button>
                   </form>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item w-100 text-center" href="#">Forgot password?</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item w-100 text-center" href="#">Sign-up</a>
+                  <a class="dropdown-item w-100 text-center" href="login.html">Sign-up</a>
+                  </div>
                 </div>
+              </li>
+              <li class="nav-item text-center">
+                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
+              </li>
+            </ul>
           </div>
-          </li>
-          <li class="nav-item text-center">
-            <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="cart.html"><i
-                class="fas fa-shopping-cart fa-lg"></i></a>
-          </li>
-          </ul>
-          </div>
-          </li>
-          </ul>
-          </div>
-        </nav>
+         </nav>
         <!-- end navbar -->
     </header>
     <!-- Calendar -->
-    <div id="calendar"></div>
+    <div class="calendar">
+    <div class="calendar__wrapper">
+      <div class="calendar__sidebar">
+        <h2 class="calendar__text">SHREDZ SCHEDULE</h2>
+        <p class="calendar__text calendar__text--para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim dolores harum velit ducimus saepe iste tempora vel earum reprehenderit nihil sint qui, laudantium ab modi sed ratione quam? Pariatur, natus?</p>
+        <div class="calendar__filter-wrapper">
+          <div class="calendar__filter-item">
+            <button class="calendar__filter-btn">Yoga</button>
+            <button class="calendar__filter-btn">Muay Thai</button>
+            <button class="calendar__filter-btn">Ju Jitsu</button>
+            <button class="calendar__filter-btn">program 4</button>
+            <button class="calendar__filter-btn">program 5</button>
+            <button class="calendar__filter-btn">program 6</button>
+        
+          </div>
+        </div>
+      </div>
+      <div id="calendar" class="calendar-wrapper fc-media-screen" style="height: 420px"></div>
+    </div>
+    </div>
+    <!-- End of Calendar -->
+
 
     <!-- JS script -->
-    <script src="../assets/fullcalendar-scheduler/main.js"></script>
+    <script src="../assets/fullcalendar-scheduler/lib/main.js"></script>
     <script src="../scripts/scripts.js"></script>
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/001a8c6911.js" crossorigin="anonymous"></script>
