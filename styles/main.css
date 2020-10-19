@@ -1,10 +1,7 @@
-
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html,
 body,
@@ -92,8 +89,7 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 article,
 aside,
@@ -106,60 +102,73 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
-}
+  display: block; }
 
 body {
-  line-height: 1;
-}
+  line-height: 1; }
 
 ol,
 ul {
-  list-style: none;
-}
+  list-style: none; }
 
 blockquote,
 q {
-  quotes: none;
-}
+  quotes: none; }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
   content: "";
-  content: none;
-}
+  content: none; }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
 .container {
   margin: 0 auto;
-  max-width: 1440px;
-}
+  max-width: 1440px; }
 
 @font-face {
   font-family: "Roboto-Bold";
-  src: url("../assets/Fonts/Roboto/Roboto-Bold.otf");
-}
-
+  src: url("../assets/Fonts/Roboto/Roboto-Bold.otf"); }
 @font-face {
   font-family: "Roboto-Demi";
-  src: url("../assets/Fonts/Roboto/Roboto-Medium.otf");
-}
-
+  src: url("../assets/Fonts/Roboto/Roboto-Medium.otf"); }
 @font-face {
   font-family: "OpenSan-Regular";
-  src: url("../assets/Fonts/OpenSan/OpenSans-Regular.otf");
-}
+  src: url("../assets/Fonts/OpenSan/OpenSans-Regular.otf"); }
+h2 {
+  margin: 5%;
+  font-size: 26px;
+  font-family: "Roboto-Bold"; }
 
-body {
-  font-family: "OpenSan-Regular";
-  font-size: 20px;
-  line-height: 20px;
-}
+.card-item {
+  display: grid;
+  grid-template-columns: 40% auto 15%;
+  grid-template-areas: "left center right";
+  justify-content: space-between;
+  background-color: #cfdbd5;
+  background: linear-gradient(135deg, white 2%, #cfdbd5);
+  margin: 2%;
+  box-shadow: 2px 2px 2px black; }
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-items: left; }
+
+.card-functions {
+  justify-self: end; }
+
+.card-item-price {
+  justify-self: bottom; }
+
+.cart-summary {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin: 2%; }
+
 /*# sourceMappingURL=main.css.map */
-
