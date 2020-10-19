@@ -1,4 +1,4 @@
-//prevent .css.map on github
+//prevent all .css.map on github
 *.css.map
 
 //prevent .DS_Store on github
