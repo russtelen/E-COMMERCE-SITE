@@ -164,6 +164,7 @@ body {
 body .jumbotron {
   background-image: url("../../images/landing/landing-banner.jpg");
   background-size: cover;
+  background-position: center;
   height: 500px;
 }
 
