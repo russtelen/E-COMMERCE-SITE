@@ -717,48 +717,17 @@ h2 {
   background-color: palegreen;
 }
 
-.contact {
-  margin: 0 auto;
-  width: 80%;
+.contact__banner {
+  background-image: url("../../images/landing/landing-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
 }
 
-@media (min-width: 1024px) {
-  .contact {
-    width: 50%;
-  }
-}
-
-.contact__info {
-  margin: 1rem;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (min-width: 1024px) {
-  .contact__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-.contact__info-details p {
-  font-family: "OpenSan-Regular";
-  font-size: 25px;
-  line-height: 25px;
+.contact__banner-text {
+  font-family: "Roboto-Bold";
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .contact__map {

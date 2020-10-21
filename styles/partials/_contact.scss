@@ -1,23 +1,13 @@
 .contact {
-    @include wrapper;
-    @include desktop {
-        width: 50%
-    }
-    
-    &__info {
-        @include space-out;
-        @include flex-column;
-
-        @include desktop {
-            @include flex-center-horiz;
-           
-        }
+    &__banner {
+        background-image: url("../../images/landing/landing-banner.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 500px;
     }
 
-    &__info-details {
-        p {
-            @include text(25px, 25px)
-        }
+    &__banner-text {
+        @include header(24px, 32px);
     }
 
     &__map {
