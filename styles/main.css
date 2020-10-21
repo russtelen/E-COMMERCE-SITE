@@ -135,7 +135,7 @@ table {
   border-spacing: 0;
 }
 
-.container {
+.container-center, .login {
   margin: 0 auto;
   max-width: 1024px;
 }
@@ -417,11 +417,11 @@ body .landing__program-img {
   background: #f2bc2c;
 }
 
-.login__btn a.btn:first-child {
+.login__btn--green {
   background: #2d5931;
 }
 
-.login__btn a.btn:first-child a.btn:hover {
+.login__btn--green:hover {
   background: #1c371e;
 }
 
