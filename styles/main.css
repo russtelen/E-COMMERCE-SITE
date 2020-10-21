@@ -717,11 +717,14 @@ h2 {
   background-color: palegreen;
 }
 
+.contact {
+  margin: 0;
+}
+
 .contact__banner {
   background-image: url("../../images/landing/landing-banner.jpg");
   background-size: cover;
   background-position: center;
-  height: 500px;
 }
 
 .contact__banner-text {
