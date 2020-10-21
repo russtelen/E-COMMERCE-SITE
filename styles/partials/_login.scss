@@ -23,9 +23,9 @@
     &:hover {
       background: darken($yellow, 10%);
     }
-    a.btn:first-child {
+    &__btn--sign {
       background: $green;
-      a.btn:hover {
+      &:hover {
         background: darken($green, 10%);
       }
     }

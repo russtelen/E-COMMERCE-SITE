@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/f0b9136e4d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/f0b9136e4d.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylesheet" href="../assets/fullcalendar-scheduler/lib/fullcalendar.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/fullcalendar-scheduler/lib/fullcalendar.css"
+    />
     <title>SHREDZ - Schedule</title>
   </head>
   <body>
@@ -47,24 +57,47 @@
                 </li>
   
                 <!-- Members seection in Navbar -
+
                    Drop-down Menu for easy Log-in; Link to Registration Page -->
-              <li class="nav-item text-center dropdown align-items-center">
-                <a class="btn btn-outline-light dropdown-toggle border border-dark rounded mx-2 w-150" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Members
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <div class="container">
+            <li class="nav-item text-center dropdown align-items-center">
+              <a
+                class="btn btn-outline-light dropdown-toggle border border-dark rounded mx-2 w-150"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Members
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="container">
                   <form class="px-4 py-2">
                     <div class="form-group">
                       <label for="email" class="ml-0">Email address</label>
-                      <input type="email" class="form-control w-100" id="email" placeholder="email@example.com">
+                      <input
+                        type="email"
+                        class="form-control w-100"
+                        id="email"
+                        placeholder="email@example.com"
+                      />
                     </div>
                     <div class="form-group">
                       <label for="password" class="m-0">Password</label>
-                      <input type="password" class="form-control w-100" id="password" placeholder="Password">
+                      <input
+                        type="password"
+                        class="form-control w-100"
+                        id="password"
+                        placeholder="Password"
+                      />
                     </div>
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="dropdownCheck"
+                      />
                       <label class="form-check-label" for="dropdownCheck">
                         Remember me
                       </label>
@@ -72,58 +105,96 @@
                     <button type="submit" class="btn btn-dark">Sign in</button>
                   </form>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item w-100 text-center" href="#">Forgot password?</a>
+                  <a class="dropdown-item w-100 text-center" href="#"
+                    >Forgot password?</a
+                  >
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item w-100 text-center" href="login.html">Sign-up</a>
-                  </div>
+                  <a class="dropdown-item w-100 text-center" href="login.html"
+                    >Sign-up</a
+                  >
                 </div>
-              </li>
-              <li class="nav-item text-center">
-                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
-              </li>
-            </ul>
-          </div>
-         </nav>
-        <!-- end navbar -->
+              </div>
+            </li>
+            <li class="nav-item text-center">
+              <a
+                class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                href="cart.html"
+                ><i class="fas fa-shopping-cart fa-lg"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- end navbar -->
     </header>
-    <!-- Calendar -->
-    <div class="calendar">
-    <div class="calendar__wrapper">
-      <div class="calendar__sidebar">
-        <h2 class="calendar__text">SHREDZ SCHEDULE</h2>
-        <div class="calendar__filter-wrapper">
-          <div class="calendar__filter-item">
-            <button class="calendar__filter-btn">Yoga</button>
-            <button class="calendar__filter-btn">Muay Thai</button>
-            <button class="calendar__filter-btn">Ju Jitsu</button>
-            <button class="calendar__filter-btn">program 4</button>
-            <button class="calendar__filter-btn">program 5</button>
-            <button class="calendar__filter-btn">program 6</button>
-        
+    <main>
+      <!-- Calendar -->
+      <div class="calendar">
+        <div class="calendar__wrapper">
+          <div class="calendar__sidebar">
+            <span class="calendar__text--title">SHREDZ SCHEDULE</span>
+            <div class="calendar__filter-wrapper">
+              <span class="calendar__text--subtitle"
+                >Filter <i class="fas fa-filter"></i
+              ></span>
+              <div class="calendar__filter-item">
+                <button class="calendar__filter-btn">
+                  <i class="fas fa-plus"></i> Yoga
+                </button>
+                <button class="calendar__filter-btn">
+                  <i class="fas fa-plus"></i> Muay Thai
+                </button>
+                <button class="calendar__filter-btn">
+                  <i class="fas fa-plus"></i> Ju Jitsu
+                </button>
+                <button class="calendar__filter-btn">
+                  <i class="fas fa-plus"></i> program 4
+                </button>
+                <button class="calendar__filter-btn">
+                  <i class="fas fa-plus"></i> program 5
+                </button>
+              </div>
+            </div>
           </div>
+          <div id="calendar" class="fc-media-screen"></div>
         </div>
       </div>
-      <div id="calendar" class="fc-media-screen"></div>
-    </div>
-    </div>
+    </main>
     <!-- End of Calendar -->
-
 
     <!-- JS script -->
     <script src="../assets/fullcalendar-scheduler/lib/main.js"></script>
     <script src="../scripts/schedule.js"></script>
     <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/001a8c6911.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/001a8c6911.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
