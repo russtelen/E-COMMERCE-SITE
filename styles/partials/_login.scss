@@ -1,4 +1,5 @@
 .login {
+  @extend .container-center;
   position: relative;
   background: #fff;
   margin-top: 15%;
@@ -23,7 +24,11 @@
     &:hover {
       background: darken($yellow, 10%);
     }
+<<<<<<< HEAD
     &__btn--sign {
+=======
+    &--green {
+>>>>>>> c6474a4c3c7728b137f900bd444d032aa6db378c
       background: $green;
       &:hover {
         background: darken($green, 10%);
