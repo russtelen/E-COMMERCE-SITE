@@ -1,14 +1,62 @@
 .contact {
-  margin: 0;
   &__banner {
-    background-image: url("../../images/landing/landing-banner.jpg");
+    background-image: url("../../images/contact/contact-banner.jpg");
     background-size: cover;
     background-position: center;
-    // height: 500px;
+    background-attachment: fixed;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__banner-text {
-    @include header(24px, 32px);
+    @include header(60px, 68px);
+    color: #fafafa;
+    border: 2px solid white;
+    text-align: center;
+  }
+
+  &__text-header {
+      @include header(24px,32px);
+      @include space-out;
+      text-align: center;
+
+      @include desktop {
+          @include header (36px, 44px);
+      }
+  }
+
+  &__text-subheader {
+    @include subheader(20px,32px);
+
+    @include desktop {
+        @include subheader(24px, 34px);
+    }
+  }
+
+  &__details {
+      @include tablet {
+          @include wrapper;
+          @include flex-center-horiz;
+      }
+
+      @include desktop {
+        @include wrapper;
+        @include flex-center;
+        height: 300px
+    }
+  }
+
+  &__detail {
+      @include flex-center-column;
+      @include space-out;
+  }
+
+  &__message {
+      @include tablet {
+          @include wrapper;
+      }
   }
 
   &__map {
@@ -18,7 +66,7 @@
 
   &__mapframe {
     height: 300px;
-    width: 200px;
+    width: 320px;
 
     @include tablet {
       height: 400px;
@@ -35,7 +83,7 @@
     position: relative;
     text-align: right;
     height: 300px;
-    width: 200px;
+    width: 320px;
 
     @include tablet {
       height: 400px;
@@ -52,7 +100,7 @@
     overflow: hidden;
     background: none !important;
     height: 300px;
-    width: 200px;
+    width: 320px;
 
     @include tablet {
       height: 400px;
