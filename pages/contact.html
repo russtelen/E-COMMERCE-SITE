@@ -89,22 +89,39 @@
          </nav>
         <!-- end navbar -->
     </header>
-    <!-- Banner -->
-    <div class="contact__banner">
-      <p class="contact__banner-text">Contact Us</p>
-    </div>
-    
-    <div class="contact">
-          <!-- Get in touch -->
-          <section class="contact__details">
-            <h3 class="contact__text-header">Get In Touch</h3>
 
+    <div class="contact">
+          <!-- Banner -->
+          <div class="contact__banner">
+              <p class="contact__banner-text">Contact Us</p>
+          </div>
+    
+          <!-- Get in touch -->
+          <h3 class="contact__text-header">Get In Touch</h3>
+          <section class="contact__details">
+            <div class="contact__detail">
+              <p class="contact__text-subheader">Address <i class="fas fa-map-pin"></i></p>
+              <p>123 ABC St</p>
+              <p>Vancouver, BC</p>
+              <p>V3V 2A0</p>
+            </div>
+
+            <div class="contact__detail">
+              <p class="contact__text-subheader">Phone <i class="fas fa-phone"></i></p>
+              <p>778-888-5412</p>
+            </div>
+
+            <div class="contact__detail">
+              <p class="contact__text-subheader">Email <i class="fas fa-envelope"></i></p>
+              <p>contact@shredz.ca</p>
+            </div>
+            
           </section>
   
           <!-- Message Us-->
           <section class="contact__message">
               <h3 class="contact__text-header">Message Us</h3>
-              <form>
+              <form class="contact__form">
                 <div class="form-group">
                   <label for="exampleFormControlInput1">Name</label>
                   <input type="text" class="form-control" required>
@@ -119,8 +136,11 @@
                   <label for="exampleFormControlTextarea1">Message</label>
                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" required></textarea>
                 </div>
-  
-                <button type="submit" class="btn btn-primary">Send Message</button>
+                
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+                
               </form>
           </section>
 
