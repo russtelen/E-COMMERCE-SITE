@@ -4,26 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tab form</title>
-
     <link rel="stylesheet" href="../styles/main.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="tab">
-        <a href="#" class="btn">Sign-in</a>
-        <form id="signIn" class="form active">
+    <div class="login">
+      <div class="login__tab">
+        <a href="#" class="login__btn login__btn--green">Sign-in</a>
+        <form id="signIn" class="login__form active">
           <label>Username</label>
           <input type="text" placeholder="Enter username" />
           <label>Password</label>
           <input type="password" placeholder="Enter password" />
           <input type="submit" value="Sign In" />
-          <a href="#" class="forget">Forget password?</a>
+          <a href="#" class="login__forget">Forget password?</a>
         </form>
       </div>
 
-      <div class="tab">
-        <a href="#" class="btn">Sign-up</a>
-        <form id="signUp" class="form noactive">
+      <div class="login__tab">
+        <a href="#" class="login__btn">Sign-up</a>
+        <form id="signUp" class="login__form noactive">
           <label>Full name</label>
           <input type="text" placeholder="Enter your name" />
           <label>Email</label>
@@ -41,7 +40,7 @@
       $(document).ready(function () {
         $("a").click(function (e) {
           e.preventDefault();
-          $(".form").removeClass("active").addClass("noactive");
+          $(".login__form").removeClass("active").addClass("noactive");
           $(this).siblings().addClass("active").removeClass("noactive");
         });
       });

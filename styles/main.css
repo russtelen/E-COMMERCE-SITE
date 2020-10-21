@@ -135,7 +135,7 @@ table {
   border-spacing: 0;
 }
 
-.container, .calendar {
+.container-center, .login {
   margin: 0 auto;
   max-width: 1024px;
 }
@@ -383,7 +383,7 @@ body .landing__program-img {
   }
 }
 
-.container, .calendar {
+.login {
   position: relative;
   background: #fff;
   margin-top: 15%;
@@ -398,13 +398,13 @@ body .landing__program-img {
   overflow: hidden;
 }
 
-.container .tab, .calendar .tab {
+.login__tab {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.container .tab a.btn, .calendar .tab a.btn {
+.login__btn {
   text-align: center;
   background: #f5cb5c;
   color: #fff;
@@ -413,15 +413,15 @@ body .landing__program-img {
   text-decoration: none;
 }
 
-.container .tab a.btn:hover, .calendar .tab a.btn:hover {
+.login__btn:hover {
   background: #f2bc2c;
 }
 
-.container .tab:first-child a.btn, .calendar .tab:first-child a.btn {
+.login__btn--green {
   background: #2d5931;
 }
 
-.container .tab:first-child a.btn:hover, .calendar .tab:first-child a.btn:hover {
+.login__btn--green:hover {
   background: #1c371e;
 }
 
