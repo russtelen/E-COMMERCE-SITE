@@ -340,7 +340,7 @@ body .landing__program-img {
   }
 }
 
-.container {
+.login {
   position: relative;
   background: #fff;
   margin-top: 15%;
@@ -355,13 +355,13 @@ body .landing__program-img {
   overflow: hidden;
 }
 
-.container .tab {
+.login__tab {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.container .tab a.btn {
+.login__btn {
   text-align: center;
   background: #f5cb5c;
   color: #fff;
@@ -370,15 +370,15 @@ body .landing__program-img {
   text-decoration: none;
 }
 
-.container .tab a.btn:hover {
+.login__btn:hover {
   background: #f2bc2c;
 }
 
-.container .tab:first-child a.btn {
+.login__btn a.btn:first-child {
   background: #2d5931;
 }
 
-.container .tab:first-child a.btn:hover {
+.login__btn a.btn:first-child a.btn:hover {
   background: #1c371e;
 }
 

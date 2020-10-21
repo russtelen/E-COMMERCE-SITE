@@ -1,4 +1,4 @@
-.container {
+.login {
   position: relative;
   background: #fff;
   margin-top: 15%;
@@ -8,22 +8,24 @@
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
   border-radius: 20px 20px 20px 20px;
   overflow: hidden;
-  .tab {
+
+  &__tab {
     flex: 1;
-    a.btn {
-      text-align: center;
-      background: $yellow;
-      color: #fff;
-      display: block;
-      padding: 10px;
-      text-decoration: none;
-      &:hover {
-        background: darken($yellow, 10%);
-      }
+  }
+
+  &__btn {
+    text-align: center;
+    background: $yellow;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    &:hover {
+      background: darken($yellow, 10%);
     }
-    &:first-child a.btn {
+    a.btn:first-child {
       background: $green;
-      &:hover {
+      a.btn:hover {
         background: darken($green, 10%);
       }
     }
