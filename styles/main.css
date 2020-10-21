@@ -383,7 +383,7 @@ body .landing__program-img {
   }
 }
 
-.container {
+.container, .calendar {
   position: relative;
   background: #fff;
   margin-top: 15%;
@@ -398,13 +398,13 @@ body .landing__program-img {
   overflow: hidden;
 }
 
-.container .tab {
+.container .tab, .calendar .tab {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.container .tab a.btn {
+.container .tab a.btn, .calendar .tab a.btn {
   text-align: center;
   background: #f5cb5c;
   color: #fff;
@@ -413,15 +413,15 @@ body .landing__program-img {
   text-decoration: none;
 }
 
-.container .tab a.btn:hover {
+.container .tab a.btn:hover, .calendar .tab a.btn:hover {
   background: #f2bc2c;
 }
 
-.container .tab:first-child a.btn {
+.container .tab:first-child a.btn, .calendar .tab:first-child a.btn {
   background: #2d5931;
 }
 
-.container .tab:first-child a.btn:hover {
+.container .tab:first-child a.btn:hover, .calendar .tab:first-child a.btn:hover {
   background: #1c371e;
 }
 
@@ -717,48 +717,17 @@ h2 {
   background-color: palegreen;
 }
 
-.contact {
-  margin: 0 auto;
-  width: 80%;
+.contact__banner {
+  background-image: url("../../images/landing/landing-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
 }
 
-@media (min-width: 1024px) {
-  .contact {
-    width: 50%;
-  }
-}
-
-.contact__info {
-  margin: 1rem;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (min-width: 1024px) {
-  .contact__info {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-.contact__info-details p {
-  font-family: "OpenSan-Regular";
-  font-size: 25px;
-  line-height: 25px;
+.contact__banner-text {
+  font-family: "Roboto-Bold";
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .contact__map {
