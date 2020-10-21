@@ -717,20 +717,18 @@ h2 {
   background-color: palegreen;
 }
 
-.contact {
-  margin: 0;
-}
-
 .contact__banner {
-  background-image: url("../../images/landing/landing-banner.jpg");
+  background-image: url("../../images/contact/contact-banner.jpg");
   background-size: cover;
   background-position: center;
+  height: 500px;
 }
 
 .contact__banner-text {
   font-family: "Roboto-Bold";
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 60px;
+  line-height: 68px;
+  color: white;
 }
 
 .contact__map {

@@ -1,14 +1,14 @@
 .contact {
-  margin: 0;
   &__banner {
-    background-image: url("../../images/landing/landing-banner.jpg");
+    background-image: url("../../images/contact/contact-banner.jpg");
     background-size: cover;
     background-position: center;
-    // height: 500px;
+    height: 500px;
   }
 
   &__banner-text {
-    @include header(24px, 32px);
+    @include header(60px, 68px);
+    color: white;
   }
 
   &__map {
