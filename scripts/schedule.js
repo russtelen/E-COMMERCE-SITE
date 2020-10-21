@@ -1,31 +1,42 @@
-// Add calendar event listener
-document.addEventListener("DOMContentLoaded", function () {
+events = {
+  yoga: [
+    {
+      title: "Hot yoga",
+      start: "2020-10-24",
+    },
+  ],
+  muaythai: [
+    {
+      title: "Beginner Muay Thai ",
+      start: "2020-10-24",
+    },
+  ],
+  jujitsu: [
+    {
+      title: "Advanced Ju Jitsu",
+      start: "2020-10-24",
+    },
+  ],
+};
+
+document.addEventListener("DOMContentLoaded", () => {
   var calendarEl = document.getElementById("calendar");
+
   var calendar = new FullCalendar.Calendar(calendarEl, {
+    slotMinTime: "08:00",
+    slotMaxTime: "22:00",
+    allDaySlot: false,
+    expandRows: true,
+    height: "100%",
+    headerToolbar: {
+      left: "prev,next today",
+      center: "title",
+      right: "timeGridWeek,timeGridDay",
+    },
     initialView: "timeGridWeek",
-    themeSystem: "bootstrap",
-    eventSources: [
-      {
-        events: [
-          {
-            title: "Yoga",
-            start: "2020-10-17T11:30:00",
-            end: "2010-10-17T12:00:00",
-          },
-          {
-            title: "Cardio",
-            start: "2020-10-17T12:30:00",
-            end: "2010-10-17T13:30:00",
-          },
-          {
-            title: "Muay Thai",
-            start: "2020-10-17T15:30:00",
-            end: "2010-10-17T16:30:00",
-          },
-        ],
-        color: "red",
-      },
-    ],
+    navLinks: true, // can click day/week names to navigate views
+    nowIndicator: true,
   });
+
   calendar.render();
 });

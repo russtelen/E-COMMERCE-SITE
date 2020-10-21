@@ -135,7 +135,7 @@ table {
   border-spacing: 0;
 }
 
-.container {
+.container, .calendar {
   margin: 0 auto;
   max-width: 1024px;
 }
@@ -155,13 +155,14 @@ table {
   src: url("../assets/Fonts/OpenSan/OpenSans-Regular.otf");
 }
 
-.calendar__wrapper {
+.calendar {
+  padding: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.calendar__filter-item {
+.calendar__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,6 +170,48 @@ table {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 80vh;
+  width: 100%;
+}
+
+.calendar__text--title {
+  margin-bottom: 1rem;
+  font-family: "Roboto-Bold";
+  font-size: 32px;
+  line-height: 28px;
+}
+
+.calendar__text--subtitle {
+  font-family: "Roboto-Demi";
+  font-size: 24px;
+  line-height: 18px;
+}
+
+.calendar__filter-wrapper {
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.calendar__filter-item {
+  margin-top: 1rem;
+}
+
+.calendar__filter-btn {
+  color: #fafafa;
+  background-color: rgba(50, 50, 50, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  border: rgba(50, 50, 50, 0.5);
+  margin: 0.3rem;
 }
 
 body {
