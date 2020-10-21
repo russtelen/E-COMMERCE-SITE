@@ -417,20 +417,24 @@ body .landing__program-img {
   background: #f2bc2c;
 }
 
-<<<<<<< HEAD
-.login__btn__btn--sign {
-  background: #2d5931;
-}
-
-.login__btn__btn--sign:hover {
-=======
 .login__btn--green {
   background: #2d5931;
 }
 
 .login__btn--green:hover {
->>>>>>> c6474a4c3c7728b137f900bd444d032aa6db378c
   background: #1c371e;
+}
+
+.login__forget {
+  background: none;
+  color: grey;
+  text-align: left;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.login__forget:hover {
+  color: black;
 }
 
 #signIn {
@@ -446,7 +450,7 @@ body .landing__program-img {
 }
 
 #signIn input[type="submit"] {
-  background: #333533;
+  background: #4c4f4c;
   border: none;
   outline: none;
   font-size: 18px;
@@ -492,18 +496,6 @@ body .landing__program-img {
 
 .noactive {
   display: none;
-}
-
-.forget {
-  background: none;
-  color: grey;
-  text-align: left;
-  margin-top: 10px;
-  text-decoration: none;
-}
-
-.forget:hover {
-  color: black;
 }
 
 h2 {

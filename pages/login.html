@@ -3,11 +3,171 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tab form</title>
+    <title>Sign-In/Sign-Up</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/f0b9136e4d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+    />
 
     <link rel="stylesheet" href="../styles/main.css" />
   </head>
   <body>
+    <!-- header -->
+    <header>
+      <!-- sample navbar (Replace this with Vlad's Navbar) -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+        <!-- -->
+
+        <!-- Logo = Link to Home -->
+        <a class="navbar-brand text-white" href="index.html"
+          ><img src="assets/logo/shredz_logo.svg" width="140px"
+        /></a>
+
+        <!-- Hamburger Menu Toggle -->
+        <button
+          class="navbar-toggler bg-white"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Items (collapsable)-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto justify-content-center">
+            <li class="nav-item text-center">
+              <a
+                class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                href="pages/program.html"
+                >Explore Programs</a
+              >
+            </li>
+
+            <li class="nav-item text-center">
+              <a
+                class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                href="pages/MeetOurTeam.html"
+                >Meet Our Team</a
+              >
+            </li>
+
+            <li class="nav-item text-center">
+              <a
+                class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                href="pages/schedule.html"
+                >Book Sessions</a
+              >
+            </li>
+
+            <li class="nav-item text-center">
+              <a
+                class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                href="pages/contact.html"
+                >Contact</a
+              >
+            </li>
+
+            <!-- Members seection in Navbar -
+                 Drop-down Menu for easy Log-in; Link to Registration Page -->
+            <li class="nav-item text-center dropdown align-items-center">
+              <a
+                class="btn btn-outline-light dropdown-toggle border border-dark rounded mx-2 w-150"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Members
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="container">
+                  <form class="px-4 py-2">
+                    <div class="form-group">
+                      <label for="email" class="ml-0">Email address</label>
+                      <input
+                        type="email"
+                        class="form-control w-100"
+                        id="email"
+                        placeholder="email@example.com"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="m-0">Password</label>
+                      <input
+                        type="password"
+                        class="form-control w-100"
+                        id="password"
+                        placeholder="Password"
+                      />
+                    </div>
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="dropdownCheck"
+                      />
+                      <label class="form-check-label" for="dropdownCheck">
+                        Remember me
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Sign in</button>
+                  </form>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item w-100 text-center" href="#"
+                    >Forgot password?</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item w-100 text-center"
+                    href="pages/login.html"
+                    >Sign-up</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="nav-item text-center">
+              <a
+                class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                href="pages/cart.html"
+                ><i class="fas fa-shopping-cart fa-lg"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- end navbar -->
+
     <div class="login">
       <div class="login__tab">
         <a href="#" class="login__btn login__btn--green">Sign-in</a>
@@ -46,5 +206,28 @@
         });
       });
     </script>
+
+    <!-- jQuery first, then Popper.js, Bootstrap JS, Slick JS, Landing JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/landing.js"></script>
   </body>
 </html>

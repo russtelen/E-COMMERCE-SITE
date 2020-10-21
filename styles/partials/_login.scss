@@ -24,15 +24,21 @@
     &:hover {
       background: darken($yellow, 10%);
     }
-<<<<<<< HEAD
-    &__btn--sign {
-=======
     &--green {
->>>>>>> c6474a4c3c7728b137f900bd444d032aa6db378c
       background: $green;
       &:hover {
         background: darken($green, 10%);
       }
+    }
+  }
+  &__forget {
+    background: none;
+    color: grey;
+    text-align: left;
+    margin-top: 10px;
+    text-decoration: none;
+    &:hover {
+      color: darken(grey, 80%);
     }
   }
 }
@@ -47,7 +53,7 @@
     margin: 5px 0px 10px 0px;
 
     &[type="submit"] {
-      background: $dark-grey;
+      background: lighten($dark-grey, 10%);
       border: none;
       outline: none;
       font-size: 18px;
@@ -91,15 +97,4 @@
 }
 .noactive {
   display: none;
-}
-
-.forget {
-  background: none;
-  color: grey;
-  text-align: left;
-  margin-top: 10px;
-  text-decoration: none;
-  &:hover {
-    color: darken(grey, 80%);
-  }
 }
