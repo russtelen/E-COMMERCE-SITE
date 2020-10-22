@@ -8,10 +8,11 @@ body {
     background-image: url("../../images/landing/landing-banner.jpg");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     h1, p{
         color: white;
     }
-    height: 500px;
+    height: 700px;
 }
    .landing {
         @include wrapper;

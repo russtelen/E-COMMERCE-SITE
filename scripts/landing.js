@@ -1,3 +1,4 @@
+// ** Slick JS ** //
 $(document).ready(function(){
     $('.responsive').slick({
         dots: true,

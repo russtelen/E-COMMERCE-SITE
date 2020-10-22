@@ -1,22 +1,41 @@
 .calendar {
+  // @extend .container;
+  padding: 2rem 0;
+  display: flex;
   &__wrapper {
     display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 100%;
   }
   &__sidebar {
   }
   &__text {
     &--title {
+      margin-bottom: 1rem;
+      @include header(32px, 28px);
     }
-    &--para {
+    &--subtitle {
+      @include subheader(24px, 18px);
     }
   }
 
   &__filter-wrapper {
-  }
-  &__filter-item {
+    margin: 1rem 0;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+  }
+  &__filter-item {
+    margin-top: 1rem;
   }
   &__filter-btn {
+    color: #fafafa;
+    background-color: rgba($color: #323232, $alpha: 0.5);
+    padding: 0.5rem 1rem;
+    // width: 130px;
+    border-radius: 15px;
+    border: rgba($color: #323232, $alpha: 0.5);
+    margin: 0.3rem;
   }
 }

@@ -1,90 +1,115 @@
 .contact {
-    @include wrapper;
+  &__banner {
+    background-image: url("../../images/contact/contact-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__banner-text {
+    @include header(60px, 68px);
+    color: #fafafa;
+    border: 2px solid white;
+    text-align: center;
+  }
+
+  &__text-header {
+      @include header(24px,32px);
+      @include space-out;
+      text-align: center;
+
+      @include desktop {
+          @include header (36px, 44px);
+      }
+  }
+
+  &__text-subheader {
+    @include subheader(20px,32px);
+
     @include desktop {
-        width: 50%
+        @include subheader(24px, 34px);
     }
-    
-    &__info {
-        @include space-out;
-        @include flex-column;
+  }
 
-        @include desktop {
-            @include flex-center-horiz;
-           
-        }
-    }
+  &__details {
+      @include tablet {
+          @include wrapper;
+          @include flex-center-horiz;
+      }
 
-    &__info-details {
-        p {
-            @include text(25px, 25px)
-        }
-    }
-
-    &__map {
-        @include space-out;
+      @include desktop {
+        @include wrapper;
         @include flex-center;
+        height: 300px
+    }
+  }
+
+  &__detail {
+      @include flex-center-column;
+      @include space-out;
+  }
+
+  &__message {
+      @include tablet {
+          @include wrapper;
+      }
+  }
+
+  &__map {
+    @include space-out;
+    @include flex-center;
+  }
+
+  &__mapframe {
+    height: 300px;
+    width: 320px;
+
+    @include tablet {
+      height: 400px;
+      width: 600px;
     }
 
-    &__mapframe{
-        height:300px;
-        width:200px;
+    @include desktop {
+      height: 600px;
+      width: 1000px;
+    }
+  }
 
-        @include tablet {
-            height: 400px;
-            width: 600px;
-        }
+  &__mapouter {
+    position: relative;
+    text-align: right;
+    height: 300px;
+    width: 320px;
 
-        @include desktop {
-            height: 600px;
-            width: 1000px;
-        }
+    @include tablet {
+      height: 400px;
+      width: 600px;
     }
 
-    &__mapouter {
-        position:relative;
-        text-align:right;
-        height:300px;
-        width:200px;
+    @include desktop {
+      height: 600px;
+      width: 1000px;
+    }
+  }
 
-        @include tablet {
-            height: 400px;
-            width: 600px;
-        }
+  &__gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 300px;
+    width: 320px;
 
-        @include desktop {
-            height: 600px;
-            width: 1000px;
-        }
+    @include tablet {
+      height: 400px;
+      width: 600px;
     }
 
-    &__gmap_canvas {
-        overflow:hidden;
-        background:none!important;
-        height:300px;
-        width:200px;
-
-        @include tablet {
-            height: 400px;
-            width: 600px;
-        }
-
-        @include desktop {
-            height: 600px;
-            width: 1000px;
-        }
+    @include desktop {
+      height: 600px;
+      width: 1000px;
     }
-   
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

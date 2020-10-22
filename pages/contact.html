@@ -90,26 +90,38 @@
         <!-- end navbar -->
     </header>
 
-    <main>
-      <div class="contact">
-        <div class="contact__info">
+    <div class="contact">
+          <!-- Banner -->
+          <div class="contact__banner">
+              <p class="contact__banner-text">Contact Us</p>
+          </div>
+    
           <!-- Get in touch -->
-          <section class="contact__info-details">
-            <h2 class="contact__text-header">Contact</h2>
-            <br>
-            <p>123 ABC St</p>
-            <p>Vancouver,BC</p>
-            <p>V2X 2K0</p>
-            <br>
-            <p>abc@shredz.ca</p>
-            <br>
-            <p>778-123-4567</p>
+          <h3 class="contact__text-header">Get In Touch</h3>
+          <section class="contact__details">
+            <div class="contact__detail">
+              <p class="contact__text-subheader">Address <i class="fas fa-map-pin"></i></p>
+              <p>123 ABC St</p>
+              <p>Vancouver, BC</p>
+              <p>V3V 2A0</p>
+            </div>
+
+            <div class="contact__detail">
+              <p class="contact__text-subheader">Phone <i class="fas fa-phone"></i></p>
+              <p>778-888-5412</p>
+            </div>
+
+            <div class="contact__detail">
+              <p class="contact__text-subheader">Email <i class="fas fa-envelope"></i></p>
+              <p>contact@shredz.ca</p>
+            </div>
+            
           </section>
   
-          <!-- Ask Us Anything -->
-          <section class="contact__info-ask">
-              <h2 class="contact__text-header">Message Us</h2>
-              <form>
+          <!-- Message Us-->
+          <section class="contact__message">
+              <h3 class="contact__text-header">Message Us</h3>
+              <form class="contact__form">
                 <div class="form-group">
                   <label for="exampleFormControlInput1">Name</label>
                   <input type="text" class="form-control" required>
@@ -124,23 +136,19 @@
                   <label for="exampleFormControlTextarea1">Message</label>
                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" required></textarea>
                 </div>
-  
-                <button type="submit" class="btn btn-primary">Send Message</button>
+                
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+                
               </form>
           </section>
-        </div>
-          
-  
+
           <!-- MAPS -->
           <section class="contact__map">
             <div class="contact__mapouter"><div class="contact__gmap_canvas"><iframe class="contact__mapframe" id="gmap_canvas" src="https://maps.google.com/maps?q=bcit%20downtown&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
           </section>
-        
-    </main>
-
       </div>
-        
-
        
     
     <!-- jQuery first, then Bootstrap JS -->
