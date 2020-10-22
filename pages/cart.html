@@ -72,7 +72,7 @@
                 </div>
               </li>
               <li class="nav-item text-center">
-                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i><span class="nav-cart-count">0</span></a>
               </li>
             </ul>
           </div>
@@ -80,73 +80,92 @@
     </header>
 
     <main>
+
+        <!-- TEST ONLY -->
+        <div class="item_container">
+          <div class="image">
+            <img src="../images/landing/program-muaythai.jpg" alt="muay_thai" width="60px">
+            <h4>Muay Thai</h4>
+            <h4>$12.00</h4>
+            <a class="add-cart cart1" href="#">Add Cart</a> 
+          </div>
+          <div class="image">
+            <img src="../images/landing/program-yoga.jpg" alt="yoga" width="60px">
+            <h4>Yoga</h4>
+            <h4>$8.00</h4>
+            <a class="add-cart cart2" href="#">Add Cart</a> 
+          </div>
+        </div>
+
         <!-- Cart Items - populated crom JS -->
         <section class="cart">
            <h2>Your Cart</h2>
                       <!-- Item 1 -->
-            <div class="cart-item">
+
+            <section class="cart-item-container">
+              <!-- <div class="cart-item">
                 <div class="cart-item__info">
                     <a href="#"><label class="card-item__title">Muay Thai</label></a>
                     <label class="cart-item__date">Date: Oct 30, 2020</label>
                     <label class="cart-item__time">Time: 9:00am - 11:00am</label>
                     <label class="cart-item__instructor">Instructor: Russ Telen</label>
                 </div>
-                            <!--  -->
+                            
                 <div class="cart-item__image" id="img1">
                     <a href="#">
-                      <!-- <img src="#" alt="muay_thai"> -->
+                      
                     </a>
                 </div>
-                            <!--  -->
+                            
                 <div class="cart-item__functions">
                     <div class="cart-item__remove">
                         <button class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
                     </div>
-                    <!-- QTY -->
+                    
                     <div class="cart-item__amount">
                       <input class="cart-item__quantity" type="number" value="1">
                       <i class="fas fa-times fa-sm"></i>
-                      <label class="cart-item__price">$15.00</label>
-                    <!-- PRICE -->
+                      <label class="cart-item__price">$10.00</label>
+                    
                     </div>
                     <span class="cart-item__item-total"></span>
                 </div>
-            </div>
-                                            <!-- Item 2 -->
-            <div class="cart-item">
-                <!-- INFO -->
-              <div class="cart-item__info">
-                    <label class="cart-item__title">Yoga</label>
-                    <label class="cart_item__date">Date: Dec 15, 2020</label>
-                    <label class="cart-item__time">Time: 3:00pm - 4:00pm</label>
-                    <label class="cart-item__instructor">Instructor: Crystal Kim</label>
+              </div>
+                                            
+              <div class="cart-item">
+                
+                <div class="cart-item__info">
+                      <label class="cart-item__title">Yoga</label>
+                      <label class="cart_item__date">Date: Dec 15, 2020</label>
+                      <label class="cart-item__time">Time: 3:00pm - 4:00pm</label>
+                      <label class="cart-item__instructor">Instructor: Crystal Kim</label>
                 </div>
-                    <!-- IMAGE -->
+                      
                 <div class="cart-item__image" id="img2">
-                    <!-- <a href="#"><img src="#" alt="yoga"></a> -->
+                      
                 </div>
                 <div class="cart-item__functions">
-                    <!-- REMOVE ITEM -->
-                    <div class="cart-item_remove">
-                      <button class="cart-item__remove-button"><i class="far fa-trash-alt"></i> Remove</button>
-                    </div>
-                    <!-- QTY -->
-                    <div class="cart-item__amount">
-                      <input class="cart-item__quantity" type="number" value="1">
-                      <i class="fas fa-times fa-sm"></i>
-                      <label class="cart-item__price">$15.00</label>
-                    <!-- PRICE -->
-                    </div>
-                    <div class="cart-item__item-total">
-                        $15.00
-                    </div>
+                  
+                  <div class="cart-item_remove">
+                    <button class="cart-item__remove-button"><i class="far fa-trash-alt"></i> Remove</button>
+                  </div>
+                  
+                  <div class="cart-item__amount">
+                    <input class="cart-item__quantity" type="number" value="1">
+                    <i class="fas fa-times fa-sm"></i>
+                                        
+                    <label class="cart-item__price">15.00</label>
+                  </div>
+                  <div class="cart-item__item-total">
+                      $1500.00
+                  </div>
                 </div>
-            </div>
-        </section>
+              </div>
+            </section> --><!-- class="cart-item-container"-->
+        </section> <!-- class="cart"-->
 
         <!--  Cart Summary - updated based on items, in JS-->
-        <section class="cart-summary">
-            
+        <!-- <section class="cart-summary"> -->
             <div class="cart-summary__item">
               <label for="cart-summary__count">Item count: <span class="js_subtotal"></span> </label>
             </div>
@@ -154,13 +173,13 @@
             <div class="cart-summary__item">
                 <label for="cart-summary__subtotal">Subtotal: <span class="js_subtotal"></span> </label>
             </div>
-            <!-- CHECKOUT -->
+            <!-- Checkout Button -->
             <div class="cart-summary__item">
               <button class="cart-summary__checkout-button" id="checkout" type="button">
                 Checkout
               </button>
             </div>
-        </section>
+        <!-- </section> -->
 
         <!-- Cart Checkout -->
         <section class="checkout">
@@ -180,6 +199,24 @@
               <a href="login.html"><button class="button" id="register" type="button">Register</button></a>
           </div>
         </section>
+
+        <!-- CONFIRM PURCHASE -->
+        <section class="checkout-confirm">
+            <h2>Confirm Your Order</h2>      
+            <div class="checkout-confirm__item">
+                <label for="checkout-confirm__subtotal">Subtotal: <span class="js_subtotal"></span> </label>
+            </div>
+        </section>
+
+        <!-- PURCHASE COMPLETED -->
+        <h2>Thank You for your Order!</h2>
+        <section class="checkout-complete">
+          <div class="checkout-complete__item">
+            <label for="checkout-complete__subtotal">Subtotal: <span class="js_subtotal"></span> </label>
+          </div>
+        </section>
+
+
     </main>
 
 
