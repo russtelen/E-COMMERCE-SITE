@@ -176,6 +176,8 @@ function displayCart() {
             `
         });
 
+        
+
         itemContainer.innerHTML += `
         <div class="cart-summary__item">
             <div class="cart-summary__item">
@@ -209,16 +211,16 @@ function displayCart() {
     let arrowsDown = document.querySelectorAll('.qty-decrement');
     for (let i = 0; i < arrowsDown.length; i++) {
     arrowsDown[i].addEventListener('click', () => {        
-        // let itemsInCartNow = localStorage.getItem('itemsInCart');
-        // itemsInCartNow = JSON.parse(itemsInCartNow)
-        // // console.log(muaythai)
-        // console.log(itemsInCartNow) // must access object :  
-        // console.log(itemsInCartNow.muaythai) // must access object :  
-        // console.log(itemsInCartNow.muaythai.inCart); // what we need
+        let itemsInCartNow = localStorage.getItem('itemsInCart');
+        itemsInCartNow = JSON.parse(itemsInCartNow)
+        // console.log(muaythai)
+        console.log(itemsInCartNow) // must access object :  
+        console.log(itemsInCartNow.muaythai) // must access object :  
+        console.log(itemsInCartNow.muaythai.inCart); // what we need
 
-        // console.log(items[0])
-        // console.log(items[0].tag) // ENTER THIS as dynamic reference
-        // // console.log(JSON.parse(localStorage.getItem('itemsInCart'))[i].tag).inCart;
+        console.log(items[0])
+        console.log(items[0].tag) // ENTER THIS as dynamic reference
+        // console.log(JSON.parse(localStorage.getItem('itemsInCart'))[i].tag).inCart;
         // if(itemsInCartNow[i].inCart > 1){
             cartQuantityDown(items[i]);
             totalCost(items[i],'decrement');
