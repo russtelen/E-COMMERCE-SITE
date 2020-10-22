@@ -43,8 +43,9 @@ function cartQuantityDown(item){
         localStorage.setItem('cartQuantity', itemQuantity - 1);
         // update Navbar Cart <icon> itemCount 
         document.querySelector('.nav-cart-count').textContent = itemQuantity - 1;
+        decreaseItem(item)
     } 
-    decreaseItem(item)
+    
 }
 function setItems(item){ // updates LocalStorage var 'itemsInCart'
     let cartItems = localStorage.getItem('itemsInCart'); // first, check what's there
@@ -81,14 +82,14 @@ function decreaseItem(item){
     localStorage.setItem("itemsInCart", JSON.stringify(cartItems));
 }
 // "Remove From Cart" Button
-// function removeItem(item){
-//     let cartItems = localStorage.getItem('itemsInCart'); // first, check what's there
-//     cartItems = JSON.parse(cartItems); // parse to js object
-//     if (cartItems != null) { // if item exists in cart
-//         cartItems[item.tag].inCart = 0; // item's "inCart" value increment
-//     } 
-//     localStorage.setItem("itemsInCart", JSON.stringify(cartItems));
-// }
+function removeItem(item){
+    let cartItems = localStorage.getItem('itemsInCart'); // first, check what's there
+    cartItems = JSON.parse(cartItems); // parse to js object
+    if (cartItems != null) { // if item exists in cart
+        cartItems[item.tag].inCart = 0; // item's "inCart" value increment
+    } 
+    localStorage.setItem("itemsInCart", JSON.stringify(cartItems));
+}
 
 // Computational Functions
 function totalCost(item,action) {
@@ -139,7 +140,7 @@ function displayCart() {
     console.log(cartItems);    
     if (cartItems && itemContainer ) {
         itemContainer.innerHTML = ''
-        Object.values(cartItems).map(item => {
+        Object.values(cartItems).filter(item => {
             itemContainer.innerHTML += `
             <div class="cart-item">
                 <div class="cart-item__info">
@@ -207,11 +208,22 @@ function displayCart() {
     }
     let arrowsDown = document.querySelectorAll('.qty-decrement');
     for (let i = 0; i < arrowsDown.length; i++) {
-    arrowsDown[i].addEventListener('click', () => {
-        console.log("arrow")
-        cartQuantityDown(items[i]);
-        totalCost(items[i],'decrement');
-        displayCart()
+    arrowsDown[i].addEventListener('click', () => {        
+        // let itemsInCartNow = localStorage.getItem('itemsInCart');
+        // itemsInCartNow = JSON.parse(itemsInCartNow)
+        // // console.log(muaythai)
+        // console.log(itemsInCartNow) // must access object :  
+        // console.log(itemsInCartNow.muaythai) // must access object :  
+        // console.log(itemsInCartNow.muaythai.inCart); // what we need
+
+        // console.log(items[0])
+        // console.log(items[0].tag) // ENTER THIS as dynamic reference
+        // // console.log(JSON.parse(localStorage.getItem('itemsInCart'))[i].tag).inCart;
+        // if(itemsInCartNow[i].inCart > 1){
+            cartQuantityDown(items[i]);
+            totalCost(items[i],'decrement');
+            displayCart()
+        // }        
     });
     }
     let removeItem = document.querySelectorAll('.cart-item__remove-button');
@@ -224,6 +236,8 @@ function displayCart() {
         displayCart();
     });
     }
+
+    console.log("display refreshed " + items[0]);
 
 }
 
