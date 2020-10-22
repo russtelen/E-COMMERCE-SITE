@@ -569,10 +569,13 @@ h2 {
       height: 600px;
       width: 1000px; } }
 
+.team {
+  margin-top: -100px; }
+
 .team_banner {
   position: relative;
   background-image: url(../images/team1.jpg);
-  height: 100vh;
+  height: 120vh;
   background-size: cover; }
 
 .team-cover {
@@ -596,31 +599,83 @@ h2 {
 .team_info {
   margin-top: 50px; }
 
-.team_title {
-  font-size: 4rem; }
+@media (min-width: 320px) {
+  .team_title {
+    font-size: 1.5rem; } }
+@media (min-width: 768px) {
+  .team_title {
+    font-size: 3rem; } }
+@media (min-width: 1024px) {
+  .team_title {
+    font-size: 4.5rem; } }
 
-.team2 > h2 {
-  font-size: 3.5rem; }
+@media (min-width: 320px) {
+  .team2 > h2 {
+    font-size: 2rem;
+    text-align: center; } }
+@media (min-width: 768px) {
+  .team2 > h2 {
+    font-size: 2.5rem;
+    text-align: left; } }
+@media (min-width: 1024px) {
+  .team2 > h2 {
+    font-size: 3.5rem;
+    text-align: left; } }
 
 main {
   margin: 0 auto;
   width: 80%; }
-  main .card {
-    padding: 50px;
-    width: 100%;
-    height: 600px; }
-    main .card .card-img {
+  main .row {
+    margin: 1rem;
+    padding: 1rem; }
+    main .row .card-img {
       width: 400px;
       height: 500px;
       border-radius: 10%; }
-    main .card .card-body {
+      @media (min-width: 320px) {
+        main .row .card-img {
+          width: 300px;
+          height: 400px;
+          align-items: center; } }
+      @media (min-width: 768px) {
+        main .row .card-img {
+          width: 300px;
+          height: 350px; } }
+      @media (min-width: 1024px) {
+        main .row .card-img {
+          width: 400px;
+          height: 500px; } }
+    main .row .card-body {
       margin-left: -200px; }
-    main .card .card-title {
-      font-size: 2.5em;
-      padding: 20px;
-      font-family: "Roboto-Demi"; }
-    main .card .card-text {
+      @media (min-width: 320px) {
+        main .row .card-body {
+          margin-left: 0px; } }
+      @media (min-width: 768px) {
+        main .row .card-body {
+          margin-left: -100px; } }
+      @media (min-width: 1024px) {
+        main .row .card-body {
+          margin-left: -200px; } }
+    main .row .card-title {
+      font-family: "Roboto-Demi";
+      padding: 20px; }
+      @media (min-width: 320px) {
+        main .row .card-title {
+          font-size: 1em;
+          text-align: center; } }
+      @media (min-width: 768px) {
+        main .row .card-title {
+          font-size: 1.5em;
+          text-align: left; } }
+      @media (min-width: 1024px) {
+        main .row .card-title {
+          font-size: 2.5em;
+          text-align: left; } }
+    main .row .card-text {
       font-family: "OpenSan-Regular"; }
+
+.col-md-8 {
+  margin-top: 90px; }
 
 /*
 .exercise1 {
