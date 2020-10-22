@@ -45,7 +45,8 @@ body {
        }
 
        &__text-header{
-           @include header(19px, 32px)
+           @include header(17px, 32px);
+           text-transform: uppercase;
        }
 
        &__text-subheader{

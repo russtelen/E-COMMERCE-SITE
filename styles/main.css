@@ -300,8 +300,9 @@ body .landing__journey {
 
 body .landing__text-header {
   font-family: "Roboto-Bold";
-  font-size: 19px;
+  font-size: 17px;
   line-height: 32px;
+  text-transform: uppercase;
 }
 
 body .landing__text-subheader {
