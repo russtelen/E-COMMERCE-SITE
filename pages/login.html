@@ -43,8 +43,8 @@
         <!-- -->
 
         <!-- Logo = Link to Home -->
-        <a class="navbar-brand text-white" href="index.html"
-          ><img src="assets/logo/shredz_logo.svg" width="140px"
+        <a class="navbar-brand text-white" href="../index.html"
+          ><img src="../assets/logo/shredz_logo.svg" width="140px"
         /></a>
 
         <!-- Hamburger Menu Toggle -->
@@ -66,7 +66,7 @@
             <li class="nav-item text-center">
               <a
                 class="btn btn-outline-light border border-dark rounded mx-2 w-150"
-                href="pages/program.html"
+                href="program.html"
                 >Explore Programs</a
               >
             </li>
@@ -74,7 +74,7 @@
             <li class="nav-item text-center">
               <a
                 class="btn btn-outline-light border border-dark rounded mx-2 w-150"
-                href="pages/MeetOurTeam.html"
+                href="MeetOurTeam.html"
                 >Meet Our Team</a
               >
             </li>
@@ -82,7 +82,7 @@
             <li class="nav-item text-center">
               <a
                 class="btn btn-outline-light border border-dark rounded mx-2 w-150"
-                href="pages/schedule.html"
+                href="schedule.html"
                 >Book Sessions</a
               >
             </li>
@@ -90,7 +90,7 @@
             <li class="nav-item text-center">
               <a
                 class="btn btn-outline-light border border-dark rounded mx-2 w-150"
-                href="pages/contact.html"
+                href="contact.html"
                 >Contact</a
               >
             </li>
@@ -149,7 +149,7 @@
                   <div class="dropdown-divider"></div>
                   <a
                     class="dropdown-item w-100 text-center"
-                    href="pages/login.html"
+                    href="login.html"
                     >Sign-up</a
                   >
                 </div>
@@ -158,7 +158,7 @@
             <li class="nav-item text-center">
               <a
                 class="btn btn-outline-light border border-dark rounded mx-2 w-150"
-                href="pages/cart.html"
+                href="cart.html"
                 ><i class="fas fa-shopping-cart fa-lg"></i
               ></a>
             </li>
@@ -195,24 +195,10 @@
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script>
-      $(document).ready(function () {
-        $("a").click(function (e) {
-          e.preventDefault();
-          $(".login__form").removeClass("active").addClass("noactive");
-          $(this).siblings().addClass("active").removeClass("noactive");
-        });
-      });
-    </script>
+    
 
     <!-- jQuery first, then Popper.js, Bootstrap JS, Slick JS, Landing JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -228,6 +214,21 @@
       integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
       crossorigin="anonymous"
     ></script>
-    <script src="scripts/landing.js"></script>
+     <!-- errors out -->
+     <script src="js/jquery.js"></script>
+    
+     <script>
+       $(document).ready(function () {
+         $("a").click(function (e) {
+           e.preventDefault();
+           $(".login__form").removeClass("active").addClass("noactive");
+           $(this).siblings().addClass("active").removeClass("noactive");
+         });
+       });
+     </script>   
+    <!-- errors out -->
+    <script src="../scripts/login.js"></script>
+
+
   </body>
 </html>
