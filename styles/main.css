@@ -217,6 +217,90 @@ table {
 body {
   font-family: "OpenSan-Regular";
   font-size: 1rem;
+<<<<<<< HEAD
+  line-height: 1rem; }
+  body .slick-prev:before, body .slick-next:before {
+    color: black; }
+  body .jumbotron {
+    background-image: url("../../images/landing/landing-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 700px; }
+    body .jumbotron h1, body .jumbotron p {
+      color: white; }
+  body .landing {
+    margin: 0 auto;
+    width: 80%; }
+    body .landing__title {
+      font-family: "Roboto-Bold";
+      font-size: 23px;
+      line-height: 32px;
+      margin: 1rem;
+      padding: 1rem;
+      text-align: center;
+      text-transform: uppercase; }
+      @media (min-width: 1024px) {
+        body .landing__title {
+          font-family: "Roboto-Bold";
+          font-size: 36px;
+          line-height: 44px; } }
+    @media (min-width: 768px) {
+      body .landing__journies {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row; } }
+    @media (min-width: 1024px) {
+      body .landing__journies {
+        height: 350px; } }
+    body .landing__journey {
+      margin: 1rem;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+    body .landing__text-header {
+      font-family: "Roboto-Bold";
+      font-size: 17px;
+      line-height: 32px;
+      text-transform: uppercase; }
+    body .landing__text-subheader {
+      font-family: "Roboto-Demi";
+      font-size: 14px;
+      line-height: 22px; }
+    body .landing__program {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: 1rem;
+      padding: 1rem; }
+      body .landing__program button {
+        margin: 1rem;
+        padding: 1rem; }
+    body .landing__program-img {
+      width: 250px;
+      height: 250px; }
+      @media (min-width: 768px) {
+        body .landing__program-img {
+          width: 150px;
+          height: 150px; } }
+      @media (min-width: 1024px) {
+        body .landing__program-img {
+          width: 250px;
+          height: 250px; } }
+    @media (min-width: 768px) {
+      body .landing__program-row1 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row; } }
+    @media (min-width: 768px) {
+      body .landing__program-row2 {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row; } }
+=======
   line-height: 1rem;
 }
 
@@ -382,6 +466,7 @@ body .landing__program-img {
             flex-direction: row;
   }
 }
+>>>>>>> 84b2041a3d9d5e51f67015cd336cd26b576da200
 
 figure.snip1321 {
   font-family: 'Raleway', Arial, sans-serif;
@@ -394,20 +479,17 @@ figure.snip1321 {
   color: #000000;
   text-align: center;
   -webkit-perspective: 50em;
-  perspective: 50em;
-}
+  perspective: 50em; }
 
 figure.snip1321 * {
   -webkit-box-sizing: padding-box;
   box-sizing: padding-box;
   -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
+  transition: all 0.2s ease-out; }
 
 figure.snip1321 img {
   max-width: 100%;
-  vertical-align: top;
-}
+  vertical-align: top; }
 
 figure.snip1321 figcaption {
   top: 50%;
@@ -415,26 +497,21 @@ figure.snip1321 figcaption {
   right: 20px;
   position: absolute;
   opacity: 0;
-  z-index: 1;
-}
+  z-index: 1; }
 
 figure.snip1321 h2,
 figure.snip1321 h4 {
-  margin: 0;
-}
+  margin: 0; }
 
 figure.snip1321 h2 {
-  font-weight: 600;
-}
+  font-weight: 600; }
 
 figure.snip1321 h4 {
   font-weight: 400;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 figure.snip1321 i {
-  font-size: 32px;
-}
+  font-size: 32px; }
 
 figure.snip1321:after {
   background-color: #ffffff;
@@ -450,9 +527,9 @@ figure.snip1321:after {
   -webkit-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
   -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  opacity: 0;
-}
+  opacity: 0; }
 
 figure.snip1321 a {
   left: 0;
@@ -460,8 +537,7 @@ figure.snip1321 a {
   top: 0;
   bottom: 0;
   position: absolute;
-  z-index: 1;
-}
+  z-index: 1; }
 
 figure.snip1321:hover figcaption,
 figure.snip1321.hover figcaption {
@@ -469,15 +545,13 @@ figure.snip1321.hover figcaption {
   transform: translateY(-50%);
   opacity: 1;
   -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-}
+  transition-delay: 0.2s; }
 
 figure.snip1321:hover:after,
 figure.snip1321.hover:after {
   -webkit-transform: rotateX(0);
   transform: rotateX(0);
-  opacity: 0.9;
-}
+  opacity: 0.9; }
 
 .login {
   position: relative;
