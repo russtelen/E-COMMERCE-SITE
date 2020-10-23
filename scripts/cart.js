@@ -80,10 +80,14 @@ function decreaseItem(item){ // get from LS; reduces inCart value in LS
 function removeItem(item){
     let cartItemsLS = localStorage.getItem('itemsInCart'); // first, check what's there
     cartItemsLS = JSON.parse(cartItemsLS); // parse to js object
-    if (cartItemsLS != null) { // if item exists in cart
+    if (cartItemsLS != null) { // if cart exists
+
+        itemsToRemove = cartItemsLS[item.tag].inCart
         cartItemsLS[item.tag].inCart = 0; // item's "inCart" value increment
     } 
     localStorage.setItem("itemsInCart", JSON.stringify(cartItemsLS));
+
+
 }
 
 // Computational Functions
@@ -137,7 +141,72 @@ function displayCart() {
     if (cartItemsLS && itemContainer ) {
         itemContainer.innerHTML = ''
         let dynamicHTML;
-        // for (var i = 0; i < items.length; i++) {
+        // Object.values() returns an array // "=>" Arrow function expression
+        Object.values(cartItemsLS).filter(item => { 
+            
+            console.log(item)
+            console.log(item.tag)
+            // only execute IF 'item' exists in cartItemsLS
+            // cartItemsLS < {multiple items: yoga;muaythai = items[].tag}
+            if (item.inCart > 0) { // item.tag gets LS item's tag
+
+            
+            
+            itemContainer.innerHTML += `             
+            <div class="cart-item">
+                <div class="cart-item__info">
+                    <a href="#"><label class="card-item__title">${item.name}.</label></a>
+                    <label class="cart-item__date">Date: Oct 30, 2020</label>
+                    <label class="cart-item__time">Time: 9:00am - 11:00am</label>
+                    <label class="cart-item__instructor">Instructor: Russ Telen</label>
+                </div>
+                        <!--  -->
+                <div class="cart-item__image" id="img1">
+                    <a href="#">
+                    <!-- <img src="#" alt="muay_thai"> -->
+                    </a>
+                </div>
+                        <!--  -->
+                <div class="cart-item__functions">
+                    <div class="cart-item__remove">
+                        <button class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
+                    </div>
+                    <!-- QTY -->
+                    <div class="cart-item__amount">
+                        <a class="qty-decrement" href="#"><i class="fas fa-arrow-down fa-sm"></i></a>
+                        <input class="cart-item__quantity" type="number" value="${item.inCart}">
+                        <a class="qty-increment" href="#"><i class="fas fa-arrow-up fa-sm"></i></a>
+                        <i class="fas fa-times fa-sm"></i>
+                        
+                    <label class="cart-item__price">$${item.price}</label>
+                    <!-- PRICE -->
+                    </div>
+                    <span class="cart-item__item-total">$${item.inCart * item.price}</span>
+                </div>
+            </div>
+            `
+            }
+        });
+
+        itemContainer.innerHTML += `
+        <div class="cart-summary__item">
+            <div class="cart-summary__item">
+                <label for="cart-summary__count">Item count: ${localStorage.getItem('cartQuantity')} </label>
+            </div>
+        
+            <div class="cart-summary__item">
+                <label for="cart-summary__subtotal">Subtotal: $${localStorage.getItem('totalCost')}</label>
+            </div>
+
+            <!-- Checkout Button -->
+            <div class="cart-summary__item">
+                <button class="cart-summary__checkout-button" id="checkout" type="button">
+                    Checkout
+                </button>
+            </div>
+        </section>
+        `
+                // for (var i = 0; i < items.length; i++) {
         //      let item = items[i]
         //      let itemTag = item.tag
 
@@ -180,61 +249,6 @@ function displayCart() {
         // itemContainer.innerHTML = dynamicHTML;
         //     }
         // }
-        // OLD Method
-        Object.values(cartItemsLS).filter(item => {
-            itemContainer.innerHTML += `
-            <div class="cart-item">
-                <div class="cart-item__info">
-                    <a href="#"><label class="card-item__title">${item.name}.</label></a>
-                    <label class="cart-item__date">Date: Oct 30, 2020</label>
-                    <label class="cart-item__time">Time: 9:00am - 11:00am</label>
-                    <label class="cart-item__instructor">Instructor: Russ Telen</label>
-                </div>
-                        <!--  -->
-                <div class="cart-item__image" id="img1">
-                    <a href="#">
-                    <!-- <img src="#" alt="muay_thai"> -->
-                    </a>
-                </div>
-                        <!--  -->
-                <div class="cart-item__functions">
-                    <div class="cart-item__remove">
-                        <button class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
-                    </div>
-                    <!-- QTY -->
-                    <div class="cart-item__amount">
-                        <a class="qty-decrement" href="#"><i class="fas fa-arrow-down fa-sm"></i></a>
-                        <input class="cart-item__quantity" type="number" value="${item.inCart}">
-                        <a class="qty-increment" href="#"><i class="fas fa-arrow-up fa-sm"></i></a>
-                        <i class="fas fa-times fa-sm"></i>
-                        
-                    <label class="cart-item__price">$${item.price}</label>
-                    <!-- PRICE -->
-                    </div>
-                    <span class="cart-item__item-total">$${item.inCart * item.price}</span>
-                </div>
-            </div>
-            `
-        });
-
-        itemContainer.innerHTML += `
-        <div class="cart-summary__item">
-            <div class="cart-summary__item">
-                <label for="cart-summary__count">Item count: ${localStorage.getItem('cartQuantity')} </label>
-            </div>
-        
-            <div class="cart-summary__item">
-                <label for="cart-summary__subtotal">Subtotal: $${localStorage.getItem('totalCost')}</label>
-            </div>
-
-            <!-- Checkout Button -->
-            <div class="cart-summary__item">
-                <button class="cart-summary__checkout-button" id="checkout" type="button">
-                    Checkout
-                </button>
-            </div>
-        </section>
-        `
     }
 
     // Add EventListeners to dynamically created HTML 
@@ -268,13 +282,14 @@ function displayCart() {
         // console.log(JSON.parse(localStorage.getItem('itemsInCart'))[i].tag).inCart;
     });
     }
-    let removeItem = document.querySelectorAll('.cart-item__remove-button');
-    for (let i = 0; i < removeItem.length; i++) {
-    removeItem[i].addEventListener('click', () => {
+    let removeHTMLElements = document.querySelectorAll('.cart-item__remove-button');
+    for (let i = 0; i < removeHTMLElements.length; i++) {
+        removeHTMLElements[i].addEventListener('click', () => {
 
         removeItem(items[i]);
         // console.log("button")
         totalCost(items[i]);
+
         displayCart();
     });
     }
