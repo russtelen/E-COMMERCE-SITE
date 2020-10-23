@@ -68,18 +68,12 @@ function setItems(item){ // updates LocalStorage var 'itemsInCart'
     // update ItemsInCart into LocalStorage as JSON
     localStorage.setItem("itemsInCart", JSON.stringify(cartItemsLS));
 }
-function decreaseItem(item){
-    console.log(item.tag)
+function decreaseItem(item){ // get from LS; reduces inCart value in LS 
     let cartItemsLS = localStorage.getItem('itemsInCart'); // first, check what's there
     cartItemsLS = JSON.parse(cartItemsLS); // parse to js object
     if (cartItemsLS != null && cartItemsLS[item.tag].inCart > 1) { // if item exists in cart
         cartItemsLS[item.tag].inCart -= 1; // item's "inCart" value increment
-    } else { // if this type of item doesn't exist in cart
-        item.inCart = 1; // item's count initialized
-        cartItemsLS = { 
-            [item.tag]: item // 
-        }
-    }
+    } 
     // update ItemsInCart into LocalStorage as JSON
     localStorage.setItem("itemsInCart", JSON.stringify(cartItemsLS));
 }
@@ -133,20 +127,27 @@ function displayNavBar(){ // CALLED at END of script
     } 
 }
 function displayCart() {
+    let itemContainer = document.querySelector('.cart-item-container')
+    
     let cartItemsLS = localStorage.getItem("itemsInCart");
     cartItemsLS = JSON.parse(cartItemsLS);
-   
-    let itemContainer = document.querySelector('.cart-item-container')
-    //itemContainer.innerHTML = ``;
+    
 
-    console.log(cartItemsLS);    
+    // NEW METHOD - To display cart items in same order as the items[] array (OLD Method below WORKS for Displaying, but Order is mismatched)
     if (cartItemsLS && itemContainer ) {
         itemContainer.innerHTML = ''
-        Object.values(cartItemsLS).filter(item => {
-            itemContainer.innerHTML += `
-            <div class="cart-item">
+        let dynamicHTML;
+        for (var i = 0; i < items.length; i++) {
+            
+            console.log(cartItemsLS)   
+            console.log(items[i].tag)
+            console.log(cartItemsLS[items[i].tag].inCart)
+
+            if (cartItemsLS[items[i].tag].inCart > 0) { 
+                dynamicHTML += `
+                <div class="cart-item">
                 <div class="cart-item__info">
-                    <a href="#"><label class="card-item__title">${item.name}.</label></a>
+                    <a href="#"><label class="card-item__title">${cartItemsLS[items[i].tag].name}.</label></a>
                     <label class="cart-item__date">Date: Oct 30, 2020</label>
                     <label class="cart-item__time">Time: 9:00am - 11:00am</label>
                     <label class="cart-item__instructor">Instructor: Russ Telen</label>
@@ -165,18 +166,57 @@ function displayCart() {
                     <!-- QTY -->
                     <div class="cart-item__amount">
                         <a class="qty-decrement" href="#"><i class="fas fa-arrow-down fa-sm"></i></a>
-                        <input class="cart-item__quantity" type="number" value="${item.inCart}">
+                        <input class="cart-item__quantity" type="number" value="${cartItemsLS[items[i].tag].inCart}">
                         <a class="qty-increment" href="#"><i class="fas fa-arrow-up fa-sm"></i></a>
                         <i class="fas fa-times fa-sm"></i>
                         
-                    <label class="cart-item__price">$${item.price}</label>
+                    <label class="cart-item__price">$${cartItemsLS[items[i].tag].price}</label>
                     <!-- PRICE -->
                     </div>
-                    <span class="cart-item__item-total">$${item.inCart * item.price}</span>
+                    <span class="cart-item__item-total">$${cartItemsLS[items[i].tag].inCart * cartItemsLS[items[i].tag].price}</span>
+                    </div>
                 </div>
-            </div>
-            `
-        });
+                `
+            }
+        }
+        itemContainer.innerHTML = dynamicHTML;
+
+        // OLD Method
+        // Object.values(cartItemsLS).filter(item => {
+            // itemContainer.innerHTML += `
+            // <div class="cart-item">
+            //     <div class="cart-item__info">
+            //         <a href="#"><label class="card-item__title">${item.name}.</label></a>
+            //         <label class="cart-item__date">Date: Oct 30, 2020</label>
+            //         <label class="cart-item__time">Time: 9:00am - 11:00am</label>
+            //         <label class="cart-item__instructor">Instructor: Russ Telen</label>
+            //     </div>
+            //             <!--  -->
+            //     <div class="cart-item__image" id="img1">
+            //         <a href="#">
+            //         <!-- <img src="#" alt="muay_thai"> -->
+            //         </a>
+            //     </div>
+            //             <!--  -->
+            //     <div class="cart-item__functions">
+            //         <div class="cart-item__remove">
+            //             <button class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
+            //         </div>
+            //         <!-- QTY -->
+            //         <div class="cart-item__amount">
+            //             <a class="qty-decrement" href="#"><i class="fas fa-arrow-down fa-sm"></i></a>
+            //             <input class="cart-item__quantity" type="number" value="${item.inCart}">
+            //             <a class="qty-increment" href="#"><i class="fas fa-arrow-up fa-sm"></i></a>
+            //             <i class="fas fa-times fa-sm"></i>
+                        
+            //         <label class="cart-item__price">$${item.price}</label>
+            //         <!-- PRICE -->
+            //         </div>
+            //         <span class="cart-item__item-total">$${item.inCart * item.price}</span>
+            //     </div>
+            // </div>
+            // `
+        // });
 
         
 
@@ -204,7 +244,6 @@ function displayCart() {
     let arrowsUp = document.querySelectorAll('.qty-increment');
     for (let i = 0; i < arrowsUp.length; i++) {
     arrowsUp[i].addEventListener('click', () => {
-        console.log("arrow")
         cartQuantityUp(items[i]);
         totalCost(items[i],'increment');
         displayCart()
@@ -215,23 +254,21 @@ function displayCart() {
     arrowsDown[i].addEventListener('click', () => {        
         let itemsInCartNow = localStorage.getItem('itemsInCart');
         let item = items[i]
-        console.log(item.tag)
         itemsInCartNow = JSON.parse(itemsInCartNow)
-        // console.log(muaythai)
-        console.log(itemsInCartNow) // must access object :  
-        console.log(itemsInCartNow.muaythai) // must access object :  
-        console.log(itemsInCartNow.muaythai.inCart); // what we need
-
-        console.log(items[0])
-        console.log(items[0].tag) // ENTER THIS as dynamic reference
-        // console.log(JSON.parse(localStorage.getItem('itemsInCart'))[i].tag).inCart;
-        
-        
         if(itemsInCartNow[item.tag].inCart > 1){
             cartQuantityDown(items[i]);
             totalCost(items[i],'decrement');
             displayCart()
         }        
+
+        // // console.log(muaythai)
+        // console.log(itemsInCartNow) // must access object :  
+        // console.log(itemsInCartNow.muaythai) // must access object :  
+        // console.log(itemsInCartNow.muaythai.inCart); // what we need
+
+        // console.log(items[0])
+        // console.log(items[0].tag) // ENTER THIS as dynamic reference
+        // console.log(JSON.parse(localStorage.getItem('itemsInCart'))[i].tag).inCart;
     });
     }
     let removeItem = document.querySelectorAll('.cart-item__remove-button');
@@ -239,13 +276,13 @@ function displayCart() {
     removeItem[i].addEventListener('click', () => {
 
         removeItem(items[i]);
-        console.log("button")
+        // console.log("button")
         totalCost(items[i]);
         displayCart();
     });
     }
 
-    console.log("display refreshed " + items[0]);
+    // console.log("display refreshed " + items[0]);
 
 }
 
