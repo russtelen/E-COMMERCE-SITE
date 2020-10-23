@@ -131,23 +131,13 @@ function displayCart() {
     
     let cartItemsLS = localStorage.getItem("itemsInCart");
     cartItemsLS = JSON.parse(cartItemsLS);
-    
 
-    // NEW METHOD - To display cart items in same order as the items[] array (OLD Method below WORKS for Displaying, but Order is mismatched)
-    if (cartItemsLS && itemContainer ) {
-        itemContainer.innerHTML = ''
-        let dynamicHTML;
-        for (var i = 0; i < items.length; i++) {
-            
-            console.log(cartItemsLS)   
-            console.log(items[i].tag)
-            console.log(cartItemsLS[items[i].tag].inCart)
-
-            if (cartItemsLS[items[i].tag].inCart > 0) { 
-                dynamicHTML += `
-                <div class="cart-item">
+        // OLD Method
+        Object.values(cartItemsLS).filter(item => {
+            itemContainer.innerHTML += `
+            <div class="cart-item">
                 <div class="cart-item__info">
-                    <a href="#"><label class="card-item__title">${cartItemsLS[items[i].tag].name}.</label></a>
+                    <a href="#"><label class="card-item__title">${item.name}.</label></a>
                     <label class="cart-item__date">Date: Oct 30, 2020</label>
                     <label class="cart-item__time">Time: 9:00am - 11:00am</label>
                     <label class="cart-item__instructor">Instructor: Russ Telen</label>
@@ -166,59 +156,72 @@ function displayCart() {
                     <!-- QTY -->
                     <div class="cart-item__amount">
                         <a class="qty-decrement" href="#"><i class="fas fa-arrow-down fa-sm"></i></a>
-                        <input class="cart-item__quantity" type="number" value="${cartItemsLS[items[i].tag].inCart}">
+                        <input class="cart-item__quantity" type="number" value="${item.inCart}">
                         <a class="qty-increment" href="#"><i class="fas fa-arrow-up fa-sm"></i></a>
                         <i class="fas fa-times fa-sm"></i>
                         
-                    <label class="cart-item__price">$${cartItemsLS[items[i].tag].price}</label>
+                    <label class="cart-item__price">$${item.price}</label>
                     <!-- PRICE -->
                     </div>
-                    <span class="cart-item__item-total">$${cartItemsLS[items[i].tag].inCart * cartItemsLS[items[i].tag].price}</span>
-                    </div>
+                    <span class="cart-item__item-total">$${item.inCart * item.price}</span>
                 </div>
-                `
-            }
-        }
-        itemContainer.innerHTML = dynamicHTML;
+            </div>
+            `
+        });
 
-        // OLD Method
-        // Object.values(cartItemsLS).filter(item => {
-            // itemContainer.innerHTML += `
-            // <div class="cart-item">
-            //     <div class="cart-item__info">
-            //         <a href="#"><label class="card-item__title">${item.name}.</label></a>
-            //         <label class="cart-item__date">Date: Oct 30, 2020</label>
-            //         <label class="cart-item__time">Time: 9:00am - 11:00am</label>
-            //         <label class="cart-item__instructor">Instructor: Russ Telen</label>
-            //     </div>
-            //             <!--  -->
-            //     <div class="cart-item__image" id="img1">
-            //         <a href="#">
-            //         <!-- <img src="#" alt="muay_thai"> -->
-            //         </a>
-            //     </div>
-            //             <!--  -->
-            //     <div class="cart-item__functions">
-            //         <div class="cart-item__remove">
-            //             <button class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
-            //         </div>
-            //         <!-- QTY -->
-            //         <div class="cart-item__amount">
-            //             <a class="qty-decrement" href="#"><i class="fas fa-arrow-down fa-sm"></i></a>
-            //             <input class="cart-item__quantity" type="number" value="${item.inCart}">
-            //             <a class="qty-increment" href="#"><i class="fas fa-arrow-up fa-sm"></i></a>
-            //             <i class="fas fa-times fa-sm"></i>
+        // NEW METHOD - To display cart items in same order as the items[] array (OLD Method below WORKS for Displaying, but Order is mismatched)
+    // if (cartItemsLS && itemContainer ) {
+    //     itemContainer.innerHTML = ''
+    //     let dynamicHTML;
+    //     for (var i = 0; i < items.length; i++) {
+    //         let item = items[i]
+            
+    //         console.log(cartItemsLS) 
+    //         // console.log(cartItemsLS.yoga.inCart)
+            
+    //         // console.log(items[i].tag)
+    //         // console.log(cartItemsLS[items[i].tag].inCart)
+
+            
+    //         // console.log(cartItemsLS['yoga'].inCart)
+
+    //         if (2 > 0) { 
+    //             dynamicHTML += `
+    //             <div class="cart-item">
+    //             <div class="cart-item__info">
+    //                 <a href="#"><label class="card-item__title">${cartItemsLS[items[i].tag].name}.</label></a>
+    //                 <label class="cart-item__date">Date: Oct 30, 2020</label>
+    //                 <label class="cart-item__time">Time: 9:00am - 11:00am</label>
+    //                 <label class="cart-item__instructor">Instructor: Russ Telen</label>
+    //             </div>
+    //                     <!--  -->
+    //             <div class="cart-item__image" id="img1">
+    //                 <a href="#">
+    //                 <!-- <img src="#" alt="muay_thai"> -->
+    //                 </a>
+    //             </div>
+    //                     <!--  -->
+    //             <div class="cart-item__functions">
+    //                 <div class="cart-item__remove">
+    //                     <button class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
+    //                 </div>
+    //                 <!-- QTY -->
+    //                 <div class="cart-item__amount">
+    //                     <a class="qty-decrement" href="#"><i class="fas fa-arrow-down fa-sm"></i></a>
+    //                     <input class="cart-item__quantity" type="number" value="${cartItemsLS[items[i].tag].inCart}">
+    //                     <a class="qty-increment" href="#"><i class="fas fa-arrow-up fa-sm"></i></a>
+    //                     <i class="fas fa-times fa-sm"></i>
                         
-            //         <label class="cart-item__price">$${item.price}</label>
-            //         <!-- PRICE -->
-            //         </div>
-            //         <span class="cart-item__item-total">$${item.inCart * item.price}</span>
-            //     </div>
-            // </div>
-            // `
-        // });
-
-        
+    //                 <label class="cart-item__price">$${cartItemsLS[items[i].tag].price}</label>
+    //                 <!-- PRICE -->
+    //                 </div>
+    //                 <span class="cart-item__item-total">$${cartItemsLS[items[i].tag].inCart * cartItemsLS[items[i].tag].price}</span>
+    //                 </div>
+    //             </div>
+    //             `
+    //         }
+    //     }
+    //     itemContainer.innerHTML = dynamicHTML;
 
         itemContainer.innerHTML += `
         <div class="cart-summary__item">
