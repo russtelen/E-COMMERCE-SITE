@@ -21,3 +21,11 @@ const openTab = (e, tabName) => {
   document.getElementById(tabName).style.display = "block";
   e.currentTarget.className += " active";
 };
+
+$(document).ready(function () {
+  $(".login__btn").click(function (e) {
+    e.preventDefault();
+    $(".login__form").removeClass("active").addClass("noactive");
+    $(this).siblings().addClass("active").removeClass("noactive");
+  });
+});
