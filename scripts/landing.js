@@ -35,3 +35,10 @@ $(document).ready(function(){
         ]
       });
 });
+
+// Hover effect on cards
+$(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
