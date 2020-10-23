@@ -121,23 +121,23 @@
           <!-- <div uk-scrollspy="cls:uk-animation-fade"> -->
             <!-- START begin your journey section -->
               <p class="landing__title" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">BEGIN YOUR JOURNEY</p>
-              <section class="landing__journies">
+              <section class="landing__journies" uk-scrollspy="cls: uk-animation-slide-right; target: .landing__journey; delay: 300; repeat: true">
                 <!-- step 1 -->
-                <div  class="landing__journey" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
+                <div  class="landing__journey">
                   <i class="fas fa-user-plus fa-3x"></i>
                   <h2 class="landing__text-header">Step 1</h2> 
                   <h3 class="landing__text-subheader">REGISTER</h3>
                 </div>
 
                 <!-- step 2 -->
-                <div class="landing__journey" uk-scrollspy="cls: uk-animation-slide-right; repeat: true"> 
+                <div class="landing__journey"> 
                   <i class="far fa-calendar-alt fa-3x"></i>
                   <h2 class="landing__text-header">Step 2</h2> 
                   <h3 class="landing__text-subheader">BOOK A CLASS</h3>
                 </div>
 
                 <!-- step 3 -->
-                <div class="landing__journey" uk-scrollspy="cls: uk-animation-slide-right; repeat: true"> 
+                <div class="landing__journey"> 
                   <i class="fas fa-dumbbell fa-3x"></i>
                   <h2 class="landing__text-header">Step 3</h2> 
                   <h3 class="landing__text-subheader">GET SHREDDED</h3>
@@ -155,7 +155,7 @@
         <!-- START our program section -->
         <p class="landing__title">Our Programs</p>
         <section class="landing__programs">
-          <div class="landing__program-row1" uk-scrollspy="cls: uk-animation-slide-top; target: .landing__program; delay: 300; repeat: true">
+          <div class="landing__program-row1" uk-scrollspy="cls: uk-animation-slide-top; target: .landing__program; delay: 300; repeat: false">
             <!-- program 1 -->
             <div class="landing__program">
               <figure class="snip1321"><img class="landing__program-img" src="images/landing/program-yoga.jpg" alt=""/>
@@ -190,7 +190,7 @@
             </div>
           </div>
 
-          <div class="landing__program-row2" uk-scrollspy="cls: uk-animation-slide-bottom; target: .landing__program; delay: 300; repeat: true">
+          <div class="landing__program-row2" uk-scrollspy="cls: uk-animation-slide-bottom; target: .landing__program; delay: 300; repeat: false">
             <!-- program 4 -->
             <div class="landing__program">
               <figure class="snip1321"><img class="landing__program-img" src="images/landing/program-zumba.jpg" alt="">
