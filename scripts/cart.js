@@ -14,15 +14,17 @@ let items = [ // our programs
     }
 ];
 
-// Add to Cart Buttons
-// collection - Cart Buttons
+// lists
+    let itemsLS // <-- get from Local Storage
 
-// define var - increase qty
-// Page Refresh: update NavBar Cart itemCount from LocalStorage itemCount
+    
+    let totalLS// <-- 'LS' = get from Local Storage
+    let quantityLS //    
+
 
 function cartQuantityUp(item, action) { // increments 'inCart' Object field in localStorage
     // get current 'CartQuantity' (False if none); parse Int
-    let cartQuantityLS = parseInt(localStorage.getItem('cartQuantity'));
+    let cartQuantityLS = parseInt(localStorage.getItem('cartQuantity')); 
     if(cartQuantityLS) { // if there True
         // then increment; Also, update Cart <i>con
         localStorage.setItem('cartQuantity', cartQuantityLS + 1);
@@ -89,32 +91,38 @@ function removeItem(item){
 
 
 }
-
-// Computational Functions
+// compute
 function totalCost(item,action) {
-    // console.log("The item price is", item.price);
-    let cartCost = localStorage.getItem('totalCost');
     
-    if (action == 'increment') {
-        if (cartCost != null) {
+    // let cartCostLS = localStorage.getItem('totalCost');
+    
+    // if (action == 'increment') {
+        
+    //     if (cartCostLS != null) {
+              
+    //         cartCostLS = parseFloat(cartCostLS);
+    //         localStorage.setItem('totalCost', cartCostLS + item.price)
             
-            cartCost = parseFloat(cartCost);
-            localStorage.setItem('totalCost', cartCost + item.price)
-            // depending on 'action' (upArrow,downArrow,removeButton)
+    //     } 
+    // }   
+    // else if (action == 'decrement') {
+    //         localStorage.setItem('totalCost', cartCostLS - item.price)
+    // }   
+    // else if (action == 'remove') {
+    //     let cartItemsLS = localStorage.getItem('itemsInCart');
+    //     let newTotal = 0; // Compute; Into TotalCost -> itemsInCart
+    //     Object.values(cartItemsLS).filter(itemLS => {
+                
+    //         //if (itemLS.tag = item) { // item = 'array'; itemLS = 'object'
+    //             newTotal += itemLS.price * itemLS.inCart
+    //         //}
+    //     localStorage.setItem('totalCost', newTotal)
             
-        } else {
-            localStorage.setItem("totalCost", item.price);
-        }
-    
-    } else if (action == 'decrement') {
-        //
-        localStorage.setItem('totalCost', cartCost - item.price)
-    }
-    
-    
+    //     });
+    // }
     
 }
-/// Event Listeners & Display function below
+/// Event Listeners
 let carts = document.querySelectorAll('.add-cart') 
 for (let i = 0; i < carts.length; i++) {
     carts[i].addEventListener('click', () => {
@@ -123,16 +131,19 @@ for (let i = 0; i < carts.length; i++) {
         displayCart()
     });
 } 
-function displayNavBar(){ // CALLED at END of script
+function displayNavBar(){ // refresh NavBar icon 
     let cartQuantityLS = parseInt(localStorage.getItem('cartQuantity'));
     if (cartQuantityLS) { // if Int exists, display it  
         document.querySelector('.nav-cart-count').textContent = cartQuantityLS;
     } 
 }
-function displayCart() {
+function displayCart() { // refresh HTML 
     // get the div container (input divs here)
     let itemContainer = document.querySelector('.cart-item-container')
     
+    let total = 0 // <-- refreshed at DisplayCart()
+    let quantity = 0
+
     // get the ItemsInCart object - convert to JS
     let cartItemsLS = localStorage.getItem("itemsInCart");
     cartItemsLS = JSON.parse(cartItemsLS);
@@ -146,66 +157,77 @@ function displayCart() {
             
             console.log(item)
             console.log(item.tag)
+            console.log(item.price)
+            console.log(typeof item.price)
+            
+            quantity += item.inCart
+            localStorage.setItem('cartQuantity', quantity)
+
+            total += item.price * item.inCart
+            localStorage.setItem('totalCost', total)
+
+            console.log(total)
+
             // only execute IF 'item' exists in cartItemsLS
             // cartItemsLS < {multiple items: yoga;muaythai = items[].tag}
             if (item.inCart > 0) { // item.tag gets LS item's tag
 
-            
-            
-            itemContainer.innerHTML += `             
-            <div class="cart-item">
-                <div class="cart-item__info">
-                    <a href="#"><label class="card-item__title">${item.name}.</label></a>
-                    <label class="cart-item__date">Date: Oct 30, 2020</label>
-                    <label class="cart-item__time">Time: 9:00am - 11:00am</label>
-                    <label class="cart-item__instructor">Instructor: Russ Telen</label>
-                </div>
-                        <!--  -->
-                <div class="cart-item__image" id="img1">
-                    <a href="#">
-                    <!-- <img src="#" alt="muay_thai"> -->
-                    </a>
-                </div>
-                        <!--  -->
-                <div class="cart-item__functions">
-                    <div class="cart-item__remove">
-                        <button class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
+                itemContainer.innerHTML += `             
+                <div class="cart-item">
+                    <div class="cart-item__info">
+                        <a href="#"><label class="card-item__title">${item.name}.</label></a>
+                        <label class="cart-item__date">Date: Oct 30, 2020</label>
+                        <label class="cart-item__time">Time: 9:00am - 11:00am</label>
+                        <label class="cart-item__instructor">Instructor: Russ Telen</label>
                     </div>
-                    <!-- QTY -->
-                    <div class="cart-item__amount">
-                        <a class="qty-decrement" href="#"><i class="fas fa-arrow-down fa-sm"></i></a>
-                        <input class="cart-item__quantity" type="number" value="${item.inCart}">
-                        <a class="qty-increment" href="#"><i class="fas fa-arrow-up fa-sm"></i></a>
-                        <i class="fas fa-times fa-sm"></i>
-                        
-                    <label class="cart-item__price">$${item.price}</label>
-                    <!-- PRICE -->
+                            <!--  -->
+                    <div class="cart-item__image" id="img1">
+                        <a href="#">
+                        <!-- <img src="#" alt="muay_thai"> -->
+                        </a>
                     </div>
-                    <span class="cart-item__item-total">$${item.inCart * item.price}</span>
+                            <!--  -->
+                    <div class="cart-item__functions">
+                        <div class="cart-item__remove">
+                            <button class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
+                        </div>
+                        <!-- QTY -->
+                        <div class="cart-item__amount">
+                            <a class="qty-decrement" href="#"><i class="fas fa-arrow-down fa-sm"></i></a>
+                            <input class="cart-item__quantity" type="number" value="${item.inCart}">
+                            <a class="qty-increment" href="#"><i class="fas fa-arrow-up fa-sm"></i></a>
+                            <i class="fas fa-times fa-sm"></i>
+                            
+                        <label class="cart-item__price">$${item.price}</label>
+                        <!-- PRICE -->
+                        </div>
+                        <span class="cart-item__item-total">$${item.inCart * item.price}</span>
+                    </div>
                 </div>
-            </div>
-            `
-            }
+                `
+                }
         });
+        if (cartItemsLS) {
+            itemContainer.innerHTML += `
+            <div class="cart-summary__item">
+                <div class="cart-summary__item">
+                    <label for="cart-summary__count">Item count: ${localStorage.getItem('cartQuantity')} </label>
+                </div>
+            
+                <div class="cart-summary__item">
+                    <label for="cart-summary__subtotal">Subtotal: $${localStorage.getItem('totalCost')}</label>
+                </div>
 
-        itemContainer.innerHTML += `
-        <div class="cart-summary__item">
-            <div class="cart-summary__item">
-                <label for="cart-summary__count">Item count: ${localStorage.getItem('cartQuantity')} </label>
-            </div>
-        
-            <div class="cart-summary__item">
-                <label for="cart-summary__subtotal">Subtotal: $${localStorage.getItem('totalCost')}</label>
-            </div>
-
-            <!-- Checkout Button -->
-            <div class="cart-summary__item">
-                <button class="cart-summary__checkout-button" id="checkout" type="button">
-                    Checkout
-                </button>
-            </div>
-        </section>
-        `
+                <!-- Checkout Button -->
+                <div class="cart-summary__item">
+                    <button class="cart-summary__checkout-button" id="checkout" type="button">
+                        Checkout
+                    </button>
+                </div>
+            </section>
+            `
+        }
+        {
                 // for (var i = 0; i < items.length; i++) {
         //      let item = items[i]
         //      let itemTag = item.tag
@@ -249,9 +271,11 @@ function displayCart() {
         // itemContainer.innerHTML = dynamicHTML;
         //     }
         // }
+        }
+        console.log(localStorage.getItem('totalCost'))
+        
     }
-
-    // Add EventListeners to dynamically created HTML 
+    // EVENT LISTENER - Arrow UP / INCREASE QTY
     let arrowsUp = document.querySelectorAll('.qty-increment');
     for (let i = 0; i < arrowsUp.length; i++) {
     arrowsUp[i].addEventListener('click', () => {
@@ -260,6 +284,7 @@ function displayCart() {
         displayCart()
     });
     }
+    // EVENT LISTENER - Arrow DOWN / DECREASE QTY
     let arrowsDown = document.querySelectorAll('.qty-decrement');
     for (let i = 0; i < arrowsDown.length; i++) {
     arrowsDown[i].addEventListener('click', () => {        
@@ -267,30 +292,18 @@ function displayCart() {
         let item = items[i]
         itemsInCartNow = JSON.parse(itemsInCartNow)
         if(itemsInCartNow[item.tag].inCart > 1){
-            cartQuantityDown(items[i]);
-            totalCost(items[i],'decrement');
-            displayCart()
-        }        
-
-        // // console.log(muaythai)
-        // console.log(itemsInCartNow) // must access object :  
-        // console.log(itemsInCartNow.muaythai) // must access object :  
-        // console.log(itemsInCartNow.muaythai.inCart); // what we need
-
-        // console.log(items[0])
-        // console.log(items[0].tag) // ENTER THIS as dynamic reference
-        // console.log(JSON.parse(localStorage.getItem('itemsInCart'))[i].tag).inCart;
+            cartQuantityDown(items[i]); // -1 QUANTITY
+            totalCost(items[i],'decrement'); // COMPUTE TOTAL
+            displayCart() // REFRESH HTML
+        }   
     });
     }
     let removeHTMLElements = document.querySelectorAll('.cart-item__remove-button');
     for (let i = 0; i < removeHTMLElements.length; i++) {
         removeHTMLElements[i].addEventListener('click', () => {
-
-        removeItem(items[i]);
-        // console.log("button")
-        totalCost(items[i]);
-
-        displayCart();
+        removeItem(items[i]); // -X QUANTITY
+        totalCost(items[i],'remove'); // COMPUTE TOTAL
+        displayCart(); // REFRESH HTML
     });
     }
 
@@ -298,14 +311,12 @@ function displayCart() {
 
 }
 
-
-// $(".checkout").toggle();
-$("#checkout").click(function(){
-    $(".checkout").slideToggle();
-})
-
-
-
+$(".checkout-validate").toggle();
+$(".checkout-confirm").toggle();
+$(".checkout-complete").toggle();
+// $("#checkout").click(function(){
+//     $(".checkout").slideToggle();
+// })
 
 // Run at Load
 displayNavBar();
