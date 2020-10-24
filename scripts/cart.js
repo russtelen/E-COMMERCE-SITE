@@ -4,13 +4,15 @@ let items = [ // our programs
         name: 'Muay Thai',
         tag: 'muaythai',
         price: 12,
-        inCart: 0
+        inCart: 0,
+        image_path: '/images/landing/program-muaythai.jpg'
     },
     {
         name: 'Yoga',
         tag: 'yoga',
         price: 8,
-        inCart: 0
+        inCart: 0,
+        image_path: '/images/landing/program-yoga.jpg'
     }
 ];
 
@@ -148,7 +150,29 @@ function displayCart() { // refresh HTML
     let cartItemsLS = localStorage.getItem("itemsInCart");
     cartItemsLS = JSON.parse(cartItemsLS);
 
-    // NEW METHOD - To display cart items in same order as the items[] array (OLD Method below WORKS for Displaying, but Order is mismatched)
+
+    // if cart is empty -- display links to Programs/Instructors
+    if (cartItemsLS == null || parseInt(quantity) <= 0) {
+        
+        itemContainer.innerHTML = `
+            <div class = "cart-empty">
+                <h4>The cart is empty, but fear not! Your journey is a click away...</h4>
+                <div class = "cart-empty-programs">
+                    <button id="empty-cart-to-programs" class="empty-cart-button" type="button">
+                        See Our Programs
+                    </button>
+                </div>
+                <div class = "cart-empty-team">
+                    <button id="empty-cart-to-team" class="empty-cart-button" type="button">
+                        Meet Instructors
+                    </button>
+                </div>
+            </div>
+               
+            </div>
+        `
+    }
+    // if cart NOT empty - display cart items 
     if (cartItemsLS && itemContainer ) {
         itemContainer.innerHTML = ''
         let dynamicHTML;
@@ -171,6 +195,11 @@ function displayCart() { // refresh HTML
             // only execute IF 'item' exists in cartItemsLS
             // cartItemsLS < {multiple items: yoga;muaythai = items[].tag}
             if (item.inCart > 0) { // item.tag gets LS item's tag
+                let itemImageString = item.image_path
+                
+                
+                // itemImageString = itemImageString.replace("'","")
+                console.log(itemImageString)
 
                 itemContainer.innerHTML += `             
                 <div class="cart-item">
@@ -181,7 +210,7 @@ function displayCart() { // refresh HTML
                         <label class="cart-item__instructor">Instructor: Russ Telen</label>
                     </div>
                             <!--  -->
-                    <div class="cart-item__image" id="img1">
+                    <div class="cart-item__image" id="img1" style="background-image: url(${itemImageString});">
                         <a href="#">
                         <!-- <img src="#" alt="muay_thai"> -->
                         </a>
@@ -205,9 +234,10 @@ function displayCart() { // refresh HTML
                     </div>
                 </div>
                 `
-                }
+            }
         });
-        if (cartItemsLS) {
+        
+        if (cartItemsLS && quantity > 0) {
             itemContainer.innerHTML += `
             <div class="cart-summary__item">
                 <div class="cart-summary__item">
@@ -220,7 +250,7 @@ function displayCart() { // refresh HTML
 
                 <!-- Checkout Button -->
                 <div class="cart-summary__item">
-                    <button class="cart-summary__checkout-button" id="checkout" type="button">
+                    <button id="checkout-to-validate" class="cart-summary__checkout-button" type="button">
                         Checkout
                     </button>
                 </div>
@@ -307,16 +337,34 @@ function displayCart() { // refresh HTML
     });
     }
 
-    // console.log("display refreshed " + items[0]);
+    $(document).ready(function() {
+        $("#checkout-to-validate").click(function(){
+            $(".checkout-validate").toggle();
 
+            $('html,body').animate({
+                scrollTop: $(".checkout").offset().top},
+                'slow');
+        });
+    
+        $(".checkout__buttons #login").click(function(){
+            $(".checkout-validate").toggle();
+            $('.checkout-confirm').toggle();
+        });
+    
+        $('.checkout-confirm').click(function(){
+            $('.checkout-confirm').toggle();
+            $('.checkout-complete').toggle();
+        });
+    
+    });
 }
 
 $(".checkout-validate").toggle();
 $(".checkout-confirm").toggle();
 $(".checkout-complete").toggle();
-// $("#checkout").click(function(){
-//     $(".checkout").slideToggle();
-// })
+
+
+
 
 // Run at Load
 displayNavBar();

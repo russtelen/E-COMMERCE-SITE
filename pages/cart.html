@@ -182,40 +182,42 @@
         <!-- </section> -->
 
         <!-- Cart Checkout -->
-        <section class="checkout-validate">
-          <h2>Checkout</h2>
-          <div class="checkout__login">
-              <label for="email">Email address</label>
-              <input type="email" placeholder="email@example.com">
-              <label for="password">Password</label>
-              <input type="password" placeholder="password">
-              <div class="checkout__login-remember">
-                <input id="checkout-rememberme" type="checkbox">
-                <label id="checkout-rememberme-label">Remember me</label>
+        <div class="checkout">
+          <section class="checkout-validate">
+            <h2>Checkout</h2>
+            <div class="checkout__login">
+                <label for="email">Email address</label>
+                <input type="email" placeholder="email@example.com">
+                <label for="password">Password</label>
+                <input type="password" placeholder="password">
+                <div class="checkout__login-remember">
+                  <input id="checkout-rememberme" type="checkbox">
+                  <label id="checkout-rememberme-label">Remember me</label>
+                </div>
               </div>
+            <div class="checkout__buttons">
+                <a href="#"><button class="button" id="login" type="button">Log-in</button></a>
+                <a href="login.html"><button class="button" id="register" type="button">Register</button></a>
             </div>
-          <div class="checkout__buttons">
-              <a href="#"><button class="button" id="login" type="button">Log-in</button></a>
-              <a href="login.html"><button class="button" id="register" type="button">Register</button></a>
-          </div>
-        </section>
+          </section>
 
-        <!-- CONFIRM PURCHASE -->
-        <section class="checkout-confirm">
-            <h2>Confirm Your Order</h2>      
-            <div class="checkout-confirm__item">
-                <label for="checkout-confirm__subtotal">Subtotal: <span class="js_subtotal"></span> </label>
+          <!-- CONFIRM PURCHASE -->
+          <section class="checkout-confirm">
+              <h2>Confirm Your Order</h2>      
+              <div class="checkout-confirm__item">
+                  <label for="checkout-confirm__subtotal">Subtotal: <span class="js_subtotal"></span> </label>
+                  <a href="#"><button class="button" id="complete" type="button">Complete</button></a>
+                </div>
+          </section>
+
+          <!-- PURCHASE COMPLETED -->
+          <section class="checkout-complete">
+            <h2>Thank You for your Order!</h2>
+            
+            <div class="checkout-complete__item">
             </div>
-        </section>
-
-        <!-- PURCHASE COMPLETED -->
-        <section class="checkout-complete">
-          <h2>Thank You for your Order!</h2>
-          
-          <div class="checkout-complete__item">
-            <label for="checkout-complete__subtotal">Subtotal: <span class="js_subtotal"></span> </label>
-          </div>
-        </section>
+          </section>
+        </div>
 
     </main>
 
