@@ -426,7 +426,6 @@ h2 {
   font-size: 26px;
   font-family: "Roboto-Bold"; }
 
-
 .recommended {
   display: flex;
   justify-content: center; }
@@ -453,7 +452,6 @@ h2 {
     background-color: #2d5931;
     transition-delay: 1.5s; }
 
-
 .cart-item {
   display: grid;
   grid-template-columns: 40% auto 40%;
@@ -478,9 +476,6 @@ h2 {
     font-size: 14px;
     padding: 8px; }
   .cart-item #img1 {
-
-    background-image: url(/images/landing/program-muaythai.jpg);
-
     background-position: center;
     background-size: cover;
     opacity: 0.7;
@@ -550,9 +545,7 @@ h2 {
       background-color: palegreen; }
 
 .checkout {
-
   height: 100vh;
-
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -712,7 +705,6 @@ h2 {
   color: white;
   z-index: 2;
   text-align: center; }
-
   .team_content .btn-danger {
     padding: 20px;
     font-size: 30px;
