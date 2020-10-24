@@ -13,6 +13,13 @@ let items = [ // our programs
         price: 8,
         inCart: 0,
         image_path: '/images/landing/program-yoga.jpg'
+    },
+    {
+        name: 'HIIT',
+        tag: 'hiit',
+        price: 10,
+        inCart: 0,
+        image_path: '/images/landing/program-hiit.jpg'
     }
 ];
 

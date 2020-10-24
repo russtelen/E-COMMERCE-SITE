@@ -3,6 +3,45 @@ h2{
     font-size: 26px;
     font-family: "Roboto-Bold";
 }
+.recommended{
+    display: flex;
+    justify-content: center;
+
+    #recommended1{
+        background-image: url(../images/landing/program-muaythai.jpg)
+    }
+    #recommended2{
+        background-image: url(../images/landing/program-yoga.jpg)
+    }
+    #recommended3{
+        background-image: url(../images/landing/program-hiit.jpg)
+    }
+    &__card{
+        background-position: center;
+        background-size: contain;  
+        background-repeat: no-repeat;
+        margin: 1.25%;
+        width: 140px;
+        height: 140px;
+
+        text-align: center;
+        vertical-align: bottom;
+
+    }
+    h4{
+        color: $light-blue
+    }
+    a{
+        color: $yellow
+    }
+    a:hover{
+        background-color: $green;
+        transition-delay: 1.5s; 
+    }
+
+}
+
+
 .cart{
     &-item{
         // display: flex;

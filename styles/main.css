@@ -426,6 +426,32 @@ h2 {
   font-size: 26px;
   font-family: "Roboto-Bold"; }
 
+.recommended {
+  display: flex;
+  justify-content: center; }
+  .recommended #recommended1 {
+    background-image: url(../images/landing/program-muaythai.jpg); }
+  .recommended #recommended2 {
+    background-image: url(../images/landing/program-yoga.jpg); }
+  .recommended #recommended3 {
+    background-image: url(../images/landing/program-hiit.jpg); }
+  .recommended__card {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 1.25%;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    vertical-align: bottom; }
+  .recommended h4 {
+    color: #cfdbd5; }
+  .recommended a {
+    color: #f5cb5c; }
+  .recommended a:hover {
+    background-color: #2d5931;
+    transition-delay: 1.5s; }
+
 .cart-item {
   display: grid;
   grid-template-columns: 40% auto 40%;
