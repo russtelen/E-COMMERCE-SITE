@@ -229,9 +229,9 @@ function displayCart() { // refresh HTML
                         </div>
                         <!-- QTY -->
                         <div class="cart-item__amount">
-                            <a class="qty-decrement" href="#"><i class="fas fa-arrow-down fa-sm"></i></a>
+                            <a class="qty-decrement"><i class="fas fa-arrow-down fa-sm"></i></a>
                             <input class="cart-item__quantity" type="number" value="${item.inCart}">
-                            <a class="qty-increment" href="#"><i class="fas fa-arrow-up fa-sm"></i></a>
+                            <a class="qty-increment"><i class="fas fa-arrow-up fa-sm"></i></a>
                             <i class="fas fa-times fa-sm"></i>
                             
                         <label class="cart-item__price">$${item.price}</label>
@@ -345,27 +345,60 @@ function displayCart() { // refresh HTML
     }
 
     $(document).ready(function() {
+        // when clicking 'Checkout' button, display Login section (to validate)
         $("#checkout-to-validate").click(function(){
             $(".checkout-validate").toggle();
-
+            // scroll to Checkout section
             $('html,body').animate({
                 scrollTop: $(".checkout").offset().top},
                 'slow');
         });
-    
+        // when clicking 'Login' button,
+        //  --- hide the Login section
+        //  --- display the Confirm Order section
         $(".checkout__buttons #login").click(function(){
             $(".checkout-validate").toggle();
             $('.checkout-confirm').toggle();
+
+            // add display of Order total. 
+            // (bonus) display list of items
+
         });
     
+        // when clicking "Complete Order", 
+        // --- display Thank You message
+        // --- clear the Internal Storage
+        // --- refresh display (so Cart disappears)
         $('.checkout-confirm').click(function(){
             $('.checkout-confirm').toggle();
             $('.checkout-complete').toggle();
+
+            localStorage.clear();
+            location.reload();
+
         });
-    
+
+        // ensure that clicking 'Add To Cart' keeps the Thank You section toggledOff
+        // $('.add-cart').click(function(){
+        //     if (log($('.checkout-complete').is(':visible'))) {
+        //         $('.checkout-complete').toggle();
+        //     };
+
+        // });
     });
 }
 
+// maintain scroll position at refresh
+// $(window).scroll(function () {
+//     sessionStorage.scrollTop = $(this).scrollTop();
+// });
+// $(document).ready(function () {
+//     if (sessionStorage.scrollTop != "undefined") {
+//         $(window).scrollTop(sessionStorage.scrollTop);
+//     }
+// });
+
+// At page load, keep these sections hidden
 $(".checkout-validate").toggle();
 $(".checkout-confirm").toggle();
 $(".checkout-complete").toggle();
