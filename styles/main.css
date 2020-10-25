@@ -687,6 +687,15 @@ h2 {
   background-image: url(../images/team1.jpg);
   height: 120vh;
   background-size: cover; }
+  @media (min-width: 320px) {
+    .team_banner {
+      height: 80vh; } }
+  @media (min-width: 768px) {
+    .team_banner {
+      height: 120vh; } }
+  @media (min-width: 1024px) {
+    .team_banner {
+      height: 150vh; } }
 
 .team-cover {
   position: absolute;
@@ -707,11 +716,22 @@ h2 {
   text-align: center; }
   .team_content .btn-danger {
     padding: 20px;
-    font-size: 30px;
     margin-top: 80px; }
+    @media (min-width: 320px) {
+      .team_content .btn-danger {
+        font-size: 10px; } }
+    @media (min-width: 768px) {
+      .team_content .btn-danger {
+        font-size: 20px; } }
+    @media (min-width: 1024px) {
+      .team_content .btn-danger {
+        font-size: 30px; } }
 
 .team_info {
   margin-top: 50px; }
+  @media (min-width: 320px) {
+    .team_info {
+      margin-top: -30px; } }
 
 @media (min-width: 320px) {
   .team_title {
@@ -723,18 +743,48 @@ h2 {
   .team_title {
     font-size: 4.5rem; } }
 
-@media (min-width: 320px) {
-  .team2 > h2 {
-    font-size: 2rem;
-    text-align: center; } }
-@media (min-width: 768px) {
-  .team2 > h2 {
-    font-size: 2.5rem;
-    text-align: left; } }
+.info1 {
+  padding: 50px; }
+  @media (min-width: 320px) {
+    .info1 {
+      font-size: 1rem;
+      margin-top: -65px; } }
+  @media (min-width: 768px) {
+    .info1 {
+      font-size: 1rem;
+      margin-top: 0px; } }
+  @media (min-width: 1024px) {
+    .info1 {
+      font-size: 1.6rem;
+      margin-top: 0px; } }
+
 @media (min-width: 1024px) {
-  .team2 > h2 {
-    font-size: 3.5rem;
-    text-align: left; } }
+  .info2 {
+    font-size: 1rem;
+    display: contents; } }
+@media (min-width: 320px) {
+  .info2 {
+    font-size: 0.5rem;
+    display: none; } }
+@media (min-width: 768px) {
+  .info2 {
+    font-size: 1rem;
+    display: contents; } }
+
+.team2 > h2 {
+  padding-top: 70px; }
+  @media (min-width: 320px) {
+    .team2 > h2 {
+      font-size: 2rem;
+      text-align: center; } }
+  @media (min-width: 768px) {
+    .team2 > h2 {
+      font-size: 2.5rem;
+      text-align: left; } }
+  @media (min-width: 1024px) {
+    .team2 > h2 {
+      font-size: 3.5rem;
+      text-align: left; } }
 
 main {
   margin: 0 auto;
@@ -743,6 +793,7 @@ main {
     margin: 1rem;
     padding: 1rem; }
     main .row .card-img {
+      margin-top: 100px;
       width: 400px;
       height: 500px;
       border-radius: 10%; }
@@ -760,16 +811,11 @@ main {
           width: 400px;
           height: 500px; } }
     main .row .card-body {
+      margin-top: 20px;
       margin-left: -200px; }
       @media (min-width: 320px) {
         main .row .card-body {
           margin-left: 0px; } }
-      @media (min-width: 768px) {
-        main .row .card-body {
-          margin-left: -100px; } }
-      @media (min-width: 1024px) {
-        main .row .card-body {
-          margin-left: -200px; } }
     main .row .card-title {
       font-family: "Roboto-Demi";
       padding: 20px; }
@@ -787,9 +833,6 @@ main {
           text-align: left; } }
     main .row .card-text {
       font-family: "OpenSan-Regular"; }
-
-.col-md-8 {
-  margin-top: 90px; }
 
 /*
 .exercise1 {
