@@ -220,7 +220,8 @@ body {
   line-height: 1rem;
 }
 
-body .slick-prev:before, body .slick-next:before {
+body .slick-prev:before,
+body .slick-next:before {
   color: black;
 }
 
@@ -232,7 +233,8 @@ body .jumbotron {
   height: 700px;
 }
 
-body .jumbotron h1, body .jumbotron p {
+body .jumbotron h1,
+body .jumbotron p {
   color: white;
 }
 
@@ -384,7 +386,7 @@ body .landing__program-img {
 }
 
 figure.snip1321 {
-  font-family: 'Raleway', Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   position: relative;
   overflow: hidden;
   margin: 10px;
@@ -600,6 +602,52 @@ h2 {
   font-family: "Roboto-Bold";
 }
 
+.recommended {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.recommended #recommended1 {
+  background-image: url(../images/landing/program-muaythai.jpg);
+}
+
+.recommended #recommended2 {
+  background-image: url(../images/landing/program-yoga.jpg);
+}
+
+.recommended #recommended3 {
+  background-image: url(../images/landing/program-hiit.jpg);
+}
+
+.recommended__card {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 1.25%;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.recommended h4 {
+  color: #cfdbd5;
+}
+
+.recommended a {
+  color: #f5cb5c;
+}
+
+.recommended a:hover {
+  background-color: #2d5931;
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
 .cart-item {
   display: -ms-grid;
   display: grid;
@@ -641,7 +689,6 @@ h2 {
 }
 
 .cart-item #img1 {
-  background-image: url(/images/landing/program-muaythai.jpg);
   background-position: center;
   background-size: cover;
   opacity: 0.7;
@@ -760,6 +807,7 @@ h2 {
 }
 
 .checkout {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1015,6 +1063,24 @@ h2 {
   background-size: cover;
 }
 
+@media (min-width: 320px) {
+  .team_banner {
+    height: 80vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .team_banner {
+    height: 120vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .team_banner {
+    height: 150vh;
+  }
+}
+
 .team-cover {
   position: absolute;
   height: 100%;
@@ -1035,8 +1101,37 @@ h2 {
   text-align: center;
 }
 
+.team_content .btn-danger {
+  padding: 20px;
+  margin-top: 80px;
+}
+
+@media (min-width: 320px) {
+  .team_content .btn-danger {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .team_content .btn-danger {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .team_content .btn-danger {
+    font-size: 30px;
+  }
+}
+
 .team_info {
   margin-top: 50px;
+}
+
+@media (min-width: 320px) {
+  .team_info {
+    margin-top: -30px;
+  }
 }
 
 @media (min-width: 320px) {
@@ -1055,6 +1150,56 @@ h2 {
   .team_title {
     font-size: 4.5rem;
   }
+}
+
+.info1 {
+  padding: 50px;
+}
+
+@media (min-width: 320px) {
+  .info1 {
+    font-size: 1rem;
+    margin-top: -65px;
+  }
+}
+
+@media (min-width: 768px) {
+  .info1 {
+    font-size: 1rem;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .info1 {
+    font-size: 1.6rem;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .info2 {
+    font-size: 1rem;
+    display: contents;
+  }
+}
+
+@media (min-width: 320px) {
+  .info2 {
+    font-size: 0.5rem;
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .info2 {
+    font-size: 1rem;
+    display: contents;
+  }
+}
+
+.team2 > h2 {
+  padding-top: 70px;
 }
 
 @media (min-width: 320px) {
@@ -1089,6 +1234,7 @@ main .row {
 }
 
 main .row .card-img {
+  margin-top: 100px;
   width: 400px;
   height: 500px;
   border-radius: 10%;
@@ -1119,24 +1265,13 @@ main .row .card-img {
 }
 
 main .row .card-body {
+  margin-top: 20px;
   margin-left: -200px;
 }
 
 @media (min-width: 320px) {
   main .row .card-body {
     margin-left: 0px;
-  }
-}
-
-@media (min-width: 768px) {
-  main .row .card-body {
-    margin-left: -100px;
-  }
-}
-
-@media (min-width: 1024px) {
-  main .row .card-body {
-    margin-left: -200px;
   }
 }
 
@@ -1168,10 +1303,6 @@ main .row .card-title {
 
 main .row .card-text {
   font-family: "OpenSan-Regular";
-}
-
-.col-md-8 {
-  margin-top: 90px;
 }
 
 /*

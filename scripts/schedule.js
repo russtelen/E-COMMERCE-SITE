@@ -1,35 +1,35 @@
-events = {
-  yoga: [
-    {
-      title: "Hot yoga",
-      start: "2020-10-24T12:30:00",
-    },
-    {
-      title: "Yoga 1",
-      start: "2020-10-28T12:30:00",
-    },
-    {
-      title: "Yoga 2",
-      start: "2020-10-25T12:30:00",
-    },
-    {
-      title: "Yoga 3",
-      start: "2020-10-26T12:30:00",
-    },
-  ],
-  muaythai: [
-    {
-      title: "Beginner Muay Thai ",
-      start: "2020-10-24T16:30:00",
-    },
-  ],
-  jujitsu: [
-    {
-      title: "Advanced Ju Jitsu",
-      start: "2020-10-24",
-    },
-  ],
-};
+// events = {
+//   yoga: [
+//     {
+//       title: "Hot yoga",
+//       start: "2020-10-24T12:30:00",
+//     },
+//     {
+//       title: "Yoga 1",
+//       start: "2020-10-28T12:30:00",
+//     },
+//     {
+//       title: "Yoga 2",
+//       start: "2020-10-25T12:30:00",
+//     },
+//     {
+//       title: "Yoga 3",
+//       start: "2020-10-26T12:30:00",
+//     },
+//   ],
+//   muaythai: [
+//     {
+//       title: "Beginner Muay Thai ",
+//       start: "2020-10-24T16:30:00",
+//     },
+//   ],
+//   jujitsu: [
+//     {
+//       title: "Advanced Ju Jitsu",
+//       start: "2020-10-24",
+//     },
+//   ],
+// };
 
 document.addEventListener("DOMContentLoaded", () => {
   var calendarEl = document.getElementById("calendar");
