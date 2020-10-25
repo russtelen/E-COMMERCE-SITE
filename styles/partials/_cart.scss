@@ -1,220 +1,213 @@
-h2{
-    margin: 5%;
-    font-size: 26px;
-    font-family: "Roboto-Bold";
+h2 {
+  margin: 5%;
+  font-size: 26px;
+  font-family: "Roboto-Bold";
 }
-.recommended{
-    display: flex;
-    justify-content: center;
+.recommended {
+  display: flex;
+  justify-content: center;
 
-    #recommended1{
-        background-image: url(../images/landing/program-muaythai.jpg)
-    }
-    #recommended2{
-        background-image: url(../images/landing/program-yoga.jpg)
-    }
-    #recommended3{
-        background-image: url(../images/landing/program-hiit.jpg)
-    }
-    &__card{
-        background-position: center;
-        background-size: contain;  
-        background-repeat: no-repeat;
-        margin: 1.25%;
-        width: 140px;
-        height: 140px;
+  #recommended1 {
+    background-image: url(../images/landing/program-muaythai.jpg);
+  }
+  #recommended2 {
+    background-image: url(../images/landing/program-yoga.jpg);
+  }
+  #recommended3 {
+    background-image: url(../images/landing/program-hiit.jpg);
+  }
+  &__card {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 1.25%;
+    width: 140px;
+    height: 140px;
 
+    text-align: center;
+    vertical-align: bottom;
+  }
+  h4 {
+    color: $light-blue;
+  }
+  a {
+    color: $yellow;
+  }
+  a:hover {
+    background-color: $green;
+    transition-delay: 1.5s;
+  }
+}
+
+.cart {
+  &-item {
+    // display: flex;
+    display: grid;
+    grid-template-columns: 40% auto 40%;
+    grid-template-areas: "left center right";
+    justify-content: space-between;
+    min-width: 425px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0.2px solid grey;
+    border-radius: 2%;
+
+    background-color: $light-blue;
+    background: linear-gradient(135deg, white 2%, $light-blue);
+
+    margin: 1.25%;
+    box-shadow: 2px 2px 2px black;
+
+    &:hover {
+      opacity: 90%;
+      transition-delay: 0.14s;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-items: left;
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    #img1 {
+      // background-image: url(/images/landing/program-muaythai.jpg);
+      background-position: center;
+      background-size: cover;
+      opacity: 0.7;
+      margin: auto;
+      min-width: 70px;
+      height: 70px;
+      align-items: center;
+      vertical-align: auto;
+    }
+
+    #img2 {
+      background-image: url(/images/landing/program-yoga.jpg);
+      background-position: center;
+      background-size: cover;
+      opacity: 0.7;
+      margin: auto;
+      min-width: 70px;
+      height: 70px;
+      align-items: center;
+      vertical-align: auto;
+    }
+
+    &__remove-button {
+      font-size: 12px;
+      height: 28px;
+      width: 90px;
+      border-radius: 5%;
+      padding: 0px;
+
+      &:hover {
+        background-color: #f5cb5c;
+        .far {
+          color: red;
+          font-size: 16px;
+          transition-duration: 0.2s;
+        }
+      }
+    }
+
+    &__functions {
+      justify-self: end;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 4px;
+
+      &__amount {
+      }
+      input {
+        width: 25%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 12px;
         text-align: center;
-        vertical-align: bottom;
-
-    }
-    h4{
-        color: $light-blue
-    }
-    a{
-        color: $yellow
-    }
-    a:hover{
-        background-color: $green;
-        transition-delay: 1.5s; 
+        align-items: center;
+        &:hover {
+          background-color: #f9df9a;
+        }
+      }
+      label {
+        font-size: 12px;
+      }
     }
 
+    &__item-total {
+      text-align: right;
+      font-size: 20px;
+    }
+  }
+}
+.cart-summary {
+  // width: 20%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+
+  margin-top: 50px;
+  margin-right: 2%;
+  // margin: 2%;
+  // align-content: space-between;
+  // align-items: right;
+
+  &__item {
+    margin-top: 4%;
+  }
+
+  &__checkout-button {
+    width: 170px;
+    height: 35px;
+
+    &:hover {
+      background-color: palegreen;
+    }
+  }
 }
 
+.checkout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.cart{
-    &-item{
-        // display: flex;
-        display: grid;
-        grid-template-columns: 40% auto 40%;
-        grid-template-areas: "left center right";
-        justify-content: space-between;
-        min-width: 425px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border: 0.2px solid grey;
-        border-radius: 2%;
+  &__login {
+    @include flex-column;
+    width: 82%;
 
-        background-color: $light-blue;
-        background: linear-gradient(135deg, white 2%, $light-blue);
-        
-        margin: 1.25%;
-        box-shadow: 2px 2px 2px black;
-    
-        &:hover{
-            opacity: 90%;
-            transition-delay: 0.14s;
-        }
-    
-        &__info{
-            display: flex;
-            flex-direction: column;
-            justify-items: left;
-            font-size: 14px;
-            padding: 8px;
-        }
-    
-        #img1{
-            // background-image: url(/images/landing/program-muaythai.jpg);
-            background-position: center;
-            background-size: cover;
-            opacity: 0.7;
-            margin: auto;
-            min-width: 70px;
-            height: 70px;
-            align-items: center;
-            vertical-align: auto;
-        }
-
-        #img2{
-            background-image: url(/images/landing/program-yoga.jpg);
-            background-position: center;
-            background-size: cover;
-            opacity: 0.7;
-            margin: auto;
-            min-width: 70px;
-            height: 70px;
-            align-items: center;
-            vertical-align: auto;
-        }
-    
-        &__remove-button{
-            font-size: 12px;
-            height: 28px;
-            width: 90px;
-            border-radius: 5%;
-            padding: 0px;
-    
-            &:hover{
-                background-color: #f5cb5c;
-                .far{
-                    color: red;
-                    font-size: 16px;
-                    transition-duration: 0.2s;
-                    
-                }
-            }
-        }
-    
-        &__functions{
-            justify-self: end;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-end;
-            padding: 4px;
-
-            &__amount{
-
-            }
-            input{
-                width: 25%;
-                margin-top: 5px;
-                margin-bottom: 5px;
-                margin-left: auto;
-                margin-right: auto;
-                font-size: 12px;
-                text-align: center;
-                align-items: center;
-                &:hover{
-                    background-color: #f9df9a;
-                }
-            }
-            label {
-                font-size: 12px;
-            }
-            
-        }
-
-        &__item-total{
-            text-align: right;
-            font-size: 20px;
-            
-        }
-    }   
-}
-.cart-summary{
-    // width: 20%;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    
-    margin-top: 50px;
-    margin-right: 2%;
-    // margin: 2%;
-    // align-content: space-between;
-    // align-items: right;
-
-    &__item{
-        margin-top: 4%;
+    label {
+      margin-top: 2%;
+      margin-bottom: 0.5%;
     }
 
-    &__checkout-button{
-        width: 170px;
-        height: 35px;
-
-        &:hover{
-            background-color: palegreen;
-        }
-    }
-}
-
-.checkout{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &__login{
-        @include flex-column; 
-        width: 82%;
-
-        label{
-            margin-top: 2%;
-            margin-bottom: 0.5%;
-        }
-
-        input{
-            margin-bottom: 1%;
-            border-radius: 5%;
-        }
-
-        &-remember{
-            margin-bottom: 2%;
-        }
+    input {
+      margin-bottom: 1%;
+      border-radius: 5%;
     }
 
-    &__buttons{
-        width: 82%;
-        height: 35px;
-        button{
-            width: 100%;
-            height: 35px;
-            margin: 1%;
-            border-radius: 3%;
-            &:hover{
-                background-color: palegreen;
-            }
-        }
+    &-remember {
+      margin-bottom: 2%;
     }
+  }
+
+  &__buttons {
+    width: 82%;
+    height: 35px;
+    button {
+      width: 100%;
+      height: 35px;
+      margin: 1%;
+      border-radius: 3%;
+      &:hover {
+        background-color: palegreen;
+      }
+    }
+  }
 }
