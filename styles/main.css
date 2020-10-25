@@ -1349,7 +1349,7 @@ main .row .card-text {
 
 .program_jumbotron .program-title {
   font-family: "roboto-demi";
-  font-weight: 500px;
+  font-weight: 300px;
   color: black;
   font-size: 4rem;
   text-align: justify;
@@ -1369,5 +1369,14 @@ main .row .card-text {
 
 .program-card .card-body .card-title {
   text-transform: uppercase;
+  font-size: 20px;
+}
+
+.program-card .card-body .card-text {
+  text-align: justify;
+}
+
+.program-card .btn {
+  margin-top: 2%;
 }
 /*# sourceMappingURL=main.css.map */
