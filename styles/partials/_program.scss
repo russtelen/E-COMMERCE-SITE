@@ -1,1 +1,29 @@
-@include wrapper;
+.program_jumbotron {
+  background-image: url("/images/cropImg/yoga.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  .program-title {
+    font-family: "roboto-demi";
+    font-weight: 500px;
+    color: black;
+    font-size: 4rem;
+    text-align: justify;
+    padding: 5%;
+  }
+  height: 700px;
+  .btn {
+    align-items: center;
+    margin-left: 5%;
+  }
+}
+.program-card {
+  margin-top: 10%;
+
+  .card-body {
+    .card-title {
+      text-transform: uppercase;
+    }
+  }
+}
