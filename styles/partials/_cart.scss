@@ -1,7 +1,12 @@
-h2{
+.cart-main{
+    width: 100%;
+    margin: 0 auto;
+}
+.cart-h2{
     margin: 5%;
     font-size: 26px;
     font-family: "Roboto-Bold";
+    width: 100%;
 }
 .recommended{
     display: flex;
@@ -16,40 +21,72 @@ h2{
     #recommended3{
         background-image: url(../images/landing/program-hiit.jpg)
     }
+    
     &__card{
         background-position: center;
-        background-size: contain;  
+        background-size: cover;  
         background-repeat: no-repeat;
         margin: 1.25%;
         width: 140px;
-        height: 140px;
+        height: 115px;
 
+        position:relative; 
         text-align: center;
-        vertical-align: bottom;
+        vertical-align: text-bottom;
 
+        border: 1px solid $dark-grey;
+        border-radius: 5%;
+        box-shadow: 5px 5px 5px black;
+        
+        &:hover{
+            opacity: 0.85;
+        }
     }
-    h4{
-        color: $light-blue
+    &__title{
+        color: white;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px black;
+        position: absolute;
+        bottom: 65%;
+        left: 10%;
+        text-align: center;
     }
-    a{
-        color: $yellow
+    &__price{
+        color: $light-grey;
+        position: absolute;
+        bottom: 30%;
+        right: 2%;
+        text-shadow: 0.5px 0.5px 0.5px orangered;
     }
-    a:hover{
-        background-color: $green;
-        transition-delay: 1.5s; 
+    .add-cart{
+        color: $yellow;
+        position: absolute;
+        bottom: 2%;
+        right: 2%;  
+        text-align: center;
+        text-shadow: 1px 0 0 1px lightyellow;
     }
-
+    .add-cart:hover{
+        cursor: pointer;
+        // background-color: $green;
+        // transition-delay: 1.5s; 
+        font-size: 32px;
+        // transition-delay: 0;
+        transition-duration: 0.5s;
+        // transition-timing-function: linear;
+        color: white;
+    }
 }
-
-
 .cart{
+    width: 100%;
     &-item{
         // display: flex;
         display: grid;
         grid-template-columns: 40% auto 40%;
         grid-template-areas: "left center right";
         justify-content: space-between;
-        min-width: 425px;
+        min-width: 350px;
+        // max-width: 100%;
         padding-top: 10px;
         padding-bottom: 10px;
         border: 0.2px solid grey;
@@ -63,34 +100,21 @@ h2{
     
         &:hover{
             opacity: 90%;
-            transition-delay: 0.14s;
+            transition-duration: 0.3s;
         }
     
         &__info{
             display: flex;
             flex-direction: column;
             justify-items: left;
-            font-size: 14px;
+            font-size: 12px;
             padding: 8px;
         }
     
-        #img1{
-            // background-image: url(/images/landing/program-muaythai.jpg);
+        &__image{
             background-position: center;
             background-size: cover;
-            opacity: 0.7;
-            margin: auto;
-            min-width: 70px;
-            height: 70px;
-            align-items: center;
-            vertical-align: auto;
-        }
-
-        #img2{
-            background-image: url(/images/landing/program-yoga.jpg);
-            background-position: center;
-            background-size: cover;
-            opacity: 0.7;
+            opacity: 0.85;
             margin: auto;
             min-width: 70px;
             height: 70px;
@@ -104,18 +128,25 @@ h2{
             width: 90px;
             border-radius: 5%;
             padding: 0px;
-    
+            background-image: radial-gradient(white, $button-n-background); 
+            cursor: pointer;
             &:hover{
-                background-color: #f5cb5c;
-                .far{
-                    color: red;
-                    font-size: 16px;
-                    transition-duration: 0.2s;
-                    
-                }
+                background-image: none; 
+                background-color: $dark-grey;
+                color: white;
+                -webkit-transition: background-color 0.35s linear;
+                -ms-transition: background-color 0.35s linear;
+                transition: background-color 0.35s linear;
+                -webkit-transition: color 0.35s linear;
+                -ms-transition: color 0.35s linear;
+                transition: color 0.35s linear;
+            }
+            &:hover .far{
+                color: red;
+                font-size: 16px;
+                transition-duration: 0.35s;
             }
         }
-    
         &__functions{
             justify-self: end;
             display: flex;
@@ -123,32 +154,57 @@ h2{
             justify-content: space-between;
             align-items: flex-end;
             padding: 4px;
+            width: 100%;
 
-            &__amount{
 
-            }
-            input{
-                width: 25%;
-                margin-top: 5px;
-                margin-bottom: 5px;
-                margin-left: auto;
-                margin-right: auto;
-                font-size: 12px;
-                text-align: center;
-                align-items: center;
-                &:hover{
-                    background-color: #f9df9a;
-                }
-            }
-            label {
-                font-size: 12px;
-            }
-            
+        }
+        &__amount{
+            display: flex;
+            flex-direction: row;
+            width: 70%;
+            justify-content: space-between;
+            vertical-align: middle;
+        }
+        &__quantity{
+            box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);
+            border-radius: 70%;
+        }
+        a .fas{
+            color: $arrows-color;
+            border-radius: 100%;
+            box-shadow: 2px 2px 2px $dark-grey;
+        }
+        a:hover .fas{
+            color: $yellow;
+            background-color: $dark-grey;
+            border: inset 0 0 1px $arrows-color;
+        }
+        &__price{
+            font-size: 18px;
+        }
+        &__item-total{
+            font-size: 24px;
+            font-weight: bold;
+            justify-self: right;
+            color: $subtotal;
         }
 
-        &__item-total{
-            text-align: right;
-            font-size: 20px;
+
+
+        .cart-item__quantity__value{
+            // width: 25%;
+            // margin-top: 5px;
+            // margin-bottom: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 18px;
+            // text-align: center;
+            align-items: center;
+            // input::-webkit-outer-spin-button, // remove up/down arrows from form input
+            // input::-webkit-inner-spin-button {
+            //     -webkit-appearance: none;
+            //     margin: 0;
+            // }
             
         }
     }   
@@ -167,14 +223,24 @@ h2{
 
     &__item{
         margin-top: 4%;
+        color: $dark-grey;
+        font-size: 22px;
+    }
+    &__count__value{
+        font-weight: bold;
+    }
+    &__subtotal__value{
+        color: $green;
+        font-weight: bold;
     }
 
     &__checkout-button{
+        background-image: radial-gradient(white, $yellow );
         width: 170px;
-        height: 35px;
-
+        height: 50px;
+        border-radius: 4%;
         &:hover{
-            background-color: palegreen;
+            background-image: radial-gradient(white, palegreen );
         }
     }
 }

@@ -185,29 +185,18 @@ function displayCart() { // refresh HTML
         let dynamicHTML;
         // Object.values() returns an array // "=>" Arrow function expression
         Object.values(cartItemsLS).filter(item => { 
-            
-            console.log(item)
-            console.log(item.tag)
-            console.log(item.price)
-            console.log(typeof item.price)
-            
+                        
             quantity += item.inCart
             localStorage.setItem('cartQuantity', quantity)
 
             total += item.price * item.inCart
             localStorage.setItem('totalCost', total)
 
-            console.log(total)
-
             // only execute IF 'item' exists in cartItemsLS
             // cartItemsLS < {multiple items: yoga;muaythai = items[].tag}
             if (item.inCart > 0) { // item.tag gets LS item's tag
                 let itemImageString = item.image_path
-                
-                
                 // itemImageString = itemImageString.replace("'","")
-                console.log(itemImageString)
-
                 itemContainer.innerHTML += `             
                 <div class="cart-item">
                     <div class="cart-item__info">
@@ -229,14 +218,17 @@ function displayCart() { // refresh HTML
                         </div>
                         <!-- QTY -->
                         <div class="cart-item__amount">
-                            <a class="qty-decrement"><i class="fas fa-arrow-down fa-sm"></i></a>
-                            <input class="cart-item__quantity" type="number" value="${item.inCart}">
-                            <a class="qty-increment"><i class="fas fa-arrow-up fa-sm"></i></a>
+                            <!-- ITEM QUANTITY -->
+                            <div class="cart-item__quantity">
+                                <a class="qty-decrement"><i class="fas fa-arrow-circle-up"></i></a>    
+                                <label class="cart-item__quantity__value">${item.inCart}</label>
+                                <a class="qty-increment"><i class="fas fa-arrow-circle-down"></i></a>
+                            </div>
                             <i class="fas fa-times fa-sm"></i>
-                            
-                        <label class="cart-item__price">$${item.price}</label>
-                        <!-- PRICE -->
+                            <!-- ITEM PRICE -->
+                            <label class="cart-item__price">$${item.price}</label>
                         </div>
+                        <!-- ITEM TOTAL (QTY X PRICE) -->
                         <span class="cart-item__item-total">$${item.inCart * item.price}</span>
                     </div>
                 </div>
@@ -246,13 +238,13 @@ function displayCart() { // refresh HTML
         
         if (cartItemsLS && quantity > 0) {
             itemContainer.innerHTML += `
-            <div class="cart-summary__item">
+            <div class="cart-summary">
                 <div class="cart-summary__item">
-                    <label for="cart-summary__count">Item count: ${localStorage.getItem('cartQuantity')} </label>
+                    <label for="cart-summary__count">Item count: <span class="cart-summary__count__value">${localStorage.getItem('cartQuantity')}</span></label>
                 </div>
             
                 <div class="cart-summary__item">
-                    <label for="cart-summary__subtotal">Subtotal: $${localStorage.getItem('totalCost')}</label>
+                    <label for="cart-summary__subtotal">Subtotal: <span class="cart-summary__subtotal__value">$${localStorage.getItem('totalCost')}</span></label>
                 </div>
 
                 <!-- Checkout Button -->
@@ -309,8 +301,6 @@ function displayCart() { // refresh HTML
         //     }
         // }
         }
-        console.log(localStorage.getItem('totalCost'))
-        
     }
     // EVENT LISTENER - Arrow UP / INCREASE QTY
     let arrowsUp = document.querySelectorAll('.qty-increment');
@@ -357,8 +347,28 @@ function displayCart() { // refresh HTML
         //  --- hide the Login section
         //  --- display the Confirm Order section
         $(".checkout__buttons #login").click(function(){
-            $(".checkout-validate").toggle();
-            $('.checkout-confirm').toggle();
+            // input validate (just no blanks)
+            let emailInput = document.getElementById('checkout-validate__email').value;
+            let passwordInput = document.getElementById('checkout-validate__password').value;
+
+            // if validation passes; make sure this is blank.
+            // else fails, input error message.
+            let errorContainer = document.querySelector('.error-message')
+            let confirmSubtotalContainer = document.querySelector('.confirm_subtotal')
+            let cartSubtotalLS = parseInt(localStorage.getItem('totalCost'))
+
+            if (emailInput == "" || passwordInput == "") {
+                errorContainer.innerHTML = "Please input an email and password (no blanks)";                
+
+            } else {
+                $(".checkout-validate").toggle();
+                $('.checkout-confirm').toggle();
+                
+                errorContainer.innerHTML = "";
+                confirmSubtotalContainer.innerHTML = cartSubtotalLS;
+            }
+
+            
 
             // add display of Order total. 
             // (bonus) display list of items
@@ -376,6 +386,11 @@ function displayCart() { // refresh HTML
             localStorage.clear();
             location.reload();
 
+            $(document).ready(function() {
+            $('html,body').animate({
+                scrollTop: $(".navbar").offset().top},
+                'fast');
+            });
         });
 
         // ensure that clicking 'Add To Cart' keeps the Thank You section toggledOff
@@ -387,6 +402,7 @@ function displayCart() { // refresh HTML
         // });
     });
 }
+
 
 // maintain scroll position at refresh
 // $(window).scroll(function () {

@@ -79,36 +79,34 @@
          </nav>
     </header>
 
-    <main>
+    <main class="cart-main">
 
         <!-- RECOMMENDED FOR YOU -->
-        <h2>Recommended For You</h2>
+        <h2 class="cart-h2">Recommended For You</h2>
         <div class="item_container recommended">
           <div class="recommended__card" id="recommended1">
             <!-- <img src="../images/landing/program-muaythai.jpg" alt="muay_thai" width="60px"> -->
-            <h4>Muay Thai</h4>
-            <h4>$12.00</h4>
-            <a class="add-cart cart1">Add Cart</a> 
+            <h4 class="recommended__title">Muay Thai</h4>
+            <h4 class="recommended__price">$12.00</h4>
+            <h4 class="add-cart cart1"><i class="fas fa-plus fa-sm"></i><i class="fas fa-shopping-cart fa-sm"></i></h4> 
           </div>
           <div class="recommended__card" id="recommended2">
             <!-- <img src="../images/landing/program-yoga.jpg" alt="yoga" width="60px"> -->
-            <h4>Yoga</h4>
-            <h4>$8.00</h4>
-            <a class="add-cart cart2">Add Cart</a> 
+            <h4 class="recommended__title">Yoga</h4>
+            <h4 class="recommended__price">$8.00</h4>
+            <h4 class="add-cart cart2"><i class="fas fa-plus fa-sm"></i><i class="fas fa-shopping-cart fa-sm"></i></i></h4> 
           </div>
           <div class="recommended__card" id="recommended3">
             <!-- <img src="../images/landing/program-hiit.jpg" alt="hiit" width="60px"> -->
-            <h4>HIIT</h4>
-            <h4>$10.00</h4>
-            <a class="add-cart cart3">Add Cart</a> 
+            <h4 class="recommended__title">HIIT</h4>
+            <h4 class="recommended__price">$10.00</h4>
+            <h4 class="add-cart cart3"><i class="fas fa-plus fa-sm"></i><i class="fas fa-shopping-cart fa-sm"></i></h4> 
           </div>
         </div>
 
         <!-- Cart Items - populated crom JS -->
         <section class="cart">
-           <h2>Your Cart</h2>
-                      <!-- Item 1 -->
-
+           <h2 class="cart-h2">Your Cart</h2>
             <section class="cart-item-container">
               <!-- <div class="cart-item">
                 <div class="cart-item__info">
@@ -191,12 +189,13 @@
         <!-- Cart Checkout -->
         <div class="checkout">
           <section class="checkout-validate">
-            <h2>Checkout</h2>
+            <h2 class="cart-h2">Checkout</h2>
             <div class="checkout__login">
+                <label class="error-message"></label>
                 <label for="email">Email address</label>
-                <input type="email" placeholder="email@example.com">
+                <input type="email" id="checkout-validate__email" placeholder="email@example.com">
                 <label for="password">Password</label>
-                <input type="password" placeholder="password">
+                <input type="password" id="checkout-validate__password" placeholder="password">
                 <div class="checkout__login-remember">
                   <input id="checkout-rememberme" type="checkbox">
                   <label id="checkout-rememberme-label">Remember me</label>
@@ -210,16 +209,16 @@
 
           <!-- CONFIRM PURCHASE -->
           <section class="checkout-confirm">
-              <h2>Confirm Your Order</h2>      
+              <h2 class="cart-h2">Confirm Your Order</h2>      
               <div class="checkout-confirm__item">
-                  <label for="checkout-confirm__subtotal">Subtotal: <span class="js_subtotal"></span> </label>
+                  <label for="checkout-confirm__subtotal">Subtotal: <span class="confirm_subtotal"></span> </label>
                   <button class="button" id="complete" type="button">Complete</button>
                 </div>
           </section>
 
           <!-- PURCHASE COMPLETED -->
           <section class="checkout-complete">
-            <h2>Thank You for your Order!</h2>
+            <h2 class="cart-h2">Thank You for your Order!</h2>
             
             <div class="checkout-complete__item">
             </div>
