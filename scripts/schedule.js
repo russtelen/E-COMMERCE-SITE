@@ -88,8 +88,9 @@ $('.modal').modal('show');
 $('.modal-title').html(eventTitle);
 $('.modal-body').html("Start: " + eventStart )
 },
-    
+  
    
   });
   calendar.render();
 });
+

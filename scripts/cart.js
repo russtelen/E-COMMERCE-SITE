@@ -268,20 +268,6 @@ function displayCart() { // refresh HTML
                     totalCost(item,'remove'); // COMPUTE TOTAL
                     displayCart(); // REFRESH HTML
                 });
-
-
-                // get the tag id dynamically added above 
-                // let arrowUp = document.getElementById('qty-increment-' + item.tag);
-                // // for (let i = 0; i < arrowsUp.length; i++) {
-                // console.log(arrowUp);
-                // // console.log(arrowsUp.length);
-                // arrowUp.addEventListener('click', () => {
-                //     console.log("arrow up");
-                //     cartQuantityUp(item);
-                //     totalCost(item,'increment');
-                //     displayCart()
-                // });
-                // }
             }
             
         });
