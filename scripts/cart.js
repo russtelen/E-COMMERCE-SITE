@@ -377,7 +377,7 @@ function displayCart() { // refresh HTML
                 
                 Object.values(cartItemsLS).filter(item => {
                 itemsInCartConfirm.innerHTML += `
-                    <label>${item.name}: ${item.inCart} x $${item.price}</label>
+                    <label>${item.name}: ${item.inCart} x $${item.price}</label><br>
                 `
                 });
             }

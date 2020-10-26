@@ -724,6 +724,9 @@ figure.snip1321.hover:after {
       .checkout__confirm .checkout-confirm__item .checkout-confirm__button:hover {
         background-image: radial-gradient(white, palegreen); }
 
+.checkout__complete {
+  padding-top: 40%; }
+
 .contact__banner {
   background-image: url("../../images/contact/contact-banner.jpg");
   background-size: cover;
