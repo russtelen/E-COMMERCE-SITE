@@ -343,15 +343,15 @@ body .landing__program-img {
 
 @media (min-width: 768px) {
   body .landing__program-img {
-    width: 150px;
-    height: 150px;
+    width: 190px;
+    height: 190px;
   }
 }
 
 @media (min-width: 1024px) {
   body .landing__program-img {
-    width: 250px;
-    height: 250px;
+    width: 270px;
+    height: 270px;
   }
 }
 
@@ -360,13 +360,12 @@ body .landing__program-img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -375,13 +374,12 @@ body .landing__program-img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -391,12 +389,26 @@ figure.snip1321 {
   overflow: hidden;
   margin: 10px;
   min-width: 230px;
-  max-width: 315px;
+  max-width: 250px;
   width: 100%;
   color: #000000;
   text-align: center;
   -webkit-perspective: 50em;
   perspective: 50em;
+}
+
+@media (min-width: 768px) {
+  figure.snip1321 {
+    min-width: 190px;
+    max-width: 190px;
+  }
+}
+
+@media (min-width: 1024px) {
+  figure.snip1321 {
+    min-width: 270px;
+    max-width: 270px;
+  }
 }
 
 figure.snip1321 * {
@@ -420,22 +432,28 @@ figure.snip1321 figcaption {
   z-index: 1;
 }
 
-figure.snip1321 h2,
+figure.snip1321 p,
 figure.snip1321 h4 {
   margin: 0;
 }
 
-figure.snip1321 h2 {
-  font-weight: 600;
+@media (min-width: 768px) {
+  figure.snip1321 p,
+  figure.snip1321 h4 {
+    font-size: 0.72rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  figure.snip1321 p,
+  figure.snip1321 h4 {
+    font-size: 1rem;
+  }
 }
 
 figure.snip1321 h4 {
   font-weight: 400;
   text-transform: uppercase;
-}
-
-figure.snip1321 i {
-  font-size: 32px;
 }
 
 figure.snip1321:after {
