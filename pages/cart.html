@@ -187,37 +187,43 @@
         <!-- </section> -->
 
         <!-- Cart Checkout -->
+        
         <div class="checkout">
-          <section class="checkout-validate">
+          
+          <section class="checkout__validate">
             <h2 class="cart-h2">Checkout</h2>
             <div class="checkout__login">
-                <label class="error-message"></label>
-                <label for="email">Email address</label>
-                <input type="email" id="checkout-validate__email" placeholder="email@example.com">
-                <label for="password">Password</label>
-                <input type="password" id="checkout-validate__password" placeholder="password">
-                <div class="checkout__login-remember">
-                  <input id="checkout-rememberme" type="checkbox">
-                  <label id="checkout-rememberme-label">Remember me</label>
-                </div>
+              <!-- <img src="/assets/logo/shredz_logo.svg" width="200px"> -->
+              <label class="error-message"></label>
+              <label for="email">Username</label>
+              <input type="email" id="checkout-validate__email" placeholder="Enter username">
+              <label for="password">Password</label>
+              <input type="password" id="checkout-validate__password" placeholder="Enter password">
+              <!-- remember me -->
+              <div class="checkout__login-remember">
+                <input id="checkout-rememberme" type="checkbox">
+                <label id="checkout-rememberme-label">Remember me</label>
               </div>
-            <div class="checkout__buttons">
-                <button class="button" id="login" type="button">Log-in</button>
-                <a href="login.html"><button class="button" id="register" type="button">Register</button></a>
+              <!-- buttons (Login & Signup) -->
+              <div class="checkout__buttons">
+                <button class="button" id="login" type="button">Log-In</button>
+                <a href="login.html"><button class="button" id="register" type="button">Sign-Up</button></a>
+              </div>
             </div>
           </section>
 
           <!-- CONFIRM PURCHASE -->
-          <section class="checkout-confirm">
+          <section class="checkout__confirm">
               <h2 class="cart-h2">Confirm Your Order</h2>      
               <div class="checkout-confirm__item">
-                  <label for="checkout-confirm__subtotal">Subtotal: <span class="confirm_subtotal"></span> </label>
-                  <button class="button" id="complete" type="button">Complete</button>
+                  <div id="checkout-confirm__items-in-cart"></div>
+                  <label class="checkout-confirm__subtotal">Subtotal: $<span class="confirm_subtotal"></span> </label>
+                  <button class="checkout-confirm__button" id="complete" type="button">Complete</button>
                 </div>
           </section>
 
           <!-- PURCHASE COMPLETED -->
-          <section class="checkout-complete">
+          <section class="checkout__complete">
             <h2 class="cart-h2">Thank You for your Order!</h2>
             
             <div class="checkout-complete__item">
