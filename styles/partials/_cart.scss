@@ -16,29 +16,15 @@
     // color: $text-grey;
     // box-shadow: 3px 3px 3px darkgay;
 }
+.recommended{
+    display: flex;
+    justify-content: center;
 
-.cart {
-  &-item {
-    // display: flex;
-    display: grid;
-    grid-template-columns: 40% auto 40%;
-    grid-template-areas: "left center right";
-    justify-content: space-between;
-    min-width: 425px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 0.2px solid grey;
-    border-radius: 2%;
-
-    background-color: $light-blue;
-    background: linear-gradient(135deg, white 2%, $light-blue);
-
-    margin: 1.25%;
-    box-shadow: 2px 2px 2px black;
-
-    &:hover {
-      opacity: 90%;
-      transition-delay: 0.14s;
+    #recommended1{
+        background-image: url(../images/landing/program-muaythai.jpg)
+    }
+    #recommended2{
+        background-image: url(../images/landing/program-yoga.jpg)
     }
     #recommended3{
         background-image: url(../images/landing/program-hiit.jpg)
@@ -241,8 +227,6 @@
                 width: 50%;
             } 
         }
-      }
-    }
 
         // &__quantity{
         //     box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);
@@ -269,7 +253,7 @@
             position: absolute;
             offset: 50px;
         }
-       
+    }   
 
     @include tablet
 }
@@ -316,32 +300,6 @@
             background-image: radial-gradient(white, palegreen );
         }
     }
-  
-}
-.cart-summary {
-  // width: 20%;
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-
-  margin-top: 50px;
-  margin-right: 2%;
-  // margin: 2%;
-  // align-content: space-between;
-  // align-items: right;
-
-  &__item {
-    margin-top: 4%;
-  }
-
-  &__checkout-button {
-    width: 170px;
-    height: 35px;
-
-    &:hover {
-      background-color: palegreen;
-    }
-  }
 }
 // CHECKOUT (VALIDATE) SECTION 
 .checkout{
@@ -383,10 +341,10 @@
             margin-bottom: 0.5%;
         }
 
-    label {
-      margin-top: 2%;
-      margin-bottom: 0.5%;
-    }
+        input{
+            margin-bottom: 1%;
+            border-radius: 5%;
+        }
 
         &-remember{
             font-size: 14px;
@@ -468,7 +426,6 @@
             }
         }
     }
-  
 }
 // CHECKOUT (COMPLETE) SECTIONS
 .checkout__complete{
