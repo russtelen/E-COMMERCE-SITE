@@ -462,7 +462,12 @@ figure.snip1321.hover:after {
 
 .recommended {
   display: flex;
-  justify-content: center; }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 320px) {
+    .recommended {
+      flex-direction: row; } }
   .recommended #recommended1 {
     background-image: url(../images/landing/program-muaythai.jpg); }
   .recommended #recommended2 {
