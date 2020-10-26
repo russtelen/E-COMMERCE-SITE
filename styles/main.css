@@ -656,6 +656,7 @@ figure.snip1321.hover:after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -727,6 +728,61 @@ figure.snip1321.hover:after {
           transition-duration: 0.5s;
   color: white;
 }
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 320px) {
+    .recommended {
+      flex-direction: row; } }
+  .recommended #recommended1 {
+    background-image: url(../images/landing/program-muaythai.jpg); }
+  .recommended #recommended2 {
+    background-image: url(../images/landing/program-yoga.jpg); }
+  .recommended #recommended3 {
+    background-image: url(../images/landing/program-hiit.jpg); }
+  .recommended__card {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 1.25%;
+    width: 140px;
+    height: 115px;
+    position: relative;
+    text-align: center;
+    vertical-align: text-bottom;
+    border: 1px solid #333533;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px black; }
+    .recommended__card:hover {
+      opacity: 0.85; }
+  .recommended__title {
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    position: absolute;
+    bottom: 65%;
+    left: 10%;
+    text-align: center; }
+  .recommended__price {
+    color: #e8eddf;
+    position: absolute;
+    bottom: 30%;
+    right: 2%;
+    text-shadow: 0.5px 0.5px 0.5px orangered; }
+  .recommended .add-cart {
+    color: #f5cb5c;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    text-align: center;
+    text-shadow: 1px 0 0 1px lightyellow; }
+  .recommended .add-cart:hover {
+    cursor: pointer;
+    font-size: 32px;
+    transition-duration: 0.5s;
+    color: white; }
+
 
 .cart-empty {
   width: 90%;
