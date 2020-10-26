@@ -70,25 +70,25 @@ body {
       // border-radius: 10%;
 
       @include tablet {
-        width: 150px;
-        height: 150px;
+        width: 190px;
+        height: 190px;
       }
 
       @include desktop {
-        width: 250px;
-        height: 250px;
+        width: 270px;
+        height: 270px;
       }
     }
 
     &__program-row1 {
       @include tablet {
-        @include flex-center-horiz;
+        @include flex-center;
       }
     }
 
     &__program-row2 {
       @include tablet {
-        @include flex-center-horiz;
+        @include flex-center;
       }
     }
   }
@@ -99,13 +99,26 @@ figure.snip1321 {
   position: relative;
   overflow: hidden;
   margin: 10px;
+  // min-width: 230px;
+  // max-width: 315px;
   min-width: 230px;
-  max-width: 315px;
+  max-width: 250px;
   width: 100%;
   color: #000000;
   text-align: center;
   -webkit-perspective: 50em;
   perspective: 50em;
+
+  @include tablet {
+    min-width: 190px;
+    max-width: 190px;
+  }
+
+  @include desktop {
+    min-width: 270px;
+    max-width: 270px;
+  }
+
 }
 figure.snip1321 * {
   -webkit-box-sizing: padding-box;
@@ -125,19 +138,19 @@ figure.snip1321 figcaption {
   opacity: 0;
   z-index: 1;
 }
-figure.snip1321 h2,
+figure.snip1321 p,
 figure.snip1321 h4 {
   margin: 0;
-}
-figure.snip1321 h2 {
-  font-weight: 600;
+  @include tablet{
+    font-size: 0.72rem;
+  }
+  @include desktop{
+    font-size: 1rem;
+  }
 }
 figure.snip1321 h4 {
   font-weight: 400;
   text-transform: uppercase;
-}
-figure.snip1321 i {
-  font-size: 32px;
 }
 figure.snip1321:after {
   background-color: #ffffff;
