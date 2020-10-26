@@ -1,73 +1,130 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>SHREDZ</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/f0b9136e4d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/f0b9136e4d.js"
+      crossorigin="anonymous"
+    ></script>
 
-    <link rel="stylesheet" href="styles/main.css">
-
+    <link rel="stylesheet" href="../styles/main.css" />
   </head>
   <body>
-     <!-- header -->
-      <header>
-        <!-- sample navbar (Replace this with Vlad's Navbar) -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top"> <!-- -->
-          
-          <!-- Logo = Link to Home -->
-          <a class="navbar-brand text-white" href="..\index.html"><img src="../assets/logo/shredz_logo.svg" width="140px"></a>
-  
-          <!-- Hamburger Menu Toggle -->
-          <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <!-- Navbar Items (collapsable)-->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto justify-content-center">
-  
-              <li class="nav-item text-center">
-                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="program.html">Explore Programs</a>
-              </li>
-              
-              <li class="nav-item text-center">
-                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="MeetOurTeam.html">Meet Our Team</a>
-                </li>
-                
-              <li class="nav-item text-center">
-                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="schedule.html">Book Sessions</a>
-                </li>
-                
-              <li class="nav-item text-center">
-                  <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="contact.html">Contact</a>
-                </li>
-  
-                <!-- Members seection in Navbar -
-                   Drop-down Menu for easy Log-in; Link to Registration Page -->
-              <li class="nav-item text-center dropdown align-items-center">
-                <a class="btn btn-outline-light dropdown-toggle border border-dark rounded mx-2 w-150" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Members
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <div class="container">
+    <!-- header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark sticky-top">
+        <!-- -->
+
+        <!-- Logo = Link to Home -->
+        <a class="navbar-brand text-white" href="..\index.html"
+          ><img src="../assets/logo/shredz_logo.svg" width="140px"
+        /></a>
+
+        <!-- Hamburger Menu Toggle -->
+        <button
+          class="navbar-toggler bg-white"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Items (collapsable)-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto justify-content-center">
+            <li class="nav-item text-center">
+              <a
+                class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                href="program.html"
+                >Explore Programs</a
+              >
+            </li>
+
+            <li class="nav-item text-center">
+              <a
+                class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                href="MeetOurTeam.html"
+                >Meet Our Team</a
+              >
+            </li>
+
+            <li class="nav-item text-center">
+              <a
+                class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                href="schedule.html"
+                >Book Sessions</a
+              >
+            </li>
+
+            <li class="nav-item text-center">
+              <a
+                class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                href="contact.html"
+                >Contact</a
+              >
+            </li>
+
+            <!-- Members seection in Navbar -
+                 Drop-down Menu for easy Log-in; Link to Registration Page -->
+            <li class="nav-item text-center dropdown align-items-center">
+              <a
+                class="btn btn-outline-light dropdown-toggle border border-dark rounded mx-2 w-150"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Members
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="container">
                   <form class="px-4 py-2">
                     <div class="form-group">
                       <label for="email" class="ml-0">Email address</label>
-                      <input type="email" class="form-control w-100" id="email" placeholder="email@example.com">
+                      <input
+                        type="email"
+                        class="form-control w-100"
+                        id="email"
+                        placeholder="email@example.com"
+                      />
                     </div>
                     <div class="form-group">
                       <label for="password" class="m-0">Password</label>
-                      <input type="password" class="form-control w-100" id="password" placeholder="Password">
+                      <input
+                        type="password"
+                        class="form-control w-100"
+                        id="password"
+                        placeholder="Password"
+                      />
                     </div>
                     <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="dropdownCheck"
+                      />
                       <label class="form-check-label" for="dropdownCheck">
                         Remember me
                       </label>
@@ -75,112 +132,246 @@
                     <button type="submit" class="btn btn-dark">Sign in</button>
                   </form>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item w-100 text-center" href="#">Forgot password?</a>
+                  <a class="dropdown-item w-100 text-center" href="#"
+                    >Forgot password?</a
+                  >
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item w-100 text-center" href="login.html">Sign-up</a>
-                  </div>
+                  <a class="dropdown-item w-100 text-center" href="login.html"
+                    >Sign-up</a
+                  >
                 </div>
-              </li>
-              <li class="nav-item text-center">
-                <a class="btn btn-outline-light border border-dark rounded mx-2 w-150" href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
-              </li>
-            </ul>
-          </div>
-         </nav>
-        <!-- end navbar -->
-
-        
-
-        <!-- START program cards-->
-        <main>
-          <!-- Intro -->
-          <div class="program">
-            <h2 class="program__text--title">Why choose SHREDZ?</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis obcaecati nemo at nihil architecto esse blanditiis doloribus hic explicabo dolor nam possimus assumenda adipisci, cumque exercitationem harum eius non quod. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime tempore, fuga tenetur inventore ex tempora id temporibus impedit at, odio, dolorum ad animi maiores dolores nesciunt. Nemo laborum error nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, excepturi nemo! Cum nisi ea aliquid eum iusto commodi velit minus odio illum perferendis, fugit sit dolore eius maiores laudantium alias.</p>
-
-          <!-- program 1 -->
-          <div class="program__cards">
-            <h2 class="program__text--header">Yoga</h2>
-            <div class="program__img">
-                <img src="" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facere sed, numquam ullam sunt qui praesentium vel dolor provident consequatur aliquam necessitatibus hic a quasi eos, optio excepturi earum corporis?</p>
-                <button type="button" class="btn btn-outline-info">
-                    <a href = "#">Book a class</a></button>
-            </div>
-          </div>
-          <!-- program 2-->
-          <div class="program__cards">
-            <h2 class="program__text--header">Muay Thai</h2>
-            <div class="program__img">
-              <img src="" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facere sed, numquam ullam sunt qui praesentium vel dolor provident consequatur aliquam necessitatibus hic a quasi eos, optio excepturi earum corporis?</p>
-                <button type="button" class="btn btn-outline-info">
-                    <a href = "#">Book a class</a></button>
-            </div>
-          </div>
-
-          <!-- program 3 -->
-          <div class="program__cards">
-            <h2 class="program__text--header">Jiu Jitsu</h2>
-            <div class="program__img">
-              <img src="" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facere sed, numquam ullam sunt qui praesentium vel dolor provident consequatur aliquam necessitatibus hic a quasi eos, optio excepturi earum corporis?</p>
-                <button type="button" class="btn btn-outline-info">
-                    <a href = "#">Book a class</a></button>
-            </div>
-          </div>
-
-          <!-- program 4 -->
-          <div class="program__cards">
-            <h2 class="program__text--header">Zumba</h2>
-            <div class="program__img">
-              <img src="" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facere sed, numquam ullam sunt qui praesentium vel dolor provident consequatur aliquam necessitatibus hic a quasi eos, optio excepturi earum corporis?</p>
-                <button type="button" class="btn btn-outline-info">
-                    <a href = "#">Book a class</a></button>
-            </div>
-          </div>
-
-          <!-- program 5 -->
-          <div class="program__cards">
-            <h2 class="program__text--header">HIIT Cardio</h2>
-            <div class="program__img">
-              <img src="" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facere sed, numquam ullam sunt qui praesentium vel dolor provident consequatur aliquam necessitatibus hic a quasi eos, optio excepturi earum corporis?</p>
-                <button type="button" class="btn btn-outline-info">
-                    <a href = "#">Book a class</a></button>
-            </div>
-          </div>
-
-          <!-- program 6 -->
-          <div class="program__cards">
-            <h2 class="program__text--header">Females Only</h2>
-            <div class="program__img">
-              <img src="" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facere sed, numquam ullam sunt qui praesentium vel dolor provident consequatur aliquam necessitatibus hic a quasi eos, optio excepturi earum corporis?</p>
-                <button type="button" class="btn btn-outline-info">
-                    <a href = "#">Book a class</a></button>
-            </div>
-          </div>
+              </div>
+            </li>
+            <li class="nav-item text-center">
+              <a
+                class="btn btn-outline-light border border-dark rounded mx-2 w-150"
+                href="cart.html"
+                ><i class="fas fa-shopping-cart fa-lg"></i
+              ></a>
+            </li>
+          </ul>
         </div>
-        </main>
-        <!-- Program Cards End -->
+      </nav>
 
+      <!-- end navbar -->
+      <!-- banner (Add background image using CSS)-->
+      <div class="program_jumbotron">
+        <div class="program-title">EXPLORE OUR PROGRAMS</div>
+        <br />
+        <a class="btn btn-dark btn-lg" href="#" role="button">Meet Our Team</a>
+      </div>
+      <!-- end banner -->
+    </header>
 
-      <footer> 
-        <!-- differently formatted nav -->
-        <!-- copyright -->
-        <!-- social links -->
-      </footer>
-    
+    <!-- START program cards-->
+    <div class="container">
+      <div class="program-card">
+        <img src="../images/cropImg/yoga.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Yoga</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Iste aspernatur
+            velit blanditiis atque delectus adipisci perspiciatis ipsam vel odit
+            debitis distinctio cumque, labore veritatis ducimus, eos iusto saepe
+            beatae quae. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Dolores dolor cum modi magni quis nihil accusantium tempore
+            quasi repellendus saepe iusto error, dignissimos tempora. Sapiente
+            illum at labore libero est.
+          </p>
+
+          <a
+            class="btn btn-lg btn-block btn-outline-info"
+            href="schedule.html"
+            role="button"
+            >Book a Class</a
+          >
+        </div>
+      </div>
+      <div class="program-card">
+        <img
+          src="../images/cropImg/boxing.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">muay-thai</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Fugiat nulla
+            minima laudantium voluptates maxime labore ut. Repellendus, beatae
+            cum, tempora blanditiis sint ea amet tempore ut sed natus iste
+            adipisci. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Odio quod obcaecati esse hic cupiditate eligendi accusantium quis
+            earum blanditiis, vitae voluptate voluptatem, harum pariatur ipsa
+            maxime quia autem neque asperiores!
+          </p>
+          <a
+            class="btn btn-lg btn-block btn-outline-info"
+            href="schedule.html"
+            role="button"
+            >Book a Class</a
+          >
+        </div>
+      </div>
+      <div class="program-card">
+        <img
+          src="../images/cropImg/jiujitsu.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">jiujitsu</h5>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad,
+            maxime fuga maiores laudantium fugit dicta earum quas similique
+            sequi consequatur repellat quae nulla. Ipsam amet in repudiandae
+            velit reiciendis! Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Praesentium obcaecati necessitatibus in quia illo
+            sapiente optio blanditiis. Voluptate modi unde reprehenderit eum
+            animi odio? Fugit, aliquid? Sint quidem labore ipsa. Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Dignissimos molestias
+            libero debitis reprehenderit. Quis, eius. Vel alias blanditiis
+            tempore consequuntur dolore reiciendis error modi dolores nihil
+            consequatur. Eius, molestias temporibus.
+          </p>
+          <a
+            class="btn btn-lg btn-block btn-outline-info"
+            href="schedule.html"
+            role="button"
+            >Book a Class</a
+          >
+        </div>
+      </div>
+
+      <div class="program-card">
+        <img src="../images/cropImg/zumba.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">zumba</h5>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad,
+            maxime fuga maiores laudantium fugit dicta earum quas similique
+            sequi consequatur repellat quae nulla. Ipsam amet in repudiandae
+            velit reiciendis! Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Praesentium obcaecati necessitatibus in quia illo
+            sapiente optio blanditiis. Voluptate modi unde reprehenderit eum
+            animi odio? Fugit, aliquid? Sint quidem labore ipsa. Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Dignissimos molestias
+            libero debitis reprehenderit. Quis, eius. Vel alias blanditiis
+            tempore consequuntur dolore reiciendis error modi dolores nihil
+            consequatur. Eius, molestias temporibus.
+          </p>
+          <a
+            class="btn btn-lg btn-block btn-outline-info"
+            href="schedule.html"
+            role="button"
+            >Book a Class</a
+          >
+        </div>
+      </div>
+      <div class="program-card">
+        <img
+          src="../images/cropImg/cardio.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">hii cardio</h5>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad,
+            maxime fuga maiores laudantium fugit dicta earum quas similique
+            sequi consequatur repellat quae nulla. Ipsam amet in repudiandae
+            velit reiciendis! Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Praesentium obcaecati necessitatibus in quia illo
+            sapiente optio blanditiis. Voluptate modi unde reprehenderit eum
+            animi odio? Fugit, aliquid? Sint quidem labore ipsa. Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Dignissimos molestias
+            libero debitis reprehenderit. Quis, eius. Vel alias blanditiis
+            tempore consequuntur dolore reiciendis error modi dolores nihil
+            consequatur. Eius, molestias temporibus.
+          </p>
+          <a
+            class="btn btn-lg btn-block btn-outline-info"
+            href="schedule.html"
+            role="button"
+            >Book a Class</a
+          >
+        </div>
+      </div>
+      <div class="program-card">
+        <img
+          src="../images/cropImg/female.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">female-only class</h5>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ad,
+            maxime fuga maiores laudantium fugit dicta earum quas similique
+            sequi consequatur repellat quae nulla. Ipsam amet in repudiandae
+            velit reiciendis! Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Praesentium obcaecati necessitatibus in quia illo
+            sapiente optio blanditiis. Voluptate modi unde reprehenderit eum
+            animi odio? Fugit, aliquid? Sint quidem labore ipsa. Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Dignissimos molestias
+            libero debitis reprehenderit. Quis, eius. Vel alias blanditiis
+            tempore consequuntur dolore reiciendis error modi dolores nihil
+            consequatur. Eius, molestias temporibus.
+          </p>
+          <a
+            class="btn btn-lg btn-block btn-outline-info"
+            href="schedule.html"
+            role="button"
+            >Book a Class</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Program Cards End -->
+
+    <footer>
+      <!-- differently formatted nav -->
+      <!-- copyright -->
+      <!-- social links -->
+    </footer>
+
     <!-- jQuery first, then Bootstrap JS -->
-    <script src="https://kit.fontawesome.com/001a8c6911.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/001a8c6911.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../scripts/cart.js"></script>
+    <script src="../scripts/scripts.js"></script>
   </body>
 </html>
-
