@@ -1,14 +1,29 @@
 .login {
   @extend .container-center;
+
+  @include tablet {
+    height: 400px;
+    width: 400px;
+  }
   position: relative;
   background: #fff;
   margin-top: 15%;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   display: flex;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
   border-radius: 20px 20px 20px 20px;
   overflow: hidden;
+
+  @include tablet {
+    height: 400px;
+    width: 400;
+  }
+
+  @include desktop {
+    height: 500px;
+    width: 500px;
+  }
 
   &__tab {
     flex: 1;
