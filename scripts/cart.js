@@ -5,21 +5,24 @@ let items = [ // our programs
         tag: 'muaythai',
         price: 12,
         inCart: 0,
-        image_path: '/images/landing/program-muaythai.jpg'
+        image_path: '/images/landing/program-muaythai.jpg',
+        id: 0
     },
     {
         name: 'Yoga',
         tag: 'yoga',
         price: 8,
         inCart: 0,
-        image_path: '/images/landing/program-yoga.jpg'
+        image_path: '/images/landing/program-yoga.jpg',
+        id: 1
     },
     {
         name: 'HIIT',
         tag: 'hiit',
         price: 10,
         inCart: 0,
-        image_path: '/images/landing/program-hiit.jpg'
+        image_path: '/images/landing/program-hiit.jpg',
+        id: 2
     }
 ];
 
@@ -31,7 +34,7 @@ let items = [ // our programs
     let quantityLS //    
 
 
-function cartQuantityUp(item, action) { // increments 'inCart' Object field in localStorage
+function cartQuantityUp(item) { // increments 'inCart' Object field in localStorage
     // get current 'CartQuantity' (False if none); parse Int
     let cartQuantityLS = parseInt(localStorage.getItem('cartQuantity')); 
     if(cartQuantityLS) { // if there True
@@ -63,7 +66,12 @@ function setItems(item){ // updates LocalStorage var 'itemsInCart'
     cartItemsLS = JSON.parse(cartItemsLS); // parse to js object
     if (cartItemsLS != null) { // if cart exists
         if (cartItemsLS[item.tag] == undefined) { // if NEW item
-            cartItemsLS = {  
+            cartItemsLS = { 
+                // get length of cartItemsLS (cartItemsLS.length)
+                // (add INDEXES to the Objects (by tagname))
+                // Run LOOP, check if ADDED ITEM's INDEX is Greater than the Existing Item Looped
+                // (basically re-add everything into the cart, up to the point where item.index > items[i].index)
+                // once added, add the rest of cartItemsLS
                 ...cartItemsLS, // append to existing items (rest operator)
                 [item.tag]: item // ... this new item
             }
@@ -184,7 +192,7 @@ function displayCart() { // refresh HTML
     // if cart NOT empty - display cart items 
     if (cartItemsLS && itemContainer ) {
         itemContainer.innerHTML = ''
-        let dynamicHTML;
+        
         // Object.values() returns an array // "=>" Arrow function expression
         Object.values(cartItemsLS).filter(item => { 
                         
@@ -223,10 +231,10 @@ function displayCart() { // refresh HTML
                         <!-- QTY -->
                         <div class="cart-item__amount">
                             <!-- ITEM QUANTITY -->
-                            <div class="cart-item__quantity">
-                                <a class="qty-increment"><i class="fas fa-arrow-circle-up"></i></a>    
+                            <div class="cart-item__quantity"> 
+                                <a id="qty-increment-${item.tag}"><i class="fas fa-arrow-circle-up"></i></a>    
                                 <label class="cart-item__quantity__value">${item.inCart}</label>
-                                <a class="qty-decrement"><i class="fas fa-arrow-circle-down"></i></a>
+                                <a id="qty-decrement-${item.tag}"><i class="fas fa-arrow-circle-down"></i></a>
                             </div>
                             <i class="fas fa-times fa-sm"></i>
                             <!-- ITEM PRICE -->
@@ -236,7 +244,41 @@ function displayCart() { // refresh HTML
                     </div>
                 </div>
                 `
+                // "Event Delegation" - Adds Quantity, but Loops Too Many Times (adding extra event listeners??)
+                // ---- UP ARROWS (QTY +1; New Total; Refresh Cart)
+                $(document).off('click', '#qty-increment-'+item.tag); // first, remove previously added event listener       
+                $(document).on('click', '#qty-increment-'+item.tag, function() { // then, add it again
+                    cartQuantityUp(item);
+                    totalCost(item,'increment');
+                    displayCart()
+                });
+                // ---- DOWN ARROW (QTY -1; New Total; Refresh Cart)
+                $(document).off('click', '#qty-decrement-'+item.tag); // first, remove previously added event listener       
+                $(document).on('click', '#qty-decrement-'+item.tag, function() { // then, add it again
+                    console.log("arrow down");
+                    if(cartItemsLS[item.tag].inCart > 1){
+                        console.log("arrow down IF");
+                        cartQuantityDown(item); // -1 QUANTITY
+                        totalCost(item,'decrement'); // COMPUTE TOTAL
+                        displayCart() // REFRESH HTML
+                    }   
+                });
+
+
+                // get the tag id dynamically added above 
+                // let arrowUp = document.getElementById('qty-increment-' + item.tag);
+                // // for (let i = 0; i < arrowsUp.length; i++) {
+                // console.log(arrowUp);
+                // // console.log(arrowsUp.length);
+                // arrowUp.addEventListener('click', () => {
+                //     console.log("arrow up");
+                //     cartQuantityUp(item);
+                //     totalCost(item,'increment');
+                //     displayCart()
+                // });
+                // }
             }
+            
         });
         
         if (cartItemsLS && quantity > 0) {
@@ -306,14 +348,14 @@ function displayCart() { // refresh HTML
         }
     }
     // EVENT LISTENER - Arrow UP / INCREASE QTY
-    let arrowsUp = document.querySelectorAll('.qty-increment');
-    for (let i = 0; i < arrowsUp.length; i++) {
-    arrowsUp[i].addEventListener('click', () => {
-        cartQuantityUp(items[i]);
-        totalCost(items[i],'increment');
-        displayCart()
-    });
-    }
+    // let arrowsUp = document.querySelectorAll('.qty-increment');
+    // for (let i = 0; i < arrowsUp.length; i++) {
+    // arrowsUp[i].addEventListener('click', () => {
+    //     cartQuantityUp(items[i]);
+    //     totalCost(items[i],'increment');
+    //     displayCart()
+    // });
+    // }
     // EVENT LISTENER - Arrow DOWN / DECREASE QTY
     let arrowsDown = document.querySelectorAll('.qty-decrement');
     for (let i = 0; i < arrowsDown.length; i++) {
