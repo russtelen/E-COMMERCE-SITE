@@ -1643,8 +1643,10 @@ main .row .card-text {
 
 .program_jumbotron .program-head-contents {
   font-size: 20px;
+  font-weight: 700;
   -webkit-margin-start: 5%;
           margin-inline-start: 5%;
+  line-height: 110%;
 }
 
 .program_jumbotron .btn {
