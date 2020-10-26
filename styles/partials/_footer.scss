@@ -1,0 +1,67 @@
+.footer {
+    height: 500px;
+    background-color: #e8eddf;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+    @include flex-center-vert;
+
+    @include tablet {
+        height: 300px;
+        @include flex-center-horiz;
+    }
+
+    @include tablet {
+        height: 200px;
+    }
+   
+    &__button {
+        @include space-out;
+    }
+
+    &__nav{
+        @include flex-center-column;
+        @include text(20px,20px);
+
+        @include tablet{
+            @include text(14px,14px);
+        }
+
+        @include desktop{
+            @include text(10px,10px);
+        }
+        
+        @include desktop {
+            @include flex-center-horiz;    
+        }
+
+        a {
+            color: black;
+        }
+
+        p {
+            @include desktop {
+                @include space-out;
+            }
+        }
+    }
+
+    &__detail {
+       @include space-out;
+    }
+
+    &__detail-text{
+        @include header(20px, 20px);
+
+        @include tablet {
+            @include header(30px, 30px)
+        }
+    }
+
+    &__detail-icons {
+        a {
+            color: black;
+        }
+    }
+
+}
