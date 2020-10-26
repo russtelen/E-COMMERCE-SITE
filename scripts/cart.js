@@ -224,7 +224,7 @@ function displayCart() { // refresh HTML
                             <!--  -->
                     <div class="cart-item__functions">
                         <div class="cart-item__remove">
-                            <button class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
+                            <button id="cart-item-remove-${item.tag}" class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
                             <!-- ITEM TOTAL (QTY X PRICE) -->
                         </div>
                         <span class="cart-item__item-total">$${item.inCart * item.price}</span>
@@ -255,13 +255,18 @@ function displayCart() { // refresh HTML
                 // ---- DOWN ARROW (QTY -1; New Total; Refresh Cart)
                 $(document).off('click', '#qty-decrement-'+item.tag); // first, remove previously added event listener       
                 $(document).on('click', '#qty-decrement-'+item.tag, function() { // then, add it again
-                    console.log("arrow down");
                     if(cartItemsLS[item.tag].inCart > 1){
-                        console.log("arrow down IF");
                         cartQuantityDown(item); // -1 QUANTITY
                         totalCost(item,'decrement'); // COMPUTE TOTAL
                         displayCart() // REFRESH HTML
                     }   
+                });
+                // ---- REMOVE BUTTON (QTY -<inCart>; New Total; Refresh Cart)
+                $(document).off('click', '#cart-item-remove-'+item.tag);
+                $(document).on('click', '#cart-item-remove-'+item.tag, function(){
+                    removeItem(item); // -X QUANTITY
+                    totalCost(item,'remove'); // COMPUTE TOTAL
+                    displayCart(); // REFRESH HTML
                 });
 
 
@@ -357,27 +362,27 @@ function displayCart() { // refresh HTML
     // });
     // }
     // EVENT LISTENER - Arrow DOWN / DECREASE QTY
-    let arrowsDown = document.querySelectorAll('.qty-decrement');
-    for (let i = 0; i < arrowsDown.length; i++) {
-    arrowsDown[i].addEventListener('click', () => {        
-        let itemsInCartNow = localStorage.getItem('itemsInCart');
-        let item = items[i]
-        itemsInCartNow = JSON.parse(itemsInCartNow)
-        if(itemsInCartNow[item.tag].inCart > 1){
-            cartQuantityDown(items[i]); // -1 QUANTITY
-            totalCost(items[i],'decrement'); // COMPUTE TOTAL
-            displayCart() // REFRESH HTML
-        }   
-    });
-    }
-    let removeHTMLElements = document.querySelectorAll('.cart-item__remove-button');
-    for (let i = 0; i < removeHTMLElements.length; i++) {
-        removeHTMLElements[i].addEventListener('click', () => {
-        removeItem(items[i]); // -X QUANTITY
-        totalCost(items[i],'remove'); // COMPUTE TOTAL
-        displayCart(); // REFRESH HTML
-    });
-    }
+    // let arrowsDown = document.querySelectorAll('.qty-decrement');
+    // for (let i = 0; i < arrowsDown.length; i++) {
+    // arrowsDown[i].addEventListener('click', () => {        
+    //     let itemsInCartNow = localStorage.getItem('itemsInCart');
+    //     let item = items[i]
+    //     itemsInCartNow = JSON.parse(itemsInCartNow)
+    //     if(itemsInCartNow[item.tag].inCart > 1){
+    //         cartQuantityDown(items[i]); // -1 QUANTITY
+    //         totalCost(items[i],'decrement'); // COMPUTE TOTAL
+    //         displayCart() // REFRESH HTML
+    //     }   
+    // });
+    // }
+    // let removeHTMLElements = document.querySelectorAll('.cart-item__remove-button');
+    // for (let i = 0; i < removeHTMLElements.length; i++) {
+    //     removeHTMLElements[i].addEventListener('click', () => {
+    //     removeItem(items[i]); // -X QUANTITY
+    //     totalCost(items[i],'remove'); // COMPUTE TOTAL
+    //     displayCart(); // REFRESH HTML
+    // });
+    // }
 
     $(document).ready(function() {
         // when clicking 'Checkout' button, display Login section (to validate)
