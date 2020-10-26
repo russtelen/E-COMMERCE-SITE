@@ -15,7 +15,8 @@
         "partials/_cart.scss",
         "partials/_contact.scss",
         "partials/_MeetOurTeam.scss",
-        "partials/_program.scss"
+        "partials/_program.scss",
+        "partials/_footer.scss"
     ],
     "names": [],
     "file": "main.css"
