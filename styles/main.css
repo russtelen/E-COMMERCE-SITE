@@ -1372,25 +1372,25 @@ figure.snip1321.hover:after {
   text-align: center;
 }
 
-.team_content .btn-danger {
+.team_content .btn-outline-light {
   padding: 20px;
   margin-top: 80px;
 }
 
 @media (min-width: 320px) {
-  .team_content .btn-danger {
+  .team_content .btn-outline-light {
     font-size: 10px;
   }
 }
 
 @media (min-width: 768px) {
-  .team_content .btn-danger {
+  .team_content .btn-outline-light {
     font-size: 20px;
   }
 }
 
 @media (min-width: 1024px) {
-  .team_content .btn-danger {
+  .team_content .btn-outline-light {
     font-size: 30px;
   }
 }
