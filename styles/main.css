@@ -1664,14 +1664,8 @@ main .row .card-text {
   margin-top: 2%;
   margin-bottom: 5%;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 50px;
   text-justify: auto;
-}
-
-@media (min-width: 768px) {
-  .program-card .card-body .program-card-title {
-    font-size: 50px;
-  }
 }
 
 .program-card .card-body .card-text {
@@ -1682,5 +1676,136 @@ main .row .card-text {
 
 .program-card .btn {
   margin-top: 2%;
+}
+
+.footer {
+  height: 500px;
+  background-color: #e8eddf;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    height: 200px;
+  }
+}
+
+.footer__button {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "OpenSan-Regular";
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@media (min-width: 768px) {
+  .footer__nav {
+    font-family: "OpenSan-Regular";
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__nav {
+    font-family: "OpenSan-Regular";
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.footer__nav a {
+  color: black;
+}
+
+@media (min-width: 1024px) {
+  .footer__nav p {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+.footer__detail {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.footer__detail-text {
+  font-family: "Roboto-Bold";
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@media (min-width: 768px) {
+  .footer__detail-text {
+    font-family: "Roboto-Bold";
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.footer__detail-icons a {
+  color: black;
 }
 /*# sourceMappingURL=main.css.map */
