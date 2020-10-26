@@ -120,9 +120,9 @@
         <a href="#" class="login__btn login__btn--green">Sign-in</a>
         <form id="signIn" class="login__form active">
           <label>Username</label>
-          <input type="text" placeholder="Enter username" />
+          <input type="text" placeholder="Enter username" required />
           <label>Password</label>
-          <input type="password" placeholder="Enter password" />
+          <input type="password" placeholder="Enter password" required />
           <input type="submit" value="Sign In" />
           <a href="#" class="login__forget">Forget password?</a>
         </form>
@@ -132,15 +132,47 @@
         <a href="#" class="login__btn">Sign-up</a>
         <form id="signUp" class="login__form noactive">
           <label>Full name</label>
-          <input type="text" placeholder="Enter your name" />
+          <input type="text" placeholder="Enter your name" required />
           <label>Email</label>
-          <input type="email" placeholder="Enter your email address" />
+          <input type="email" placeholder="Enter your email address" required />
           <label>Password</label>
-          <input type="email" placeholder="Choose password" />
+          <input type="email" placeholder="Choose password" required />
           <input type="submit" value="Sign Up" />
         </form>
       </div>
     </div>
+
+    <footer> 
+      <div class="footer my-5">
+        <div class="footer__block">
+          <div class="text-center footer__button">
+            <a href="pages/login.html" class="btn btn-sm btn-dark" style="color:white;">SIGN UP TODAY</a>
+          </div>
+        </div>
+
+        <div class="footer__block text-center">
+          <div class="footer__nav">
+            <p><a href="index.html">Home</a></p>
+            <p><a href="./pages/program.html">Program</a></p>
+            <p><a href="./pages/MeetOurTeam.html">Our Team</a></p>
+            <p><a href="./pages/schedule.html">Book Session</a></p>
+            <p><a href="./pages/contact.html">Contact</a></p>
+          </div>
+        </div>
+
+        <div class="footer__block">            
+          <!-- social media -->
+          <div class="footer__detail text-center">
+            <div class="footer__detail-icons">
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x footer__detail-icon mx-1"></i></a> 
+              <a href="https://www.instagram.com/russtelen/"><i class="fab fa-instagram fa-2x footer__detail-icon mx-1"></i></a>
+              <a href="https://www.twitter.com/"><i class="fab fa-twitter fa-2x footer__detail-icon mx-1"></i></a>
+              <a href="https://www.youtube.com"><i class="fab fa-youtube fa-2x footer__detail-icon mx-1"></i></a>
+            </div>   
+          </div>
+        </div>
+      </div>
+    </footer> 
 
     <!-- jQuery first, then Popper.js, Bootstrap JS, Slick JS, Landing JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

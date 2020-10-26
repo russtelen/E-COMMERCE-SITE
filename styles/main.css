@@ -358,12 +358,24 @@ figure.snip1321.hover:after {
   position: relative;
   background: #fff;
   margin-top: 15%;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   display: flex;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
   border-radius: 20px 20px 20px 20px;
   overflow: hidden; }
+  @media (min-width: 768px) {
+    .login {
+      height: 400px;
+      width: 400px; } }
+  @media (min-width: 768px) {
+    .login {
+      height: 400px;
+      width: 400; } }
+  @media (min-width: 1024px) {
+    .login {
+      height: 500px;
+      width: 500px; } }
   .login__tab {
     flex: 1; }
   .login__btn {
@@ -914,17 +926,17 @@ figure.snip1321.hover:after {
   color: white;
   z-index: 2;
   text-align: center; }
-  .team_content .btn-danger {
+  .team_content .btn-outline-light {
     padding: 20px;
     margin-top: 80px; }
     @media (min-width: 320px) {
-      .team_content .btn-danger {
+      .team_content .btn-outline-light {
         font-size: 10px; } }
     @media (min-width: 768px) {
-      .team_content .btn-danger {
+      .team_content .btn-outline-light {
         font-size: 20px; } }
     @media (min-width: 1024px) {
-      .team_content .btn-danger {
+      .team_content .btn-outline-light {
         font-size: 30px; } }
 
 .team_info {
@@ -1078,10 +1090,16 @@ main {
     font-family: "roboto-demi";
     font-weight: 300px;
     color: black;
-    font-size: 4rem;
+    font-size: 2rem;
     padding-top: 5%;
     margin-inline-start: 5%;
     text-transform: uppercase; }
+    @media (min-width: 768px) {
+      .program_jumbotron .program-title {
+        font-size: 3rem; } }
+    @media (min-width: 1024px) {
+      .program_jumbotron .program-title {
+        font-size: 4rem; } }
   .program_jumbotron .program-head-contents {
     font-size: 20px;
     margin-inline-start: 5%; }
@@ -1097,13 +1115,81 @@ main {
     margin-top: 2%;
     margin-bottom: 5%;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 20px;
     text-justify: auto; }
+    @media (min-width: 768px) {
+      .program-card .card-body .program-card-title {
+        font-size: 50px; } }
   .program-card .card-body .card-text {
     text-align: justify;
     font-size: 20px;
     line-height: 130%; }
   .program-card .btn {
     margin-top: 2%; }
+
+.footer {
+  height: 500px;
+  background-color: #e8eddf;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .footer {
+      height: 300px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row; } }
+  @media (min-width: 768px) {
+    .footer {
+      height: 200px; } }
+  .footer__button {
+    margin: 1rem;
+    padding: 1rem; }
+  .footer__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "OpenSan-Regular";
+    font-size: 20px;
+    line-height: 20px; }
+    @media (min-width: 768px) {
+      .footer__nav {
+        font-family: "OpenSan-Regular";
+        font-size: 14px;
+        line-height: 14px; } }
+    @media (min-width: 1024px) {
+      .footer__nav {
+        font-family: "OpenSan-Regular";
+        font-size: 10px;
+        line-height: 10px; } }
+    @media (min-width: 1024px) {
+      .footer__nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row; } }
+    .footer__nav a {
+      color: black; }
+    @media (min-width: 1024px) {
+      .footer__nav p {
+        margin: 1rem;
+        padding: 1rem; } }
+  .footer__detail {
+    margin: 1rem;
+    padding: 1rem; }
+  .footer__detail-text {
+    font-family: "Roboto-Bold";
+    font-size: 20px;
+    line-height: 20px; }
+    @media (min-width: 768px) {
+      .footer__detail-text {
+        font-family: "Roboto-Bold";
+        font-size: 30px;
+        line-height: 30px; } }
+  .footer__detail-icons a {
+    color: black; }
 
 /*# sourceMappingURL=main.css.map */
