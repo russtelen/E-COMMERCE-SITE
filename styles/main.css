@@ -763,24 +763,40 @@ figure.snip1321.hover:after {
 .cart-empty {
   width: 90%;
   margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .cart-empty__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 5%;
+  margin: 1%;
+}
+
+@media (min-width: 768px) {
+  .cart-empty__buttons {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .cart-empty #empty-cart-to-programs {
   background-image: radial-gradient(white, #f5cb5c);
-  width: 170px;
+  width: 300px;
   height: 50px;
   border-radius: 4%;
   cursor: pointer;
@@ -792,7 +808,7 @@ figure.snip1321.hover:after {
 
 .cart-empty #empty-cart-to-team {
   background-image: radial-gradient(white, #f5cb5c);
-  width: 170px;
+  width: 300px;
   height: 50px;
   border-radius: 4%;
   cursor: pointer;
@@ -994,7 +1010,7 @@ figure.snip1321.hover:after {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 2%;
-  margin-right: 2%;
+  margin-right: 6%;
 }
 
 .cart-summary__item {
@@ -1067,6 +1083,7 @@ figure.snip1321.hover:after {
   padding-top: 12%;
   width: 82%;
   margin: 0 auto;
+  margin-bottom: 15%;
   -webkit-box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
   border-top-left-radius: 10px;
@@ -1140,11 +1157,6 @@ figure.snip1321.hover:after {
           transform: skew(0.5deg, 1deg);
 }
 
-.checkout__confirm {
-  height: 100vh;
-  padding-top: 10%;
-}
-
 .checkout__confirm .checkout-confirm__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1153,7 +1165,6 @@ figure.snip1321.hover:after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 15%;
 }
 
 .checkout__confirm .checkout-confirm__item .checkout-confirm__items-in-cart {
@@ -1164,18 +1175,16 @@ figure.snip1321.hover:after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 15% auto;
 }
 
 .checkout__confirm .checkout-confirm__item .checkout-confirm__subtotal {
-  margin: 15% auto;
   text-align: center;
 }
 
 .checkout__confirm .checkout-confirm__item .checkout-confirm__button {
   margin: 0 auto;
   background-image: radial-gradient(white, #f5cb5c);
-  width: 170px;
+  width: 280px;
   height: 50px;
   border-radius: 4%;
   cursor: pointer;
@@ -1185,8 +1194,29 @@ figure.snip1321.hover:after {
   background-image: radial-gradient(white, palegreen);
 }
 
+.checkout__confirm div.row {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .checkout__complete {
-  padding-top: 40%;
+  margin-top: 40%;
+  margin-bottom: 40%;
+}
+
+.complete-order {
+  color: black;
+  background-image: radial-gradient(white, #f5cb5c);
+  width: 300px;
+  height: 50px;
+  border-radius: 4%;
+  cursor: pointer;
+}
+
+.complete-order:hover {
+  color: black;
+  background-image: radial-gradient(white, palegreen);
 }
 
 .contact__banner {

@@ -28,8 +28,6 @@ let items = [ // our programs
 
 // lists
     let itemsLS // <-- get from Local Storage
-
-    
     let totalLS// <-- 'LS' = get from Local Storage
     let quantityLS //    
 
@@ -135,12 +133,12 @@ function displayCart() { // refresh HTML
             <div class = "cart-empty">
                 <h4 class="cart-h4">The cart is empty, but fear not! Your journey is a click away...</h4>
                 <div class="cart-empty__buttons">
-                    <div class = "cart-empty__button-programs">
+                    <div class = "cart-empty__button">
                         <a href="program.html"><button id="empty-cart-to-programs" class="empty-cart-button" type="button">
                             See Our Programs
                         </button></a>
                     </div>
-                    <div class = "cart-empty__button-team">
+                    <div class = "cart-empty__button">
                         <a href="MeetOurTeam.html"><button id="empty-cart-to-team" class="empty-cart-button" type="button">
                             Meet Instructors
                         </button></a>
@@ -275,7 +273,7 @@ function displayCart() { // refresh HTML
 
             // if validation passes; make sure this is blank.
             // else fails, input error message.
-            let errorContainer = document.querySelector('.error-message')
+            let errorContainer = document.querySelector('#error-login')
             let confirmSubtotalContainer = document.querySelector('.confirm_subtotal')
             let cartSubtotalLS = parseInt(localStorage.getItem('totalCost'))
             
@@ -286,33 +284,52 @@ function displayCart() { // refresh HTML
                 $(".checkout__validate").toggle();
                 $('.checkout__confirm').toggle();
                 
-                errorContainer.innerHTML = "";
-                confirmSubtotalContainer.innerHTML = cartSubtotalLS;
+                $('html,body').animate({
+                    scrollTop: $(".checkout").offset().top},
+                    'slow');
+
+                    //Checkout Form  Validation
+                    let requiredInput = document.querySelectorAll('.form-control');
+                    let errorContainerCheckout = document.querySelector('#error-checkout')
+                    
+                    requiredInput.some(function(i){
+                        if(i == "" || i == 0) {
+                            errorContainerCheckout.innerHTML = "Please complete all required inputs.";
+                        } else {
+                            
+                        }
+                    });
+
+                // errorContainer.innerHTML = "";
+                // confirmSubtotalContainer.innerHTML = `${totalLS}`;
+                // itemsInCartConfirm.innerHTML = "";
                 
-                itemsInCartConfirm.innerHTML = "";
-                
-                Object.values(cartItemsLS).filter(item => {
-                itemsInCartConfirm.innerHTML += `
-                    <label>${item.name}: ${item.inCart} x $${item.price}</label><br>
-                `
-                });
+                // to re-list cart items for user confirmation
+                // functionally, not required since cart items are listed above the checkout section
+                // Object.values(cartItemsLS).filter(item => {
+                // itemsInCartConfirm.innerHTML += `
+                //     <label>${item.name}: ${item.inCart} x $${item.price}</label><br>
+                // `
+                // });
             }
         });
         // at click: "Complete Order", 
         // --- display Thank You; clear LoclStorage; refresh display (so Cart disappears) 
-        $('.checkout__confirm').click(function(){
+        
+
+        $('.checkout-confirm__button').click(function(){
+            console.log("clicked Checkout Confirm")
             $('.checkout__confirm').toggle();
             $('.checkout__complete').toggle();
 
+            $('html,body').animate({
+                scrollTop: $(".stick").offset().top},
+                'slow');
+
             localStorage.clear();
             location.reload();
-
-            $(document).ready(function() {
-            $('html,body').animate({
-                scrollTop: $(".navbar").offset().top},
-                'fast');
-            });
         });
+
     });
 }
 
