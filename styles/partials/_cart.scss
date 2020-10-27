@@ -436,3 +436,16 @@
     margin-top: 40%;
     margin-bottom: 40%;
 }
+
+.complete-order {
+    color: black;
+    background-image: radial-gradient(white, $yellow);
+    width: 300px;
+    height: 50px;
+    border-radius: 4%;
+    cursor: pointer;
+    &:hover {
+        color: black;
+      background-image: radial-gradient(white, palegreen);
+    }
+  }

@@ -273,7 +273,7 @@ function displayCart() { // refresh HTML
 
             // if validation passes; make sure this is blank.
             // else fails, input error message.
-            let errorContainer = document.querySelector('.error-message')
+            let errorContainer = document.querySelector('#error-login')
             let confirmSubtotalContainer = document.querySelector('.confirm_subtotal')
             let cartSubtotalLS = parseInt(localStorage.getItem('totalCost'))
             
@@ -288,10 +288,21 @@ function displayCart() { // refresh HTML
                     scrollTop: $(".checkout").offset().top},
                     'slow');
 
-                errorContainer.innerHTML = "";
+                    //Checkout Form  Validation
+                    let requiredInput = document.querySelectorAll('.form-control');
+                    let errorContainerCheckout = document.querySelector('#error-checkout')
+                    
+                    requiredInput.some(function(i){
+                        if(i == "" || i == 0) {
+                            errorContainerCheckout.innerHTML = "Please complete all required inputs.";
+                        } else {
+                            
+                        }
+                    });
+
+                // errorContainer.innerHTML = "";
                 // confirmSubtotalContainer.innerHTML = `${totalLS}`;
-                
-                itemsInCartConfirm.innerHTML = "";
+                // itemsInCartConfirm.innerHTML = "";
                 
                 // to re-list cart items for user confirmation
                 // functionally, not required since cart items are listed above the checkout section
@@ -304,7 +315,10 @@ function displayCart() { // refresh HTML
         });
         // at click: "Complete Order", 
         // --- display Thank You; clear LoclStorage; refresh display (so Cart disappears) 
+        
+
         $('.checkout-confirm__button').click(function(){
+            console.log("clicked Checkout Confirm")
             $('.checkout__confirm').toggle();
             $('.checkout__complete').toggle();
 
@@ -315,6 +329,7 @@ function displayCart() { // refresh HTML
             localStorage.clear();
             location.reload();
         });
+
     });
 }
 
@@ -329,9 +344,9 @@ function displayCart() { // refresh HTML
 // });
 
 // At page load, keep these sections hidden
-// $(".checkout__validate").toggle();
-// $(".checkout__confirm").toggle();
-// $(".checkout__complete").toggle();
+$(".checkout__validate").toggle();
+$(".checkout__confirm").toggle();
+$(".checkout__complete").toggle();
 
 // Run at Load
 displayNavBar();

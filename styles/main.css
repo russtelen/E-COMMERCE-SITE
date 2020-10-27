@@ -777,6 +777,17 @@ figure.snip1321.hover:after {
   margin-top: 40%;
   margin-bottom: 40%; }
 
+.complete-order {
+  color: black;
+  background-image: radial-gradient(white, #f5cb5c);
+  width: 300px;
+  height: 50px;
+  border-radius: 4%;
+  cursor: pointer; }
+  .complete-order:hover {
+    color: black;
+    background-image: radial-gradient(white, palegreen); }
+
 .contact__banner {
   background-image: url("../../images/contact/contact-banner.jpg");
   background-size: cover;
