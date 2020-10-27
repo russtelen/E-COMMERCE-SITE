@@ -194,9 +194,9 @@ function displayCart() { // refresh HTML
                         <div class="cart-item__amount">
                             <!-- ITEM QUANTITY -->
                             <div class="cart-item__quantity"> 
-                                <a id="qty-increment-${item.tag}"><i class="fas fa-arrow-circle-up"></i></a>    
+                                <a id="qty-increment-${item.tag}" class="arrow"><i class="fas fa-arrow-circle-up"></i></a>    
                                 <label class="cart-item__quantity__value">${item.inCart}</label>
-                                <a id="qty-decrement-${item.tag}"><i class="fas fa-arrow-circle-down"></i></a>
+                                <a id="qty-decrement-${item.tag}" class="arrow"><i class="fas fa-arrow-circle-down"></i></a>
                             </div>
                             <i class="fas fa-times fa-sm"></i>
                             <!-- ITEM PRICE -->

@@ -552,7 +552,6 @@ figure.snip1321.hover:after {
     grid-template-areas: "left center right";
     justify-content: space-between;
     min-width: 310px;
-    padding-top: 10px;
     padding-bottom: 10px;
     border: 0.2px solid grey;
     border-radius: 2%;
@@ -584,9 +583,11 @@ figure.snip1321.hover:after {
     .cart-item__amount {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      vertical-align: middle;
-      width: 72%; }
+      justify-content: center;
+      width: 100%; }
+      .cart-item__amount .fa-times {
+        margin-left: 7%;
+        margin-right: 7%; }
     .cart-item__remove-button {
       font-size: 12px;
       height: 32px;
@@ -607,12 +608,12 @@ figure.snip1321.hover:after {
         -webkit-transition: color 0.35s linear;
         -ms-transition: color 0.35s linear;
         transition: color 0.35s linear; }
+      .cart-item__remove-button i {
+        padding-left: 10%; }
       .cart-item__remove-button:hover .far {
         color: red;
         font-size: 16px;
         transition-duration: 0.35s; }
-      .cart-item__remove-button i {
-        padding-left: 10%; }
     .cart-item__functions {
       justify-self: end;
       display: flex;
@@ -632,7 +633,8 @@ figure.snip1321.hover:after {
     .cart-item a .fas {
       color: #515fb9;
       border-radius: 100%;
-      box-shadow: 2px 2px 2px #333533; }
+      box-shadow: 2px 2px 2px #333533;
+      cursor: pointer; }
     .cart-item a:hover .fas {
       color: #f5cb5c;
       background-color: #333533;
@@ -644,6 +646,7 @@ figure.snip1321.hover:after {
       font-weight: bold;
       justify-self: right;
       color: #62929f;
+      padding: 1.5%;
       position: absolute;
       offset: 50px; }
 
