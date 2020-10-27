@@ -189,12 +189,12 @@
 
           <!-- CONFIRM PURCHASE -->
           <section class="checkout__confirm">
-              <h2 class="cart-h2">Confirm Your Order</h2>      
+              <h2 class="cart-h2">Complete Your Order</h2>      
               <div class="checkout-confirm__item">
                   <div id="checkout-confirm__items-in-cart"></div> <!-- targeting this div in cart.js to display Checkout confirm items-->
                   <!-- Checkout form -->
-                  <!-- <div class="row">
-                    <div class="col-md-4 order-md-2 mb-4">
+                  <div class="row">
+                    <!-- <div class="col-md-4 order-md-2 mb-4">
                       <h4 class="d-flex justify-content-between align-items-center mb-3">
                         <span class="text-muted">Your cart</span>
                         <span class="badge badge-secondary badge-pill">3</span>
@@ -242,7 +242,7 @@
                           </div>
                         </div>
                       </form>
-                    </div>
+                    </div> -->
                     <div class="col-md-8 order-md-1">
                       <h4 class="mb-3">Billing address</h4>
                       <form class="needs-validation" novalidate="">
@@ -327,19 +327,8 @@
                           </div>
                         </div>
                         <hr class="mb-4">
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="same-address">
-                          <label class="custom-control-label" for="same-address">Shipping address is the same as my billing
-                            address</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" id="save-info">
-                          <label class="custom-control-label" for="save-info">Save this information for next time</label>
-                        </div>
-                        <hr class="mb-4">
-                  
                         <h4 class="mb-3">Payment</h4>
-                  
+
                         <div class="d-block my-3">
                           <div class="custom-control custom-radio">
                             <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
@@ -388,12 +377,12 @@
                           </div>
                         </div>
                         <hr class="mb-4">
-                        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+                        <!-- <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button> -->
                       </form>
                     </div>
-                  </div> -->
-                  <label class="checkout-confirm__subtotal">Subtotal: $<span class="confirm_subtotal"></span> </label>
-                  <button class="checkout-confirm__button" id="complete" type="button">Complete</button>
+                  </div>
+                  <!-- <label class="checkout-confirm__subtotal">Subtotal: $<span class="confirm_subtotal"></span> </label> -->
+                  <button class="checkout-confirm__button" id="complete" type="button">Complete Your Order</button>
                 </div>
           </section>
 

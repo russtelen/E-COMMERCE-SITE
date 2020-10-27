@@ -286,32 +286,36 @@ function displayCart() { // refresh HTML
                 $(".checkout__validate").toggle();
                 $('.checkout__confirm').toggle();
                 
+                $('html,body').animate({
+                    scrollTop: $(".checkout").offset().top},
+                    'slow');
+
                 errorContainer.innerHTML = "";
-                confirmSubtotalContainer.innerHTML = cartSubtotalLS;
+                confirmSubtotalContainer.innerHTML = `${cartSubtotalLS}`;
                 
                 itemsInCartConfirm.innerHTML = "";
                 
-                Object.values(cartItemsLS).filter(item => {
-                itemsInCartConfirm.innerHTML += `
-                    <label>${item.name}: ${item.inCart} x $${item.price}</label><br>
-                `
-                });
+                // to re-list cart items for user confirmation
+                // functionally, not required since cart items are listed above the checkout section
+                // Object.values(cartItemsLS).filter(item => {
+                // itemsInCartConfirm.innerHTML += `
+                //     <label>${item.name}: ${item.inCart} x $${item.price}</label><br>
+                // `
+                // });
             }
         });
         // at click: "Complete Order", 
         // --- display Thank You; clear LoclStorage; refresh display (so Cart disappears) 
-        $('.checkout__confirm').click(function(){
+        $('.checkout-confirm__button').click(function(){
             $('.checkout__confirm').toggle();
             $('.checkout__complete').toggle();
 
+            $('html,body').animate({
+                scrollTop: $(".stick").offset().top},
+                'slow');
+
             localStorage.clear();
             location.reload();
-
-            $(document).ready(function() {
-            $('html,body').animate({
-                scrollTop: $(".navbar").offset().top},
-                'fast');
-            });
         });
     });
 }
@@ -327,9 +331,9 @@ function displayCart() { // refresh HTML
 // });
 
 // At page load, keep these sections hidden
-$(".checkout__validate").toggle();
-$(".checkout__confirm").toggle();
-$(".checkout__complete").toggle();
+// $(".checkout__validate").toggle();
+// $(".checkout__confirm").toggle();
+// $(".checkout__complete").toggle();
 
 // Run at Load
 displayNavBar();
