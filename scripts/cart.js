@@ -174,14 +174,14 @@ function displayCart() { // refresh HTML
                 <h4 class="cart-h4">The cart is empty, but fear not! Your journey is a click away...</h4>
                 <div class="cart-empty__buttons">
                     <div class = "cart-empty__button-programs">
-                        <button id="empty-cart-to-programs" class="empty-cart-button" type="button">
+                        <a href="program.html"><button id="empty-cart-to-programs" class="empty-cart-button" type="button">
                             See Our Programs
-                        </button>
+                        </button></a>
                     </div>
                     <div class = "cart-empty__button-team">
-                        <button id="empty-cart-to-team" class="empty-cart-button" type="button">
+                        <a href="MeetOurTeam.html"><button id="empty-cart-to-team" class="empty-cart-button" type="button">
                             Meet Instructors
-                        </button>
+                        </button></a>
                     </div>
                 </div>
             </div>
