@@ -1,7 +1,5 @@
-nav.navbar{
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
+.stick{
+    z-index: 99;
 }
 
 .cart-main{

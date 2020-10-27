@@ -445,10 +445,8 @@ figure.snip1321.hover:after {
 .noactive {
   display: none; }
 
-nav.navbar {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0; }
+.stick {
+  z-index: 99; }
 
 .cart-main {
   width: 100%;
