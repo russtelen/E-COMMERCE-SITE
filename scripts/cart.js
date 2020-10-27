@@ -1,31 +1,30 @@
 
 let items = [ // our programs
-    {  
+    {
         name: 'Muay Thai',
         tag: 'muaythai',
         price: 12,
         inCart: 0,
-        image_path: '/images/landing/program-muaythai.jpg'
+        image_path: '/images/landing/program-muaythai.jpg',
+        id: 0
     },
     {
-      
         name: 'Yoga',
         tag: 'yoga',
         price: 8,
         inCart: 0,
-        image_path: '/images/landing/program-yoga.jpg'
+        image_path: '/images/landing/program-yoga.jpg',
+        id: 1
     },
     {
-        
         name: 'HIIT',
         tag: 'hiit',
         price: 10,
         inCart: 0,
-        image_path: '/images/landing/program-hiit.jpg'
+        image_path: '/images/landing/program-hiit.jpg',
+        id: 2
     }
 ];
-
-
 
 // lists
     let itemsLS // <-- get from Local Storage
@@ -35,7 +34,7 @@ let items = [ // our programs
     let quantityLS //    
 
 
-function cartQuantityUp(item, action) { // increments 'inCart' Object field in localStorage
+function cartQuantityUp(item) { // increments 'inCart' Object field in localStorage
     // get current 'CartQuantity' (False if none); parse Int
     let cartQuantityLS = parseInt(localStorage.getItem('cartQuantity')); 
     if(cartQuantityLS) { // if there True
@@ -67,12 +66,16 @@ function setItems(item){ // updates LocalStorage var 'itemsInCart'
     cartItemsLS = JSON.parse(cartItemsLS); // parse to js object
     if (cartItemsLS != null) { // if cart exists
         if (cartItemsLS[item.tag] == undefined) { // if NEW item
-            cartItemsLS = {  
+            cartItemsLS = { 
+                // get length of cartItemsLS (cartItemsLS.length)
+                // (add INDEXES to the Objects (by tagname))
+                // Run LOOP, check if ADDED ITEM's INDEX is Greater than the Existing Item Looped
+                // (basically re-add everything into the cart, up to the point where item.index > items[i].index)
+                // once added, add the rest of cartItemsLS
                 ...cartItemsLS, // append to existing items (rest operator)
                 [item.tag]: item // ... this new item
             }
         }
-        
         cartItemsLS[item.tag].inCart += 1; // increase item's count
     } else { // create the cart
         item.inCart = 1; // with this item in it
@@ -80,12 +83,9 @@ function setItems(item){ // updates LocalStorage var 'itemsInCart'
             [item.tag]: item // 
         }
     }
-   
     // update ItemsInCart into LocalStorage as JSON
     localStorage.setItem("itemsInCart", JSON.stringify(cartItemsLS));
 }
-
-
 function decreaseItem(item){ // get from LS; reduces inCart value in LS 
     let cartItemsLS = localStorage.getItem('itemsInCart'); // first, check what's there
     cartItemsLS = JSON.parse(cartItemsLS); // parse to js object
@@ -164,7 +164,7 @@ function displayCart() { // refresh HTML
     // get the ItemsInCart object - convert to JS
     let cartItemsLS = localStorage.getItem("itemsInCart");
     cartItemsLS = JSON.parse(cartItemsLS);
-      
+
 
     // if cart is empty -- display links to Programs/Instructors
     if (cartItemsLS == null || parseInt(quantity) <= 0) {
@@ -192,12 +192,10 @@ function displayCart() { // refresh HTML
     // if cart NOT empty - display cart items 
     if (cartItemsLS && itemContainer ) {
         itemContainer.innerHTML = ''
-        let dynamicHTML;
+        
         // Object.values() returns an array // "=>" Arrow function expression
         Object.values(cartItemsLS).filter(item => { 
-            console.log(item)
-            console.log(item.inCart);
-
+                        
             quantity += item.inCart
             localStorage.setItem('cartQuantity', quantity)
 
@@ -226,17 +224,17 @@ function displayCart() { // refresh HTML
                             <!--  -->
                     <div class="cart-item__functions">
                         <div class="cart-item__remove">
-                            <button class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
+                            <button id="cart-item-remove-${item.tag}" class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
                             <!-- ITEM TOTAL (QTY X PRICE) -->
                         </div>
                         <span class="cart-item__item-total">$${item.inCart * item.price}</span>
                         <!-- QTY -->
                         <div class="cart-item__amount">
                             <!-- ITEM QUANTITY -->
-                            <div class="cart-item__quantity">
-                                <a class="qty-increment"><i class="fas fa-arrow-circle-up"></i></a>    
+                            <div class="cart-item__quantity"> 
+                                <a id="qty-increment-${item.tag}"><i class="fas fa-arrow-circle-up"></i></a>    
                                 <label class="cart-item__quantity__value">${item.inCart}</label>
-                                <a class="qty-decrement"><i class="fas fa-arrow-circle-down"></i></a>
+                                <a id="qty-decrement-${item.tag}"><i class="fas fa-arrow-circle-down"></i></a>
                             </div>
                             <i class="fas fa-times fa-sm"></i>
                             <!-- ITEM PRICE -->
@@ -246,9 +244,33 @@ function displayCart() { // refresh HTML
                     </div>
                 </div>
                 `
+                // "Event Delegation" - Adds Quantity, but Loops Too Many Times (adding extra event listeners??)
+                // ---- UP ARROWS (QTY +1; New Total; Refresh Cart)
+                $(document).off('click', '#qty-increment-'+item.tag); // first, remove previously added event listener       
+                $(document).on('click', '#qty-increment-'+item.tag, function() { // then, add it again
+                    cartQuantityUp(item);
+                    totalCost(item,'increment');
+                    displayCart()
+                });
+                // ---- DOWN ARROW (QTY -1; New Total; Refresh Cart)
+                $(document).off('click', '#qty-decrement-'+item.tag); // first, remove previously added event listener       
+                $(document).on('click', '#qty-decrement-'+item.tag, function() { // then, add it again
+                    if(cartItemsLS[item.tag].inCart > 1){
+                        cartQuantityDown(item); // -1 QUANTITY
+                        totalCost(item,'decrement'); // COMPUTE TOTAL
+                        displayCart() // REFRESH HTML
+                    }   
+                });
+                // ---- REMOVE BUTTON (QTY -<inCart>; New Total; Refresh Cart)
+                $(document).off('click', '#cart-item-remove-'+item.tag);
+                $(document).on('click', '#cart-item-remove-'+item.tag, function(){
+                    removeItem(item); // -X QUANTITY
+                    totalCost(item,'remove'); // COMPUTE TOTAL
+                    displayCart(); // REFRESH HTML
+                });
             }
+            
         });
-       
         
         if (cartItemsLS && quantity > 0) {
             itemContainer.innerHTML += `
@@ -270,40 +292,83 @@ function displayCart() { // refresh HTML
             </section>
             `
         }
+        {
+                // for (var i = 0; i < items.length; i++) {
+        //      let item = items[i]
+        //      let itemTag = item.tag
+
+        //      if (cartItemsLS.itemTag.inCart > 0) { 
+        //         dynamicHTML += `
+        //         <div class="cart-item">
+        //         <div class="cart-item__info">
+        //             <a href="#"><label class="card-item__title">${cartItemsLS[items[i].tag].name}.</label></a>
+        //             <label class="cart-item__date">Date: Oct 30, 2020</label>
+        //             <label class="cart-item__time">Time: 9:00am - 11:00am</label>
+        //             <label class="cart-item__instructor">Instructor: Russ Telen</label>
+        //         </div>
+        //                 <!--  -->
+        //         <div class="cart-item__image" id="img1">
+        //             <a href="#">
+        //             <!-- <img src="#" alt="muay_thai"> -->
+        //             </a>
+        //         </div>
+        //                 <!--  -->
+        //         <div class="cart-item__functions">
+        //             <div class="cart-item__remove">
+        //                 <button class="cart-item__remove-button" type="button"><i class="far fa-trash-alt"></i> Remove</button>
+        //             </div>
+        //             <!-- QTY -->
+        //             <div class="cart-item__amount">
+        //                 <a class="qty-decrement" href="#"><i class="fas fa-arrow-down fa-sm"></i></a>
+        //                 <input class="cart-item__quantity" type="number" value="${cartItemsLS[items[i].tag].inCart}">
+        //                 <a class="qty-increment" href="#"><i class="fas fa-arrow-up fa-sm"></i></a>
+        //                 <i class="fas fa-times fa-sm"></i>
+                        
+        //             <label class="cart-item__price">$${cartItemsLS[items[i].tag].price}</label>
+        //             <!-- PRICE -->
+        //             </div>
+        //             <span class="cart-item__item-total">$${cartItemsLS[items[i].tag].inCart * cartItemsLS[items[i].tag].price}</span>
+        //             </div>
+        //         </div>
+        //         `
+        //     }
+        // }
+        // itemContainer.innerHTML = dynamicHTML;
+        //     }
+        // }
+        }
     }
     // EVENT LISTENER - Arrow UP / INCREASE QTY
-    let arrowsUp = document.querySelectorAll('.qty-increment');
-   
-    for (let i = 0; i < arrowsUp.length; i++) {
-    arrowsUp[i].addEventListener('click', () => {
-        cartQuantityUp(items[i]);
-        totalCost(items[i],'increment');
-        displayCart()
-    });
-    }
+    // let arrowsUp = document.querySelectorAll('.qty-increment');
+    // for (let i = 0; i < arrowsUp.length; i++) {
+    // arrowsUp[i].addEventListener('click', () => {
+    //     cartQuantityUp(items[i]);
+    //     totalCost(items[i],'increment');
+    //     displayCart()
+    // });
+    // }
     // EVENT LISTENER - Arrow DOWN / DECREASE QTY
-    let arrowsDown = document.querySelectorAll('.qty-decrement');
-    for (let i = 0; i < arrowsDown.length; i++) {
-    arrowsDown[i].addEventListener('click', () => {        
-        let itemsInCartNow = localStorage.getItem('itemsInCart');
-        let item = items[i]
-        itemsInCartNow = JSON.parse(itemsInCartNow)
-        if(itemsInCartNow[item.tag].inCart > 1){
-            cartQuantityDown(items[i]); // -1 QUANTITY
-            totalCost(items[i],'decrement'); // COMPUTE TOTAL
-            displayCart() // REFRESH HTML
-           
-        }   
-    });
-    }
-    let removeHTMLElements = document.querySelectorAll('.cart-item__remove-button');
-    for (let i = 0; i < removeHTMLElements.length; i++) {
-        removeHTMLElements[i].addEventListener('click', () => {
-        removeItem(items[i]); // -X QUANTITY
-        totalCost(items[i],'remove'); // COMPUTE TOTAL
-        displayCart(); // REFRESH HTML
-    });
-    }
+    // let arrowsDown = document.querySelectorAll('.qty-decrement');
+    // for (let i = 0; i < arrowsDown.length; i++) {
+    // arrowsDown[i].addEventListener('click', () => {        
+    //     let itemsInCartNow = localStorage.getItem('itemsInCart');
+    //     let item = items[i]
+    //     itemsInCartNow = JSON.parse(itemsInCartNow)
+    //     if(itemsInCartNow[item.tag].inCart > 1){
+    //         cartQuantityDown(items[i]); // -1 QUANTITY
+    //         totalCost(items[i],'decrement'); // COMPUTE TOTAL
+    //         displayCart() // REFRESH HTML
+    //     }   
+    // });
+    // }
+    // let removeHTMLElements = document.querySelectorAll('.cart-item__remove-button');
+    // for (let i = 0; i < removeHTMLElements.length; i++) {
+    //     removeHTMLElements[i].addEventListener('click', () => {
+    //     removeItem(items[i]); // -X QUANTITY
+    //     totalCost(items[i],'remove'); // COMPUTE TOTAL
+    //     displayCart(); // REFRESH HTML
+    // });
+    // }
 
     $(document).ready(function() {
         // when clicking 'Checkout' button, display Login section (to validate)
@@ -384,7 +449,6 @@ function displayCart() { // refresh HTML
         // });
     });
 }
-
 
 
 // maintain scroll position at refresh
