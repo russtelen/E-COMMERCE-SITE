@@ -28,8 +28,6 @@ let items = [ // our programs
 
 // lists
     let itemsLS // <-- get from Local Storage
-
-    
     let totalLS// <-- 'LS' = get from Local Storage
     let quantityLS //    
 
@@ -135,12 +133,12 @@ function displayCart() { // refresh HTML
             <div class = "cart-empty">
                 <h4 class="cart-h4">The cart is empty, but fear not! Your journey is a click away...</h4>
                 <div class="cart-empty__buttons">
-                    <div class = "cart-empty__button-programs">
+                    <div class = "cart-empty__button">
                         <a href="program.html"><button id="empty-cart-to-programs" class="empty-cart-button" type="button">
                             See Our Programs
                         </button></a>
                     </div>
-                    <div class = "cart-empty__button-team">
+                    <div class = "cart-empty__button">
                         <a href="MeetOurTeam.html"><button id="empty-cart-to-team" class="empty-cart-button" type="button">
                             Meet Instructors
                         </button></a>
@@ -291,7 +289,7 @@ function displayCart() { // refresh HTML
                     'slow');
 
                 errorContainer.innerHTML = "";
-                confirmSubtotalContainer.innerHTML = `${cartSubtotalLS}`;
+                // confirmSubtotalContainer.innerHTML = `${totalLS}`;
                 
                 itemsInCartConfirm.innerHTML = "";
                 
