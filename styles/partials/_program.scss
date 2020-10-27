@@ -16,9 +16,6 @@
     @include tablet {
       font-size: 3rem;
     }
-    @include desktop {
-      font-size: 4rem;
-    }
   }
   height: 700px;
   .program-head-contents {
@@ -55,6 +52,7 @@
       line-height: 130%;
     }
   }
+
   .btn {
     margin-top: 2%;
   }
