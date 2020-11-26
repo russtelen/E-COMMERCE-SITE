@@ -1,6 +1,4 @@
-# SSD - FRONT END PROJECT
-
-## GROUP 4 - "BoomShakaLaka"
+# E Commerce Website
 
 - The Team:
 
@@ -25,6 +23,7 @@ Moqups URL: https://app.moqups.com/YyMjjcMyRD/view/page/a2643d858
 <img src="assets\use_case_diagram\Shredz_UCD.JPG" width="600px">
 
 ## Wireframe Prototype
+
 <br>
 <div style="display: flex;">
   <div style="width: 32%;">
