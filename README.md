@@ -1,20 +1,25 @@
 # E Commerce Website
 
-- The Team:
+## View the app here:
 
-  - Crystal Kim
-  - Juhwan Moon
-  - Russell Telen
-  - Nusorn Krachangtoy
-  - Vlad Preduna
+[Shredz](https://russtelen-shredz.netlify.app/)
 
-  Team roles/tasks as per Project Kanban
+## The Team:
 
-- Company name: "SHREDZ"
-  - Description: Health & Wellness Hub
-  - Purpose: Connect Health & Wellness Professionals with Customers, and faciliate Transactions direclty within the app
-  - User base: General Users; Service Provider Users; Admins
-  - Product Type: Fitness Program Membership, Services and Products
+- Crystal Kim
+- Juhwan Moon
+- Russell Telen
+- Nusorn Krachangtoy
+- Vlad Preduna
+
+Team roles/tasks as per Project Kanban
+
+### Company name: "SHREDZ"
+
+- Description: Health & Wellness Hub
+- Purpose: Connect Health & Wellness Professionals with Customers, and faciliate Transactions direclty within the app
+- User base: General Users; Service Provider Users; Admins
+- Product Type: Fitness Program Membership, Services and Products
 
 ## Use Case Diagram
 
